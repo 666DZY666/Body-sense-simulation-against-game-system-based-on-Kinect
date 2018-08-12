@@ -1,0 +1,4341 @@
+
+Sevro.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00001788  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .debug_aranges 00000060  00000000  00000000  000017dc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  2 .debug_pubnames 000001f4  00000000  00000000  0000183c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_info   000019e7  00000000  00000000  00001a30  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_abbrev 00000472  00000000  00000000  00003417  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_line   000017f7  00000000  00000000  00003889  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_frame  00000230  00000000  00000000  00005080  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_str    0000031a  00000000  00000000  000052b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_loc    00000c75  00000000  00000000  000055ca  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_ranges 000000a8  00000000  00000000  0000623f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 46 00 	jmp	0x8c	; 0x8c <__ctors_end>
+       4:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+       8:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+       c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      10:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      14:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      18:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      1c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      20:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      24:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      28:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      2c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      30:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      34:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      38:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      3c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      40:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      44:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      48:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      4c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      50:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      54:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      58:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      5c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      60:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      64:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      68:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      6c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      70:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      74:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      78:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      7c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      80:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      84:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+      88:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+
+0000008c <__ctors_end>:
+      8c:	11 24       	eor	r1, r1
+      8e:	1f be       	out	0x3f, r1	; 63
+      90:	cf ef       	ldi	r28, 0xFF	; 255
+      92:	d0 e1       	ldi	r29, 0x10	; 16
+      94:	de bf       	out	0x3e, r29	; 62
+      96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+      98:	11 e0       	ldi	r17, 0x01	; 1
+      9a:	a0 e0       	ldi	r26, 0x00	; 0
+      9c:	b1 e0       	ldi	r27, 0x01	; 1
+      9e:	e8 e8       	ldi	r30, 0x88	; 136
+      a0:	f7 e1       	ldi	r31, 0x17	; 23
+      a2:	00 e0       	ldi	r16, 0x00	; 0
+      a4:	0b bf       	out	0x3b, r16	; 59
+      a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+      a8:	07 90       	elpm	r0, Z+
+      aa:	0d 92       	st	X+, r0
+      ac:	a0 30       	cpi	r26, 0x00	; 0
+      ae:	b1 07       	cpc	r27, r17
+      b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+      b2:	0e 94 9e 07 	call	0xf3c	; 0xf3c <main>
+      b6:	0c 94 c2 0b 	jmp	0x1784	; 0x1784 <_exit>
+
+000000ba <__bad_interrupt>:
+      ba:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000be <zuo>:
+
+
+}
+zuo(void)
+{
+    SetServoPosition(9,912,300);
+      be:	89 e0       	ldi	r24, 0x09	; 9
+      c0:	60 e9       	ldi	r22, 0x90	; 144
+      c2:	73 e0       	ldi	r23, 0x03	; 3
+      c4:	4c e2       	ldi	r20, 0x2C	; 44
+      c6:	51 e0       	ldi	r21, 0x01	; 1
+      c8:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+ 	SetServoPosition(10,86,300);
+      cc:	8a e0       	ldi	r24, 0x0A	; 10
+      ce:	66 e5       	ldi	r22, 0x56	; 86
+      d0:	70 e0       	ldi	r23, 0x00	; 0
+      d2:	4c e2       	ldi	r20, 0x2C	; 44
+      d4:	51 e0       	ldi	r21, 0x01	; 1
+      d6:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	SetServoPosition(11,78,300);
+      da:	8b e0       	ldi	r24, 0x0B	; 11
+      dc:	6e e4       	ldi	r22, 0x4E	; 78
+      de:	70 e0       	ldi	r23, 0x00	; 0
+      e0:	4c e2       	ldi	r20, 0x2C	; 44
+      e2:	51 e0       	ldi	r21, 0x01	; 1
+      e4:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+ 	SetServoPosition(12,945,300);
+      e8:	8c e0       	ldi	r24, 0x0C	; 12
+      ea:	61 eb       	ldi	r22, 0xB1	; 177
+      ec:	73 e0       	ldi	r23, 0x03	; 3
+      ee:	4c e2       	ldi	r20, 0x2C	; 44
+      f0:	51 e0       	ldi	r21, 0x01	; 1
+      f2:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+      f6:	88 e5       	ldi	r24, 0x58	; 88
+      f8:	9b e1       	ldi	r25, 0x1B	; 27
+    milliseconds can be achieved.
+ */
+void
+_delay_loop_2(uint16_t __count)
+{
+	__asm__ volatile (
+      fa:	20 e9       	ldi	r18, 0x90	; 144
+      fc:	31 e0       	ldi	r19, 0x01	; 1
+      fe:	f9 01       	movw	r30, r18
+     100:	31 97       	sbiw	r30, 0x01	; 1
+     102:	f1 f7       	brne	.-4      	; 0x100 <zuo+0x42>
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     104:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     106:	d9 f7       	brne	.-10     	; 0xfe <zuo+0x40>
+	_delay_ms(700);
+
+}
+     108:	08 95       	ret
+
+0000010a <baoqiu1>:
+
+	}
+void  baoqiu1()    
+     {  
+	
+	    SetServoPosition(3,679,300);
+     10a:	83 e0       	ldi	r24, 0x03	; 3
+     10c:	67 ea       	ldi	r22, 0xA7	; 167
+     10e:	72 e0       	ldi	r23, 0x02	; 2
+     110:	4c e2       	ldi	r20, 0x2C	; 44
+     112:	51 e0       	ldi	r21, 0x01	; 1
+     114:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(4,574,300);
+     118:	84 e0       	ldi	r24, 0x04	; 4
+     11a:	6e e3       	ldi	r22, 0x3E	; 62
+     11c:	72 e0       	ldi	r23, 0x02	; 2
+     11e:	4c e2       	ldi	r20, 0x2C	; 44
+     120:	51 e0       	ldi	r21, 0x01	; 1
+     122:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     126:	80 e2       	ldi	r24, 0x20	; 32
+     128:	9e e4       	ldi	r25, 0x4E	; 78
+     12a:	20 e9       	ldi	r18, 0x90	; 144
+     12c:	31 e0       	ldi	r19, 0x01	; 1
+     12e:	f9 01       	movw	r30, r18
+     130:	31 97       	sbiw	r30, 0x01	; 1
+     132:	f1 f7       	brne	.-4      	; 0x130 <baoqiu1+0x26>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     134:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     136:	d9 f7       	brne	.-10     	; 0x12e <baoqiu1+0x24>
+		 _delay_ms(2000); 
+        
+		 SetServoPosition(1,330,300);
+     138:	81 e0       	ldi	r24, 0x01	; 1
+     13a:	6a e4       	ldi	r22, 0x4A	; 74
+     13c:	71 e0       	ldi	r23, 0x01	; 1
+     13e:	4c e2       	ldi	r20, 0x2C	; 44
+     140:	51 e0       	ldi	r21, 0x01	; 1
+     142:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		 SetServoPosition(2,671,300);
+     146:	82 e0       	ldi	r24, 0x02	; 2
+     148:	6f e9       	ldi	r22, 0x9F	; 159
+     14a:	72 e0       	ldi	r23, 0x02	; 2
+     14c:	4c e2       	ldi	r20, 0x2C	; 44
+     14e:	51 e0       	ldi	r21, 0x01	; 1
+     150:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		 SetServoPosition(3,789,300);
+     154:	83 e0       	ldi	r24, 0x03	; 3
+     156:	65 e1       	ldi	r22, 0x15	; 21
+     158:	73 e0       	ldi	r23, 0x03	; 3
+     15a:	4c e2       	ldi	r20, 0x2C	; 44
+     15c:	51 e0       	ldi	r21, 0x01	; 1
+     15e:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		 SetServoPosition(4,511,300);
+     162:	84 e0       	ldi	r24, 0x04	; 4
+     164:	6f ef       	ldi	r22, 0xFF	; 255
+     166:	71 e0       	ldi	r23, 0x01	; 1
+     168:	4c e2       	ldi	r20, 0x2C	; 44
+     16a:	51 e0       	ldi	r21, 0x01	; 1
+     16c:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	   	 SetServoPosition(5,556,300);
+     170:	85 e0       	ldi	r24, 0x05	; 5
+     172:	6c e2       	ldi	r22, 0x2C	; 44
+     174:	72 e0       	ldi	r23, 0x02	; 2
+     176:	4c e2       	ldi	r20, 0x2C	; 44
+     178:	51 e0       	ldi	r21, 0x01	; 1
+     17a:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	   	 SetServoPosition(6,610,300);
+     17e:	86 e0       	ldi	r24, 0x06	; 6
+     180:	62 e6       	ldi	r22, 0x62	; 98
+     182:	72 e0       	ldi	r23, 0x02	; 2
+     184:	4c e2       	ldi	r20, 0x2C	; 44
+     186:	51 e0       	ldi	r21, 0x01	; 1
+     188:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     18c:	80 e2       	ldi	r24, 0x20	; 32
+     18e:	9e e4       	ldi	r25, 0x4E	; 78
+     190:	20 e9       	ldi	r18, 0x90	; 144
+     192:	31 e0       	ldi	r19, 0x01	; 1
+     194:	f9 01       	movw	r30, r18
+     196:	31 97       	sbiw	r30, 0x01	; 1
+     198:	f1 f7       	brne	.-4      	; 0x196 <baoqiu1+0x8c>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     19a:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     19c:	d9 f7       	brne	.-10     	; 0x194 <baoqiu1+0x8a>
+	      _delay_ms(2000); 
+
+         SetServoPosition(1,324,300);
+     19e:	81 e0       	ldi	r24, 0x01	; 1
+     1a0:	64 e4       	ldi	r22, 0x44	; 68
+     1a2:	71 e0       	ldi	r23, 0x01	; 1
+     1a4:	4c e2       	ldi	r20, 0x2C	; 44
+     1a6:	51 e0       	ldi	r21, 0x01	; 1
+     1a8:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		 SetServoPosition(2,612,300);
+     1ac:	82 e0       	ldi	r24, 0x02	; 2
+     1ae:	64 e6       	ldi	r22, 0x64	; 100
+     1b0:	72 e0       	ldi	r23, 0x02	; 2
+     1b2:	4c e2       	ldi	r20, 0x2C	; 44
+     1b4:	51 e0       	ldi	r21, 0x01	; 1
+     1b6:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		 SetServoPosition(3,905,300);
+     1ba:	83 e0       	ldi	r24, 0x03	; 3
+     1bc:	69 e8       	ldi	r22, 0x89	; 137
+     1be:	73 e0       	ldi	r23, 0x03	; 3
+     1c0:	4c e2       	ldi	r20, 0x2C	; 44
+     1c2:	51 e0       	ldi	r21, 0x01	; 1
+     1c4:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		 SetServoPosition(4,422,300);
+     1c8:	84 e0       	ldi	r24, 0x04	; 4
+     1ca:	66 ea       	ldi	r22, 0xA6	; 166
+     1cc:	71 e0       	ldi	r23, 0x01	; 1
+     1ce:	4c e2       	ldi	r20, 0x2C	; 44
+     1d0:	51 e0       	ldi	r21, 0x01	; 1
+     1d2:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	   	 SetServoPosition(5,609,300);
+     1d6:	85 e0       	ldi	r24, 0x05	; 5
+     1d8:	61 e6       	ldi	r22, 0x61	; 97
+     1da:	72 e0       	ldi	r23, 0x02	; 2
+     1dc:	4c e2       	ldi	r20, 0x2C	; 44
+     1de:	51 e0       	ldi	r21, 0x01	; 1
+     1e0:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	   	 SetServoPosition(6,594,300);
+     1e4:	86 e0       	ldi	r24, 0x06	; 6
+     1e6:	62 e5       	ldi	r22, 0x52	; 82
+     1e8:	72 e0       	ldi	r23, 0x02	; 2
+     1ea:	4c e2       	ldi	r20, 0x2C	; 44
+     1ec:	51 e0       	ldi	r21, 0x01	; 1
+     1ee:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     1f2:	88 e9       	ldi	r24, 0x98	; 152
+     1f4:	9a e3       	ldi	r25, 0x3A	; 58
+     1f6:	20 e9       	ldi	r18, 0x90	; 144
+     1f8:	31 e0       	ldi	r19, 0x01	; 1
+     1fa:	f9 01       	movw	r30, r18
+     1fc:	31 97       	sbiw	r30, 0x01	; 1
+     1fe:	f1 f7       	brne	.-4      	; 0x1fc <baoqiu1+0xf2>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     200:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     202:	d9 f7       	brne	.-10     	; 0x1fa <baoqiu1+0xf0>
+	     _delay_ms(1500);
+
+          SetServoPosition(7,478,300);
+     204:	87 e0       	ldi	r24, 0x07	; 7
+     206:	6e ed       	ldi	r22, 0xDE	; 222
+     208:	71 e0       	ldi	r23, 0x01	; 1
+     20a:	4c e2       	ldi	r20, 0x2C	; 44
+     20c:	51 e0       	ldi	r21, 0x01	; 1
+     20e:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	   	 SetServoPosition(9,523,300);
+     212:	89 e0       	ldi	r24, 0x09	; 9
+     214:	6b e0       	ldi	r22, 0x0B	; 11
+     216:	72 e0       	ldi	r23, 0x02	; 2
+     218:	4c e2       	ldi	r20, 0x2C	; 44
+     21a:	51 e0       	ldi	r21, 0x01	; 1
+     21c:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     220:	80 e1       	ldi	r24, 0x10	; 16
+     222:	97 e2       	ldi	r25, 0x27	; 39
+     224:	20 e9       	ldi	r18, 0x90	; 144
+     226:	31 e0       	ldi	r19, 0x01	; 1
+     228:	f9 01       	movw	r30, r18
+     22a:	31 97       	sbiw	r30, 0x01	; 1
+     22c:	f1 f7       	brne	.-4      	; 0x22a <baoqiu1+0x120>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     22e:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     230:	d9 f7       	brne	.-10     	; 0x228 <baoqiu1+0x11e>
+		 _delay_ms(1000);
+	     
+
+
+
+       }
+     232:	08 95       	ret
+
+00000234 <dunjiinit>:
+		  SetServoPosition(6,656,300);
+          _delay_ms(1500);
+   
+   }
+   void dunjiinit()
+   {     SetServoPosition(7,445,300);
+     234:	87 e0       	ldi	r24, 0x07	; 7
+     236:	6d eb       	ldi	r22, 0xBD	; 189
+     238:	71 e0       	ldi	r23, 0x01	; 1
+     23a:	4c e2       	ldi	r20, 0x2C	; 44
+     23c:	51 e0       	ldi	r21, 0x01	; 1
+     23e:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+          SetServoPosition(8,359,300);
+     242:	88 e0       	ldi	r24, 0x08	; 8
+     244:	67 e6       	ldi	r22, 0x67	; 103
+     246:	71 e0       	ldi	r23, 0x01	; 1
+     248:	4c e2       	ldi	r20, 0x2C	; 44
+     24a:	51 e0       	ldi	r21, 0x01	; 1
+     24c:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	      SetServoPosition(9,556,300);
+     250:	89 e0       	ldi	r24, 0x09	; 9
+     252:	6c e2       	ldi	r22, 0x2C	; 44
+     254:	72 e0       	ldi	r23, 0x02	; 2
+     256:	4c e2       	ldi	r20, 0x2C	; 44
+     258:	51 e0       	ldi	r21, 0x01	; 1
+     25a:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	      SetServoPosition(10,640,300);
+     25e:	8a e0       	ldi	r24, 0x0A	; 10
+     260:	60 e8       	ldi	r22, 0x80	; 128
+     262:	72 e0       	ldi	r23, 0x02	; 2
+     264:	4c e2       	ldi	r20, 0x2C	; 44
+     266:	51 e0       	ldi	r21, 0x01	; 1
+     268:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     26c:	88 e8       	ldi	r24, 0x88	; 136
+     26e:	93 e1       	ldi	r25, 0x13	; 19
+     270:	20 e9       	ldi	r18, 0x90	; 144
+     272:	31 e0       	ldi	r19, 0x01	; 1
+     274:	f9 01       	movw	r30, r18
+     276:	31 97       	sbiw	r30, 0x01	; 1
+     278:	f1 f7       	brne	.-4      	; 0x276 <dunjiinit+0x42>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     27a:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     27c:	d9 f7       	brne	.-10     	; 0x274 <dunjiinit+0x40>
+		 _delay_ms(500);
+	
+   }
+     27e:	08 95       	ret
+
+00000280 <dun>:
+	 }
+
+ void  dun()
+   {
+   
+	      SetServoPosition(1,305,300);
+     280:	81 e0       	ldi	r24, 0x01	; 1
+     282:	61 e3       	ldi	r22, 0x31	; 49
+     284:	71 e0       	ldi	r23, 0x01	; 1
+     286:	4c e2       	ldi	r20, 0x2C	; 44
+     288:	51 e0       	ldi	r21, 0x01	; 1
+     28a:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+          SetServoPosition(2,641,300);
+     28e:	82 e0       	ldi	r24, 0x02	; 2
+     290:	61 e8       	ldi	r22, 0x81	; 129
+     292:	72 e0       	ldi	r23, 0x02	; 2
+     294:	4c e2       	ldi	r20, 0x2C	; 44
+     296:	51 e0       	ldi	r21, 0x01	; 1
+     298:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		  SetServoPosition(3,307,300);
+     29c:	83 e0       	ldi	r24, 0x03	; 3
+     29e:	63 e3       	ldi	r22, 0x33	; 51
+     2a0:	71 e0       	ldi	r23, 0x01	; 1
+     2a2:	4c e2       	ldi	r20, 0x2C	; 44
+     2a4:	51 e0       	ldi	r21, 0x01	; 1
+     2a6:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		  SetServoPosition(4,1024,300);
+     2aa:	84 e0       	ldi	r24, 0x04	; 4
+     2ac:	60 e0       	ldi	r22, 0x00	; 0
+     2ae:	74 e0       	ldi	r23, 0x04	; 4
+     2b0:	4c e2       	ldi	r20, 0x2C	; 44
+     2b2:	51 e0       	ldi	r21, 0x01	; 1
+     2b4:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		  SetServoPosition(5,579,300);
+     2b8:	85 e0       	ldi	r24, 0x05	; 5
+     2ba:	63 e4       	ldi	r22, 0x43	; 67
+     2bc:	72 e0       	ldi	r23, 0x02	; 2
+     2be:	4c e2       	ldi	r20, 0x2C	; 44
+     2c0:	51 e0       	ldi	r21, 0x01	; 1
+     2c2:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		  SetServoPosition(6,656,300);
+     2c6:	86 e0       	ldi	r24, 0x06	; 6
+     2c8:	60 e9       	ldi	r22, 0x90	; 144
+     2ca:	72 e0       	ldi	r23, 0x02	; 2
+     2cc:	4c e2       	ldi	r20, 0x2C	; 44
+     2ce:	51 e0       	ldi	r21, 0x01	; 1
+     2d0:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     2d4:	88 e9       	ldi	r24, 0x98	; 152
+     2d6:	9a e3       	ldi	r25, 0x3A	; 58
+     2d8:	20 e9       	ldi	r18, 0x90	; 144
+     2da:	31 e0       	ldi	r19, 0x01	; 1
+     2dc:	f9 01       	movw	r30, r18
+     2de:	31 97       	sbiw	r30, 0x01	; 1
+     2e0:	f1 f7       	brne	.-4      	; 0x2de <dun+0x5e>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     2e2:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     2e4:	d9 f7       	brne	.-10     	; 0x2dc <dun+0x5c>
+          _delay_ms(1500);
+   
+   }
+     2e6:	08 95       	ret
+
+000002e8 <leftrightping>:
+    	 SetServoPosition(5,243,350);
+		 SetServoPosition(6,505,50);
+	 }
+ void  leftrightping()    //左右手平举
+     {
+         SetServoPosition(1,473,50);
+     2e8:	81 e0       	ldi	r24, 0x01	; 1
+     2ea:	69 ed       	ldi	r22, 0xD9	; 217
+     2ec:	71 e0       	ldi	r23, 0x01	; 1
+     2ee:	42 e3       	ldi	r20, 0x32	; 50
+     2f0:	50 e0       	ldi	r21, 0x00	; 0
+     2f2:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		 SetServoPosition(2,971,350);
+     2f6:	82 e0       	ldi	r24, 0x02	; 2
+     2f8:	6b ec       	ldi	r22, 0xCB	; 203
+     2fa:	73 e0       	ldi	r23, 0x03	; 3
+     2fc:	4e e5       	ldi	r20, 0x5E	; 94
+     2fe:	51 e0       	ldi	r21, 0x01	; 1
+     300:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		 SetServoPosition(4,818,300);
+     304:	84 e0       	ldi	r24, 0x04	; 4
+     306:	62 e3       	ldi	r22, 0x32	; 50
+     308:	73 e0       	ldi	r23, 0x03	; 3
+     30a:	4c e2       	ldi	r20, 0x2C	; 44
+     30c:	51 e0       	ldi	r21, 0x01	; 1
+     30e:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+    	 SetServoPosition(5,243,350);
+     312:	85 e0       	ldi	r24, 0x05	; 5
+     314:	63 ef       	ldi	r22, 0xF3	; 243
+     316:	70 e0       	ldi	r23, 0x00	; 0
+     318:	4e e5       	ldi	r20, 0x5E	; 94
+     31a:	51 e0       	ldi	r21, 0x01	; 1
+     31c:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		 SetServoPosition(6,505,50);
+     320:	86 e0       	ldi	r24, 0x06	; 6
+     322:	69 ef       	ldi	r22, 0xF9	; 249
+     324:	71 e0       	ldi	r23, 0x01	; 1
+     326:	42 e3       	ldi	r20, 0x32	; 50
+     328:	50 e0       	ldi	r21, 0x00	; 0
+     32a:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	 }
+     32e:	08 95       	ret
+
+00000330 <leftping>:
+		 SetServoPosition(3,463,300);
+		 
+	 }
+ void  leftping()    //左手平举
+     {
+	     SetServoPosition(4,818,300);
+     330:	84 e0       	ldi	r24, 0x04	; 4
+     332:	62 e3       	ldi	r22, 0x32	; 50
+     334:	73 e0       	ldi	r23, 0x03	; 3
+     336:	4c e2       	ldi	r20, 0x2C	; 44
+     338:	51 e0       	ldi	r21, 0x01	; 1
+     33a:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+    	 SetServoPosition(5,243,350);
+     33e:	85 e0       	ldi	r24, 0x05	; 5
+     340:	63 ef       	ldi	r22, 0xF3	; 243
+     342:	70 e0       	ldi	r23, 0x00	; 0
+     344:	4e e5       	ldi	r20, 0x5E	; 94
+     346:	51 e0       	ldi	r21, 0x01	; 1
+     348:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		 SetServoPosition(6,505,50);
+     34c:	86 e0       	ldi	r24, 0x06	; 6
+     34e:	69 ef       	ldi	r22, 0xF9	; 249
+     350:	71 e0       	ldi	r23, 0x01	; 1
+     352:	42 e3       	ldi	r20, 0x32	; 50
+     354:	50 e0       	ldi	r21, 0x00	; 0
+     356:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	 }
+     35a:	08 95       	ret
+
+0000035c <rightping>:
+		  SetServoPosition(6,667,300);
+         _delay_ms(1500);
+	  } 
+void  rightping()    //右手平举
+     {
+         SetServoPosition(1,473,50);
+     35c:	81 e0       	ldi	r24, 0x01	; 1
+     35e:	69 ed       	ldi	r22, 0xD9	; 217
+     360:	71 e0       	ldi	r23, 0x01	; 1
+     362:	42 e3       	ldi	r20, 0x32	; 50
+     364:	50 e0       	ldi	r21, 0x00	; 0
+     366:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		 SetServoPosition(2,971,350);
+     36a:	82 e0       	ldi	r24, 0x02	; 2
+     36c:	6b ec       	ldi	r22, 0xCB	; 203
+     36e:	73 e0       	ldi	r23, 0x03	; 3
+     370:	4e e5       	ldi	r20, 0x5E	; 94
+     372:	51 e0       	ldi	r21, 0x01	; 1
+     374:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		 SetServoPosition(3,463,300);
+     378:	83 e0       	ldi	r24, 0x03	; 3
+     37a:	6f ec       	ldi	r22, 0xCF	; 207
+     37c:	71 e0       	ldi	r23, 0x01	; 1
+     37e:	4c e2       	ldi	r20, 0x2C	; 44
+     380:	51 e0       	ldi	r21, 0x01	; 1
+     382:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		 
+	 }
+     386:	08 95       	ret
+
+00000388 <leftrightinit>:
+		  SetServoPosition(5,573,300);
+		  SetServoPosition(6,505,300);
+		
+	  }
+void   leftrightinit()                      //左右手前伸  平常    
+      {   SetServoPosition(7,445,300);
+     388:	87 e0       	ldi	r24, 0x07	; 7
+     38a:	6d eb       	ldi	r22, 0xBD	; 189
+     38c:	71 e0       	ldi	r23, 0x01	; 1
+     38e:	4c e2       	ldi	r20, 0x2C	; 44
+     390:	51 e0       	ldi	r21, 0x01	; 1
+     392:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+          SetServoPosition(8,359,300);
+     396:	88 e0       	ldi	r24, 0x08	; 8
+     398:	67 e6       	ldi	r22, 0x67	; 103
+     39a:	71 e0       	ldi	r23, 0x01	; 1
+     39c:	4c e2       	ldi	r20, 0x2C	; 44
+     39e:	51 e0       	ldi	r21, 0x01	; 1
+     3a0:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	      SetServoPosition(9,556,300);
+     3a4:	89 e0       	ldi	r24, 0x09	; 9
+     3a6:	6c e2       	ldi	r22, 0x2C	; 44
+     3a8:	72 e0       	ldi	r23, 0x02	; 2
+     3aa:	4c e2       	ldi	r20, 0x2C	; 44
+     3ac:	51 e0       	ldi	r21, 0x01	; 1
+     3ae:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	      SetServoPosition(10,640,300);
+     3b2:	8a e0       	ldi	r24, 0x0A	; 10
+     3b4:	60 e8       	ldi	r22, 0x80	; 128
+     3b6:	72 e0       	ldi	r23, 0x02	; 2
+     3b8:	4c e2       	ldi	r20, 0x2C	; 44
+     3ba:	51 e0       	ldi	r21, 0x01	; 1
+     3bc:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     3c0:	88 ef       	ldi	r24, 0xF8	; 248
+     3c2:	9a e2       	ldi	r25, 0x2A	; 42
+     3c4:	20 e9       	ldi	r18, 0x90	; 144
+     3c6:	31 e0       	ldi	r19, 0x01	; 1
+     3c8:	f9 01       	movw	r30, r18
+     3ca:	31 97       	sbiw	r30, 0x01	; 1
+     3cc:	f1 f7       	brne	.-4      	; 0x3ca <leftrightinit+0x42>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     3ce:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     3d0:	d9 f7       	brne	.-10     	; 0x3c8 <leftrightinit+0x40>
+		  _delay_ms(1100);    
+          SetServoPosition(1,273,300);
+     3d2:	81 e0       	ldi	r24, 0x01	; 1
+     3d4:	61 e1       	ldi	r22, 0x11	; 17
+     3d6:	71 e0       	ldi	r23, 0x01	; 1
+     3d8:	4c e2       	ldi	r20, 0x2C	; 44
+     3da:	51 e0       	ldi	r21, 0x01	; 1
+     3dc:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+          SetServoPosition(2,614,300);
+     3e0:	82 e0       	ldi	r24, 0x02	; 2
+     3e2:	66 e6       	ldi	r22, 0x66	; 102
+     3e4:	72 e0       	ldi	r23, 0x02	; 2
+     3e6:	4c e2       	ldi	r20, 0x2C	; 44
+     3e8:	51 e0       	ldi	r21, 0x01	; 1
+     3ea:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		  SetServoPosition(3,668,300);
+     3ee:	83 e0       	ldi	r24, 0x03	; 3
+     3f0:	6c e9       	ldi	r22, 0x9C	; 156
+     3f2:	72 e0       	ldi	r23, 0x02	; 2
+     3f4:	4c e2       	ldi	r20, 0x2C	; 44
+     3f6:	51 e0       	ldi	r21, 0x01	; 1
+     3f8:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		  SetServoPosition(4,697,300);
+     3fc:	84 e0       	ldi	r24, 0x04	; 4
+     3fe:	69 eb       	ldi	r22, 0xB9	; 185
+     400:	72 e0       	ldi	r23, 0x02	; 2
+     402:	4c e2       	ldi	r20, 0x2C	; 44
+     404:	51 e0       	ldi	r21, 0x01	; 1
+     406:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		  SetServoPosition(5,601,300);
+     40a:	85 e0       	ldi	r24, 0x05	; 5
+     40c:	69 e5       	ldi	r22, 0x59	; 89
+     40e:	72 e0       	ldi	r23, 0x02	; 2
+     410:	4c e2       	ldi	r20, 0x2C	; 44
+     412:	51 e0       	ldi	r21, 0x01	; 1
+     414:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		  SetServoPosition(6,667,300);
+     418:	86 e0       	ldi	r24, 0x06	; 6
+     41a:	6b e9       	ldi	r22, 0x9B	; 155
+     41c:	72 e0       	ldi	r23, 0x02	; 2
+     41e:	4c e2       	ldi	r20, 0x2C	; 44
+     420:	51 e0       	ldi	r21, 0x01	; 1
+     422:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     426:	88 e9       	ldi	r24, 0x98	; 152
+     428:	9a e3       	ldi	r25, 0x3A	; 58
+     42a:	20 e9       	ldi	r18, 0x90	; 144
+     42c:	31 e0       	ldi	r19, 0x01	; 1
+     42e:	f9 01       	movw	r30, r18
+     430:	31 97       	sbiw	r30, 0x01	; 1
+     432:	f1 f7       	brne	.-4      	; 0x430 <leftrightinit+0xa8>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     434:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     436:	d9 f7       	brne	.-10     	; 0x42e <leftrightinit+0xa6>
+         _delay_ms(1500);
+	  } 
+     438:	08 95       	ret
+
+0000043a <leftinit>:
+		  SetServoPosition(3,794,300);
+		 
+	  }
+void   leftinit()                      //左手前伸  平常   
+      {
+	  	  SetServoPosition(4,505,300);
+     43a:	84 e0       	ldi	r24, 0x04	; 4
+     43c:	69 ef       	ldi	r22, 0xF9	; 249
+     43e:	71 e0       	ldi	r23, 0x01	; 1
+     440:	4c e2       	ldi	r20, 0x2C	; 44
+     442:	51 e0       	ldi	r21, 0x01	; 1
+     444:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		  SetServoPosition(5,573,300);
+     448:	85 e0       	ldi	r24, 0x05	; 5
+     44a:	6d e3       	ldi	r22, 0x3D	; 61
+     44c:	72 e0       	ldi	r23, 0x02	; 2
+     44e:	4c e2       	ldi	r20, 0x2C	; 44
+     450:	51 e0       	ldi	r21, 0x01	; 1
+     452:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		  SetServoPosition(6,505,300);
+     456:	86 e0       	ldi	r24, 0x06	; 6
+     458:	69 ef       	ldi	r22, 0xF9	; 249
+     45a:	71 e0       	ldi	r23, 0x01	; 1
+     45c:	4c e2       	ldi	r20, 0x2C	; 44
+     45e:	51 e0       	ldi	r21, 0x01	; 1
+     460:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		
+	  }
+     464:	08 95       	ret
+
+00000466 <rightinit>:
+}
+
+
+void   rightinit()                      //右手前伸  平常     
+      { 
+	      SetServoPosition(1,473,300);
+     466:	81 e0       	ldi	r24, 0x01	; 1
+     468:	69 ed       	ldi	r22, 0xD9	; 217
+     46a:	71 e0       	ldi	r23, 0x01	; 1
+     46c:	4c e2       	ldi	r20, 0x2C	; 44
+     46e:	51 e0       	ldi	r21, 0x01	; 1
+     470:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+          SetServoPosition(2,664,300);
+     474:	82 e0       	ldi	r24, 0x02	; 2
+     476:	68 e9       	ldi	r22, 0x98	; 152
+     478:	72 e0       	ldi	r23, 0x02	; 2
+     47a:	4c e2       	ldi	r20, 0x2C	; 44
+     47c:	51 e0       	ldi	r21, 0x01	; 1
+     47e:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		  SetServoPosition(3,794,300);
+     482:	83 e0       	ldi	r24, 0x03	; 3
+     484:	6a e1       	ldi	r22, 0x1A	; 26
+     486:	73 e0       	ldi	r23, 0x03	; 3
+     488:	4c e2       	ldi	r20, 0x2C	; 44
+     48a:	51 e0       	ldi	r21, 0x01	; 1
+     48c:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		 
+	  }
+     490:	08 95       	ret
+
+00000492 <qiaoluo>:
+	SetServoVelocity(12,v2);
+	
+}
+void qiaoluo(void)
+{
+         SetServoPosition(1,298,300);
+     492:	81 e0       	ldi	r24, 0x01	; 1
+     494:	6a e2       	ldi	r22, 0x2A	; 42
+     496:	71 e0       	ldi	r23, 0x01	; 1
+     498:	4c e2       	ldi	r20, 0x2C	; 44
+     49a:	51 e0       	ldi	r21, 0x01	; 1
+     49c:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+         SetServoPosition(2,631,300);
+     4a0:	82 e0       	ldi	r24, 0x02	; 2
+     4a2:	67 e7       	ldi	r22, 0x77	; 119
+     4a4:	72 e0       	ldi	r23, 0x02	; 2
+     4a6:	4c e2       	ldi	r20, 0x2C	; 44
+     4a8:	51 e0       	ldi	r21, 0x01	; 1
+     4aa:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		 SetServoPosition(3,778,300);
+     4ae:	83 e0       	ldi	r24, 0x03	; 3
+     4b0:	6a e0       	ldi	r22, 0x0A	; 10
+     4b2:	73 e0       	ldi	r23, 0x03	; 3
+     4b4:	4c e2       	ldi	r20, 0x2C	; 44
+     4b6:	51 e0       	ldi	r21, 0x01	; 1
+     4b8:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     4bc:	80 e1       	ldi	r24, 0x10	; 16
+     4be:	97 e2       	ldi	r25, 0x27	; 39
+     4c0:	20 e9       	ldi	r18, 0x90	; 144
+     4c2:	31 e0       	ldi	r19, 0x01	; 1
+     4c4:	f9 01       	movw	r30, r18
+     4c6:	31 97       	sbiw	r30, 0x01	; 1
+     4c8:	f1 f7       	brne	.-4      	; 0x4c6 <qiaoluo+0x34>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     4ca:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     4cc:	d9 f7       	brne	.-10     	; 0x4c4 <qiaoluo+0x32>
+		  _delay_ms(1000);
+          SetServoPosition(1,467,300);
+     4ce:	81 e0       	ldi	r24, 0x01	; 1
+     4d0:	63 ed       	ldi	r22, 0xD3	; 211
+     4d2:	71 e0       	ldi	r23, 0x01	; 1
+     4d4:	4c e2       	ldi	r20, 0x2C	; 44
+     4d6:	51 e0       	ldi	r21, 0x01	; 1
+     4d8:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+          SetServoPosition(2,806,300);
+     4dc:	82 e0       	ldi	r24, 0x02	; 2
+     4de:	66 e2       	ldi	r22, 0x26	; 38
+     4e0:	73 e0       	ldi	r23, 0x03	; 3
+     4e2:	4c e2       	ldi	r20, 0x2C	; 44
+     4e4:	51 e0       	ldi	r21, 0x01	; 1
+     4e6:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		  SetServoPosition(3,770,300);
+     4ea:	83 e0       	ldi	r24, 0x03	; 3
+     4ec:	62 e0       	ldi	r22, 0x02	; 2
+     4ee:	73 e0       	ldi	r23, 0x03	; 3
+     4f0:	4c e2       	ldi	r20, 0x2C	; 44
+     4f2:	51 e0       	ldi	r21, 0x01	; 1
+     4f4:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		
+}
+     4f8:	08 95       	ret
+
+000004fa <wushu>:
+
+
+
+       }
+wushu()
+{
+     4fa:	ef 92       	push	r14
+     4fc:	ff 92       	push	r15
+     4fe:	0f 93       	push	r16
+     500:	1f 93       	push	r17
+Servo_all(745,1020,502,854,337,671);
+     502:	89 ee       	ldi	r24, 0xE9	; 233
+     504:	92 e0       	ldi	r25, 0x02	; 2
+     506:	6c ef       	ldi	r22, 0xFC	; 252
+     508:	73 e0       	ldi	r23, 0x03	; 3
+     50a:	46 ef       	ldi	r20, 0xF6	; 246
+     50c:	51 e0       	ldi	r21, 0x01	; 1
+     50e:	26 e5       	ldi	r18, 0x56	; 86
+     510:	33 e0       	ldi	r19, 0x03	; 3
+     512:	01 e5       	ldi	r16, 0x51	; 81
+     514:	11 e0       	ldi	r17, 0x01	; 1
+     516:	ff e9       	ldi	r31, 0x9F	; 159
+     518:	ef 2e       	mov	r14, r31
+     51a:	f2 e0       	ldi	r31, 0x02	; 2
+     51c:	ff 2e       	mov	r15, r31
+     51e:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+ Servo_all(309,853,517,792,135,251);
+     522:	85 e3       	ldi	r24, 0x35	; 53
+     524:	91 e0       	ldi	r25, 0x01	; 1
+     526:	65 e5       	ldi	r22, 0x55	; 85
+     528:	73 e0       	ldi	r23, 0x03	; 3
+     52a:	45 e0       	ldi	r20, 0x05	; 5
+     52c:	52 e0       	ldi	r21, 0x02	; 2
+     52e:	28 e1       	ldi	r18, 0x18	; 24
+     530:	33 e0       	ldi	r19, 0x03	; 3
+     532:	07 e8       	ldi	r16, 0x87	; 135
+     534:	10 e0       	ldi	r17, 0x00	; 0
+     536:	eb ef       	ldi	r30, 0xFB	; 251
+     538:	ee 2e       	mov	r14, r30
+     53a:	f1 2c       	mov	r15, r1
+     53c:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+ Servo_all(473,963,516,791,217,466);
+     540:	89 ed       	ldi	r24, 0xD9	; 217
+     542:	91 e0       	ldi	r25, 0x01	; 1
+     544:	63 ec       	ldi	r22, 0xC3	; 195
+     546:	73 e0       	ldi	r23, 0x03	; 3
+     548:	44 e0       	ldi	r20, 0x04	; 4
+     54a:	52 e0       	ldi	r21, 0x02	; 2
+     54c:	27 e1       	ldi	r18, 0x17	; 23
+     54e:	33 e0       	ldi	r19, 0x03	; 3
+     550:	09 ed       	ldi	r16, 0xD9	; 217
+     552:	10 e0       	ldi	r17, 0x00	; 0
+     554:	b2 ed       	ldi	r27, 0xD2	; 210
+     556:	eb 2e       	mov	r14, r27
+     558:	b1 e0       	ldi	r27, 0x01	; 1
+     55a:	fb 2e       	mov	r15, r27
+     55c:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+ Servo_all(186,656,815,480,257,462);
+     560:	8a eb       	ldi	r24, 0xBA	; 186
+     562:	90 e0       	ldi	r25, 0x00	; 0
+     564:	60 e9       	ldi	r22, 0x90	; 144
+     566:	72 e0       	ldi	r23, 0x02	; 2
+     568:	4f e2       	ldi	r20, 0x2F	; 47
+     56a:	53 e0       	ldi	r21, 0x03	; 3
+     56c:	20 ee       	ldi	r18, 0xE0	; 224
+     56e:	31 e0       	ldi	r19, 0x01	; 1
+     570:	01 e0       	ldi	r16, 0x01	; 1
+     572:	11 e0       	ldi	r17, 0x01	; 1
+     574:	ae ec       	ldi	r26, 0xCE	; 206
+     576:	ea 2e       	mov	r14, r26
+     578:	a1 e0       	ldi	r26, 0x01	; 1
+     57a:	fa 2e       	mov	r15, r26
+     57c:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+ Servo_all(434,566,691,632,457,463);//5
+     580:	82 eb       	ldi	r24, 0xB2	; 178
+     582:	91 e0       	ldi	r25, 0x01	; 1
+     584:	66 e3       	ldi	r22, 0x36	; 54
+     586:	72 e0       	ldi	r23, 0x02	; 2
+     588:	43 eb       	ldi	r20, 0xB3	; 179
+     58a:	52 e0       	ldi	r21, 0x02	; 2
+     58c:	28 e7       	ldi	r18, 0x78	; 120
+     58e:	32 e0       	ldi	r19, 0x02	; 2
+     590:	09 ec       	ldi	r16, 0xC9	; 201
+     592:	11 e0       	ldi	r17, 0x01	; 1
+     594:	ff ec       	ldi	r31, 0xCF	; 207
+     596:	ef 2e       	mov	r14, r31
+     598:	f1 e0       	ldi	r31, 0x01	; 1
+     59a:	ff 2e       	mov	r15, r31
+     59c:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+ Servo_all(469,804,703,603,670,461);
+     5a0:	85 ed       	ldi	r24, 0xD5	; 213
+     5a2:	91 e0       	ldi	r25, 0x01	; 1
+     5a4:	64 e2       	ldi	r22, 0x24	; 36
+     5a6:	73 e0       	ldi	r23, 0x03	; 3
+     5a8:	4f eb       	ldi	r20, 0xBF	; 191
+     5aa:	52 e0       	ldi	r21, 0x02	; 2
+     5ac:	2b e5       	ldi	r18, 0x5B	; 91
+     5ae:	32 e0       	ldi	r19, 0x02	; 2
+     5b0:	0e e9       	ldi	r16, 0x9E	; 158
+     5b2:	12 e0       	ldi	r17, 0x02	; 2
+     5b4:	ed ec       	ldi	r30, 0xCD	; 205
+     5b6:	ee 2e       	mov	r14, r30
+     5b8:	e1 e0       	ldi	r30, 0x01	; 1
+     5ba:	fe 2e       	mov	r15, r30
+     5bc:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+ Servo_all(470,957,510,482,555,787);
+     5c0:	86 ed       	ldi	r24, 0xD6	; 214
+     5c2:	91 e0       	ldi	r25, 0x01	; 1
+     5c4:	6d eb       	ldi	r22, 0xBD	; 189
+     5c6:	73 e0       	ldi	r23, 0x03	; 3
+     5c8:	4e ef       	ldi	r20, 0xFE	; 254
+     5ca:	51 e0       	ldi	r21, 0x01	; 1
+     5cc:	22 ee       	ldi	r18, 0xE2	; 226
+     5ce:	31 e0       	ldi	r19, 0x01	; 1
+     5d0:	0b e2       	ldi	r16, 0x2B	; 43
+     5d2:	12 e0       	ldi	r17, 0x02	; 2
+     5d4:	b3 e1       	ldi	r27, 0x13	; 19
+     5d6:	eb 2e       	mov	r14, r27
+     5d8:	b3 e0       	ldi	r27, 0x03	; 3
+     5da:	fb 2e       	mov	r15, r27
+     5dc:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+ Servo_all(470,794,676,624,648,515);
+     5e0:	86 ed       	ldi	r24, 0xD6	; 214
+     5e2:	91 e0       	ldi	r25, 0x01	; 1
+     5e4:	6a e1       	ldi	r22, 0x1A	; 26
+     5e6:	73 e0       	ldi	r23, 0x03	; 3
+     5e8:	44 ea       	ldi	r20, 0xA4	; 164
+     5ea:	52 e0       	ldi	r21, 0x02	; 2
+     5ec:	20 e7       	ldi	r18, 0x70	; 112
+     5ee:	32 e0       	ldi	r19, 0x02	; 2
+     5f0:	08 e8       	ldi	r16, 0x88	; 136
+     5f2:	12 e0       	ldi	r17, 0x02	; 2
+     5f4:	a3 e0       	ldi	r26, 0x03	; 3
+     5f6:	ea 2e       	mov	r14, r26
+     5f8:	a2 e0       	ldi	r26, 0x02	; 2
+     5fa:	fa 2e       	mov	r15, r26
+     5fc:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+ Servo_all(229,611,649,563,601,737);
+     600:	85 ee       	ldi	r24, 0xE5	; 229
+     602:	90 e0       	ldi	r25, 0x00	; 0
+     604:	63 e6       	ldi	r22, 0x63	; 99
+     606:	72 e0       	ldi	r23, 0x02	; 2
+     608:	49 e8       	ldi	r20, 0x89	; 137
+     60a:	52 e0       	ldi	r21, 0x02	; 2
+     60c:	23 e3       	ldi	r18, 0x33	; 51
+     60e:	32 e0       	ldi	r19, 0x02	; 2
+     610:	09 e5       	ldi	r16, 0x59	; 89
+     612:	12 e0       	ldi	r17, 0x02	; 2
+     614:	f1 ee       	ldi	r31, 0xE1	; 225
+     616:	ef 2e       	mov	r14, r31
+     618:	f2 e0       	ldi	r31, 0x02	; 2
+     61a:	ff 2e       	mov	r15, r31
+     61c:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+ Servo_all(462,559,697,638,407,487);
+     620:	8e ec       	ldi	r24, 0xCE	; 206
+     622:	91 e0       	ldi	r25, 0x01	; 1
+     624:	6f e2       	ldi	r22, 0x2F	; 47
+     626:	72 e0       	ldi	r23, 0x02	; 2
+     628:	49 eb       	ldi	r20, 0xB9	; 185
+     62a:	52 e0       	ldi	r21, 0x02	; 2
+     62c:	2e e7       	ldi	r18, 0x7E	; 126
+     62e:	32 e0       	ldi	r19, 0x02	; 2
+     630:	07 e9       	ldi	r16, 0x97	; 151
+     632:	11 e0       	ldi	r17, 0x01	; 1
+     634:	e7 ee       	ldi	r30, 0xE7	; 231
+     636:	ee 2e       	mov	r14, r30
+     638:	e1 e0       	ldi	r30, 0x01	; 1
+     63a:	fe 2e       	mov	r15, r30
+     63c:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+ Servo_all(462,680,673,531,562,488);
+     640:	8e ec       	ldi	r24, 0xCE	; 206
+     642:	91 e0       	ldi	r25, 0x01	; 1
+     644:	68 ea       	ldi	r22, 0xA8	; 168
+     646:	72 e0       	ldi	r23, 0x02	; 2
+     648:	41 ea       	ldi	r20, 0xA1	; 161
+     64a:	52 e0       	ldi	r21, 0x02	; 2
+     64c:	23 e1       	ldi	r18, 0x13	; 19
+     64e:	32 e0       	ldi	r19, 0x02	; 2
+     650:	02 e3       	ldi	r16, 0x32	; 50
+     652:	12 e0       	ldi	r17, 0x02	; 2
+     654:	b8 ee       	ldi	r27, 0xE8	; 232
+     656:	eb 2e       	mov	r14, r27
+     658:	b1 e0       	ldi	r27, 0x01	; 1
+     65a:	fb 2e       	mov	r15, r27
+     65c:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+ Servo_all(462,681,780,652,563,488);
+     660:	8e ec       	ldi	r24, 0xCE	; 206
+     662:	91 e0       	ldi	r25, 0x01	; 1
+     664:	69 ea       	ldi	r22, 0xA9	; 169
+     666:	72 e0       	ldi	r23, 0x02	; 2
+     668:	4c e0       	ldi	r20, 0x0C	; 12
+     66a:	53 e0       	ldi	r21, 0x03	; 3
+     66c:	2c e8       	ldi	r18, 0x8C	; 140
+     66e:	32 e0       	ldi	r19, 0x02	; 2
+     670:	03 e3       	ldi	r16, 0x33	; 51
+     672:	12 e0       	ldi	r17, 0x02	; 2
+     674:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+ Servo_all(222,638,755,659,567,759);
+     678:	8e ed       	ldi	r24, 0xDE	; 222
+     67a:	90 e0       	ldi	r25, 0x00	; 0
+     67c:	6e e7       	ldi	r22, 0x7E	; 126
+     67e:	72 e0       	ldi	r23, 0x02	; 2
+     680:	43 ef       	ldi	r20, 0xF3	; 243
+     682:	52 e0       	ldi	r21, 0x02	; 2
+     684:	23 e9       	ldi	r18, 0x93	; 147
+     686:	32 e0       	ldi	r19, 0x02	; 2
+     688:	07 e3       	ldi	r16, 0x37	; 55
+     68a:	12 e0       	ldi	r17, 0x02	; 2
+     68c:	a7 ef       	ldi	r26, 0xF7	; 247
+     68e:	ea 2e       	mov	r14, r26
+     690:	a2 e0       	ldi	r26, 0x02	; 2
+     692:	fa 2e       	mov	r15, r26
+     694:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+ Servo_all(358,990,510,800,210,614);
+     698:	86 e6       	ldi	r24, 0x66	; 102
+     69a:	91 e0       	ldi	r25, 0x01	; 1
+     69c:	6e ed       	ldi	r22, 0xDE	; 222
+     69e:	73 e0       	ldi	r23, 0x03	; 3
+     6a0:	4e ef       	ldi	r20, 0xFE	; 254
+     6a2:	51 e0       	ldi	r21, 0x01	; 1
+     6a4:	20 e2       	ldi	r18, 0x20	; 32
+     6a6:	33 e0       	ldi	r19, 0x03	; 3
+     6a8:	02 ed       	ldi	r16, 0xD2	; 210
+     6aa:	10 e0       	ldi	r17, 0x00	; 0
+     6ac:	f6 e6       	ldi	r31, 0x66	; 102
+     6ae:	ef 2e       	mov	r14, r31
+     6b0:	f2 e0       	ldi	r31, 0x02	; 2
+     6b2:	ff 2e       	mov	r15, r31
+     6b4:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+ Servo_all(205,640,791,478,556,477);
+     6b8:	8d ec       	ldi	r24, 0xCD	; 205
+     6ba:	90 e0       	ldi	r25, 0x00	; 0
+     6bc:	60 e8       	ldi	r22, 0x80	; 128
+     6be:	72 e0       	ldi	r23, 0x02	; 2
+     6c0:	47 e1       	ldi	r20, 0x17	; 23
+     6c2:	53 e0       	ldi	r21, 0x03	; 3
+     6c4:	2e ed       	ldi	r18, 0xDE	; 222
+     6c6:	31 e0       	ldi	r19, 0x01	; 1
+     6c8:	0c e2       	ldi	r16, 0x2C	; 44
+     6ca:	12 e0       	ldi	r17, 0x02	; 2
+     6cc:	ed ed       	ldi	r30, 0xDD	; 221
+     6ce:	ee 2e       	mov	r14, r30
+     6d0:	e1 e0       	ldi	r30, 0x01	; 1
+     6d2:	fe 2e       	mov	r15, r30
+     6d4:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+ Servo_all(488,943,794,209,555,477);
+     6d8:	88 ee       	ldi	r24, 0xE8	; 232
+     6da:	91 e0       	ldi	r25, 0x01	; 1
+     6dc:	6f ea       	ldi	r22, 0xAF	; 175
+     6de:	73 e0       	ldi	r23, 0x03	; 3
+     6e0:	4a e1       	ldi	r20, 0x1A	; 26
+     6e2:	53 e0       	ldi	r21, 0x03	; 3
+     6e4:	21 ed       	ldi	r18, 0xD1	; 209
+     6e6:	30 e0       	ldi	r19, 0x00	; 0
+     6e8:	0b e2       	ldi	r16, 0x2B	; 43
+     6ea:	12 e0       	ldi	r17, 0x02	; 2
+     6ec:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+ Servo_all(205,640,791,476,556,477);
+     6f0:	8d ec       	ldi	r24, 0xCD	; 205
+     6f2:	90 e0       	ldi	r25, 0x00	; 0
+     6f4:	60 e8       	ldi	r22, 0x80	; 128
+     6f6:	72 e0       	ldi	r23, 0x02	; 2
+     6f8:	47 e1       	ldi	r20, 0x17	; 23
+     6fa:	53 e0       	ldi	r21, 0x03	; 3
+     6fc:	2c ed       	ldi	r18, 0xDC	; 220
+     6fe:	31 e0       	ldi	r19, 0x01	; 1
+     700:	0c e2       	ldi	r16, 0x2C	; 44
+     702:	12 e0       	ldi	r17, 0x02	; 2
+     704:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+ Servo_all(305,656,898,399,563,633);
+     708:	81 e3       	ldi	r24, 0x31	; 49
+     70a:	91 e0       	ldi	r25, 0x01	; 1
+     70c:	60 e9       	ldi	r22, 0x90	; 144
+     70e:	72 e0       	ldi	r23, 0x02	; 2
+     710:	42 e8       	ldi	r20, 0x82	; 130
+     712:	53 e0       	ldi	r21, 0x03	; 3
+     714:	2f e8       	ldi	r18, 0x8F	; 143
+     716:	31 e0       	ldi	r19, 0x01	; 1
+     718:	03 e3       	ldi	r16, 0x33	; 51
+     71a:	12 e0       	ldi	r17, 0x02	; 2
+     71c:	b9 e7       	ldi	r27, 0x79	; 121
+     71e:	eb 2e       	mov	r14, r27
+     720:	b2 e0       	ldi	r27, 0x02	; 2
+     722:	fb 2e       	mov	r15, r27
+     724:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+     728:	80 ed       	ldi	r24, 0xD0	; 208
+     72a:	97 e0       	ldi	r25, 0x07	; 7
+     72c:	20 e9       	ldi	r18, 0x90	; 144
+     72e:	31 e0       	ldi	r19, 0x01	; 1
+     730:	f9 01       	movw	r30, r18
+     732:	31 97       	sbiw	r30, 0x01	; 1
+     734:	f1 f7       	brne	.-4      	; 0x732 <wushu+0x238>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     736:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     738:	d9 f7       	brne	.-10     	; 0x730 <wushu+0x236>
+ _delay_ms(200);     
+ Servo_all(305,657,718,601,563,633);
+     73a:	81 e3       	ldi	r24, 0x31	; 49
+     73c:	91 e0       	ldi	r25, 0x01	; 1
+     73e:	61 e9       	ldi	r22, 0x91	; 145
+     740:	72 e0       	ldi	r23, 0x02	; 2
+     742:	4e ec       	ldi	r20, 0xCE	; 206
+     744:	52 e0       	ldi	r21, 0x02	; 2
+     746:	29 e5       	ldi	r18, 0x59	; 89
+     748:	32 e0       	ldi	r19, 0x02	; 2
+     74a:	03 e3       	ldi	r16, 0x33	; 51
+     74c:	12 e0       	ldi	r17, 0x02	; 2
+     74e:	a9 e7       	ldi	r26, 0x79	; 121
+     750:	ea 2e       	mov	r14, r26
+     752:	a2 e0       	ldi	r26, 0x02	; 2
+     754:	fa 2e       	mov	r15, r26
+     756:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+     75a:	80 ed       	ldi	r24, 0xD0	; 208
+     75c:	97 e0       	ldi	r25, 0x07	; 7
+     75e:	20 e9       	ldi	r18, 0x90	; 144
+     760:	31 e0       	ldi	r19, 0x01	; 1
+     762:	f9 01       	movw	r30, r18
+     764:	31 97       	sbiw	r30, 0x01	; 1
+     766:	f1 f7       	brne	.-4      	; 0x764 <wushu+0x26a>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     768:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     76a:	d9 f7       	brne	.-10     	; 0x762 <wushu+0x268>
+ _delay_ms(200);
+ Servo_all(305,656,898,399,563,633);
+     76c:	81 e3       	ldi	r24, 0x31	; 49
+     76e:	91 e0       	ldi	r25, 0x01	; 1
+     770:	60 e9       	ldi	r22, 0x90	; 144
+     772:	72 e0       	ldi	r23, 0x02	; 2
+     774:	42 e8       	ldi	r20, 0x82	; 130
+     776:	53 e0       	ldi	r21, 0x03	; 3
+     778:	2f e8       	ldi	r18, 0x8F	; 143
+     77a:	31 e0       	ldi	r19, 0x01	; 1
+     77c:	03 e3       	ldi	r16, 0x33	; 51
+     77e:	12 e0       	ldi	r17, 0x02	; 2
+     780:	f9 e7       	ldi	r31, 0x79	; 121
+     782:	ef 2e       	mov	r14, r31
+     784:	f2 e0       	ldi	r31, 0x02	; 2
+     786:	ff 2e       	mov	r15, r31
+     788:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+     78c:	80 ed       	ldi	r24, 0xD0	; 208
+     78e:	97 e0       	ldi	r25, 0x07	; 7
+     790:	20 e9       	ldi	r18, 0x90	; 144
+     792:	31 e0       	ldi	r19, 0x01	; 1
+     794:	f9 01       	movw	r30, r18
+     796:	31 97       	sbiw	r30, 0x01	; 1
+     798:	f1 f7       	brne	.-4      	; 0x796 <wushu+0x29c>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     79a:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     79c:	d9 f7       	brne	.-10     	; 0x794 <wushu+0x29a>
+ _delay_ms(200);
+ Servo_all(305,657,718,601,563,633);
+     79e:	81 e3       	ldi	r24, 0x31	; 49
+     7a0:	91 e0       	ldi	r25, 0x01	; 1
+     7a2:	61 e9       	ldi	r22, 0x91	; 145
+     7a4:	72 e0       	ldi	r23, 0x02	; 2
+     7a6:	4e ec       	ldi	r20, 0xCE	; 206
+     7a8:	52 e0       	ldi	r21, 0x02	; 2
+     7aa:	29 e5       	ldi	r18, 0x59	; 89
+     7ac:	32 e0       	ldi	r19, 0x02	; 2
+     7ae:	03 e3       	ldi	r16, 0x33	; 51
+     7b0:	12 e0       	ldi	r17, 0x02	; 2
+     7b2:	e9 e7       	ldi	r30, 0x79	; 121
+     7b4:	ee 2e       	mov	r14, r30
+     7b6:	e2 e0       	ldi	r30, 0x02	; 2
+     7b8:	fe 2e       	mov	r15, r30
+     7ba:	0e 94 b3 0a 	call	0x1566	; 0x1566 <Servo_all>
+     7be:	80 ed       	ldi	r24, 0xD0	; 208
+     7c0:	97 e0       	ldi	r25, 0x07	; 7
+     7c2:	20 e9       	ldi	r18, 0x90	; 144
+     7c4:	31 e0       	ldi	r19, 0x01	; 1
+     7c6:	f9 01       	movw	r30, r18
+     7c8:	31 97       	sbiw	r30, 0x01	; 1
+     7ca:	f1 f7       	brne	.-4      	; 0x7c8 <wushu+0x2ce>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     7cc:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     7ce:	d9 f7       	brne	.-10     	; 0x7c6 <wushu+0x2cc>
+ _delay_ms(200);
+
+
+}
+     7d0:	1f 91       	pop	r17
+     7d2:	0f 91       	pop	r16
+     7d4:	ff 90       	pop	r15
+     7d6:	ef 90       	pop	r14
+     7d8:	08 95       	ret
+
+000007da <zhixing>:
+void   zou(void);
+void wushu(void);
+void baoqiu1(void);
+
+void zhixing(int v1,int v2 )
+{
+     7da:	ef 92       	push	r14
+     7dc:	ff 92       	push	r15
+     7de:	0f 93       	push	r16
+     7e0:	1f 93       	push	r17
+     7e2:	8c 01       	movw	r16, r24
+     7e4:	7b 01       	movw	r14, r22
+
+	SetServoVelocity(13,v1);
+     7e6:	8d e0       	ldi	r24, 0x0D	; 13
+     7e8:	b8 01       	movw	r22, r16
+     7ea:	0e 94 59 0a 	call	0x14b2	; 0x14b2 <SetServoVelocity>
+	SetServoVelocity(14,v1);
+     7ee:	8e e0       	ldi	r24, 0x0E	; 14
+     7f0:	b8 01       	movw	r22, r16
+     7f2:	0e 94 59 0a 	call	0x14b2	; 0x14b2 <SetServoVelocity>
+	SetServoVelocity(11,v2);
+     7f6:	8b e0       	ldi	r24, 0x0B	; 11
+     7f8:	b7 01       	movw	r22, r14
+     7fa:	0e 94 59 0a 	call	0x14b2	; 0x14b2 <SetServoVelocity>
+	SetServoVelocity(12,v2);
+     7fe:	8c e0       	ldi	r24, 0x0C	; 12
+     800:	b7 01       	movw	r22, r14
+     802:	0e 94 59 0a 	call	0x14b2	; 0x14b2 <SetServoVelocity>
+	
+}
+     806:	1f 91       	pop	r17
+     808:	0f 91       	pop	r16
+     80a:	ff 90       	pop	r15
+     80c:	ef 90       	pop	r14
+     80e:	08 95       	ret
+
+00000810 <zou>:
+
+
+void   zou()
+	{
+	   
+		SetServoPosition(1,454,300);
+     810:	81 e0       	ldi	r24, 0x01	; 1
+     812:	66 ec       	ldi	r22, 0xC6	; 198
+     814:	71 e0       	ldi	r23, 0x01	; 1
+     816:	4c e2       	ldi	r20, 0x2C	; 44
+     818:	51 e0       	ldi	r21, 0x01	; 1
+     81a:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(2,747,300);
+     81e:	82 e0       	ldi	r24, 0x02	; 2
+     820:	6b ee       	ldi	r22, 0xEB	; 235
+     822:	72 e0       	ldi	r23, 0x02	; 2
+     824:	4c e2       	ldi	r20, 0x2C	; 44
+     826:	51 e0       	ldi	r21, 0x01	; 1
+     828:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+      	SetServoPosition(3,498,300); 
+     82c:	83 e0       	ldi	r24, 0x03	; 3
+     82e:	62 ef       	ldi	r22, 0xF2	; 242
+     830:	71 e0       	ldi	r23, 0x01	; 1
+     832:	4c e2       	ldi	r20, 0x2C	; 44
+     834:	51 e0       	ldi	r21, 0x01	; 1
+     836:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(4,791,300);
+     83a:	84 e0       	ldi	r24, 0x04	; 4
+     83c:	67 e1       	ldi	r22, 0x17	; 23
+     83e:	73 e0       	ldi	r23, 0x03	; 3
+     840:	4c e2       	ldi	r20, 0x2C	; 44
+     842:	51 e0       	ldi	r21, 0x01	; 1
+     844:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(5,481,300);
+     848:	85 e0       	ldi	r24, 0x05	; 5
+     84a:	61 ee       	ldi	r22, 0xE1	; 225
+     84c:	71 e0       	ldi	r23, 0x01	; 1
+     84e:	4c e2       	ldi	r20, 0x2C	; 44
+     850:	51 e0       	ldi	r21, 0x01	; 1
+     852:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(6,517,300);
+     856:	86 e0       	ldi	r24, 0x06	; 6
+     858:	65 e0       	ldi	r22, 0x05	; 5
+     85a:	72 e0       	ldi	r23, 0x02	; 2
+     85c:	4c e2       	ldi	r20, 0x2C	; 44
+     85e:	51 e0       	ldi	r21, 0x01	; 1
+     860:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(7,573,300); 
+     864:	87 e0       	ldi	r24, 0x07	; 7
+     866:	6d e3       	ldi	r22, 0x3D	; 61
+     868:	72 e0       	ldi	r23, 0x02	; 2
+     86a:	4c e2       	ldi	r20, 0x2C	; 44
+     86c:	51 e0       	ldi	r21, 0x01	; 1
+     86e:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(8,478,300);
+     872:	88 e0       	ldi	r24, 0x08	; 8
+     874:	6e ed       	ldi	r22, 0xDE	; 222
+     876:	71 e0       	ldi	r23, 0x01	; 1
+     878:	4c e2       	ldi	r20, 0x2C	; 44
+     87a:	51 e0       	ldi	r21, 0x01	; 1
+     87c:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(9,440,300);
+     880:	89 e0       	ldi	r24, 0x09	; 9
+     882:	68 eb       	ldi	r22, 0xB8	; 184
+     884:	71 e0       	ldi	r23, 0x01	; 1
+     886:	4c e2       	ldi	r20, 0x2C	; 44
+     888:	51 e0       	ldi	r21, 0x01	; 1
+     88a:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(10,547,300);//zhanzhi
+     88e:	8a e0       	ldi	r24, 0x0A	; 10
+     890:	63 e2       	ldi	r22, 0x23	; 35
+     892:	72 e0       	ldi	r23, 0x02	; 2
+     894:	4c e2       	ldi	r20, 0x2C	; 44
+     896:	51 e0       	ldi	r21, 0x01	; 1
+     898:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     89c:	80 ea       	ldi	r24, 0xA0	; 160
+     89e:	9f e0       	ldi	r25, 0x0F	; 15
+     8a0:	20 e9       	ldi	r18, 0x90	; 144
+     8a2:	31 e0       	ldi	r19, 0x01	; 1
+     8a4:	f9 01       	movw	r30, r18
+     8a6:	31 97       	sbiw	r30, 0x01	; 1
+     8a8:	f1 f7       	brne	.-4      	; 0x8a6 <zou+0x96>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     8aa:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     8ac:	d9 f7       	brne	.-10     	; 0x8a4 <zou+0x94>
+
+
+         _delay_ms(400);
+      	 zhixing(400,-400);
+     8ae:	80 e9       	ldi	r24, 0x90	; 144
+     8b0:	91 e0       	ldi	r25, 0x01	; 1
+     8b2:	60 e7       	ldi	r22, 0x70	; 112
+     8b4:	7e ef       	ldi	r23, 0xFE	; 254
+     8b6:	0e 94 ed 03 	call	0x7da	; 0x7da <zhixing>
+
+		SetServoPosition(1,454,300);
+     8ba:	81 e0       	ldi	r24, 0x01	; 1
+     8bc:	66 ec       	ldi	r22, 0xC6	; 198
+     8be:	71 e0       	ldi	r23, 0x01	; 1
+     8c0:	4c e2       	ldi	r20, 0x2C	; 44
+     8c2:	51 e0       	ldi	r21, 0x01	; 1
+     8c4:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(2,713,300);
+     8c8:	82 e0       	ldi	r24, 0x02	; 2
+     8ca:	69 ec       	ldi	r22, 0xC9	; 201
+     8cc:	72 e0       	ldi	r23, 0x02	; 2
+     8ce:	4c e2       	ldi	r20, 0x2C	; 44
+     8d0:	51 e0       	ldi	r21, 0x01	; 1
+     8d2:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+      	SetServoPosition(3,369,300); 
+     8d6:	83 e0       	ldi	r24, 0x03	; 3
+     8d8:	61 e7       	ldi	r22, 0x71	; 113
+     8da:	71 e0       	ldi	r23, 0x01	; 1
+     8dc:	4c e2       	ldi	r20, 0x2C	; 44
+     8de:	51 e0       	ldi	r21, 0x01	; 1
+     8e0:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(4,694,300);
+     8e4:	84 e0       	ldi	r24, 0x04	; 4
+     8e6:	66 eb       	ldi	r22, 0xB6	; 182
+     8e8:	72 e0       	ldi	r23, 0x02	; 2
+     8ea:	4c e2       	ldi	r20, 0x2C	; 44
+     8ec:	51 e0       	ldi	r21, 0x01	; 1
+     8ee:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(5,502,300);
+     8f2:	85 e0       	ldi	r24, 0x05	; 5
+     8f4:	66 ef       	ldi	r22, 0xF6	; 246
+     8f6:	71 e0       	ldi	r23, 0x01	; 1
+     8f8:	4c e2       	ldi	r20, 0x2C	; 44
+     8fa:	51 e0       	ldi	r21, 0x01	; 1
+     8fc:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(6,513,300);//baizuoshou
+     900:	86 e0       	ldi	r24, 0x06	; 6
+     902:	61 e0       	ldi	r22, 0x01	; 1
+     904:	72 e0       	ldi	r23, 0x02	; 2
+     906:	4c e2       	ldi	r20, 0x2C	; 44
+     908:	51 e0       	ldi	r21, 0x01	; 1
+     90a:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     90e:	80 ea       	ldi	r24, 0xA0	; 160
+     910:	9f e0       	ldi	r25, 0x0F	; 15
+     912:	20 e9       	ldi	r18, 0x90	; 144
+     914:	31 e0       	ldi	r19, 0x01	; 1
+     916:	f9 01       	movw	r30, r18
+     918:	31 97       	sbiw	r30, 0x01	; 1
+     91a:	f1 f7       	brne	.-4      	; 0x918 <zou+0x108>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     91c:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     91e:	d9 f7       	brne	.-10     	; 0x916 <zou+0x106>
+		_delay_ms(400);
+
+		SetServoPosition(7,647,300);
+     920:	87 e0       	ldi	r24, 0x07	; 7
+     922:	67 e8       	ldi	r22, 0x87	; 135
+     924:	72 e0       	ldi	r23, 0x02	; 2
+     926:	4c e2       	ldi	r20, 0x2C	; 44
+     928:	51 e0       	ldi	r21, 0x01	; 1
+     92a:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+        SetServoPosition(8,550,300);
+     92e:	88 e0       	ldi	r24, 0x08	; 8
+     930:	66 e2       	ldi	r22, 0x26	; 38
+     932:	72 e0       	ldi	r23, 0x02	; 2
+     934:	4c e2       	ldi	r20, 0x2C	; 44
+     936:	51 e0       	ldi	r21, 0x01	; 1
+     938:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(9,510,300);
+     93c:	89 e0       	ldi	r24, 0x09	; 9
+     93e:	6e ef       	ldi	r22, 0xFE	; 254
+     940:	71 e0       	ldi	r23, 0x01	; 1
+     942:	4c e2       	ldi	r20, 0x2C	; 44
+     944:	51 e0       	ldi	r21, 0x01	; 1
+     946:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(10,607,300);//kuayoujiao
+     94a:	8a e0       	ldi	r24, 0x0A	; 10
+     94c:	6f e5       	ldi	r22, 0x5F	; 95
+     94e:	72 e0       	ldi	r23, 0x02	; 2
+     950:	4c e2       	ldi	r20, 0x2C	; 44
+     952:	51 e0       	ldi	r21, 0x01	; 1
+     954:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     958:	88 e5       	ldi	r24, 0x58	; 88
+     95a:	9b e1       	ldi	r25, 0x1B	; 27
+     95c:	20 e9       	ldi	r18, 0x90	; 144
+     95e:	31 e0       	ldi	r19, 0x01	; 1
+     960:	f9 01       	movw	r30, r18
+     962:	31 97       	sbiw	r30, 0x01	; 1
+     964:	f1 f7       	brne	.-4      	; 0x962 <zou+0x152>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     966:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     968:	d9 f7       	brne	.-10     	; 0x960 <zou+0x150>
+        _delay_ms(700);
+
+		SetServoPosition(1,454,300);
+     96a:	81 e0       	ldi	r24, 0x01	; 1
+     96c:	66 ec       	ldi	r22, 0xC6	; 198
+     96e:	71 e0       	ldi	r23, 0x01	; 1
+     970:	4c e2       	ldi	r20, 0x2C	; 44
+     972:	51 e0       	ldi	r21, 0x01	; 1
+     974:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(2,747,300);
+     978:	82 e0       	ldi	r24, 0x02	; 2
+     97a:	6b ee       	ldi	r22, 0xEB	; 235
+     97c:	72 e0       	ldi	r23, 0x02	; 2
+     97e:	4c e2       	ldi	r20, 0x2C	; 44
+     980:	51 e0       	ldi	r21, 0x01	; 1
+     982:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+      	SetServoPosition(3,498,300); 
+     986:	83 e0       	ldi	r24, 0x03	; 3
+     988:	62 ef       	ldi	r22, 0xF2	; 242
+     98a:	71 e0       	ldi	r23, 0x01	; 1
+     98c:	4c e2       	ldi	r20, 0x2C	; 44
+     98e:	51 e0       	ldi	r21, 0x01	; 1
+     990:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(4,791,300);
+     994:	84 e0       	ldi	r24, 0x04	; 4
+     996:	67 e1       	ldi	r22, 0x17	; 23
+     998:	73 e0       	ldi	r23, 0x03	; 3
+     99a:	4c e2       	ldi	r20, 0x2C	; 44
+     99c:	51 e0       	ldi	r21, 0x01	; 1
+     99e:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(5,481,300);
+     9a2:	85 e0       	ldi	r24, 0x05	; 5
+     9a4:	61 ee       	ldi	r22, 0xE1	; 225
+     9a6:	71 e0       	ldi	r23, 0x01	; 1
+     9a8:	4c e2       	ldi	r20, 0x2C	; 44
+     9aa:	51 e0       	ldi	r21, 0x01	; 1
+     9ac:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(6,517,300);
+     9b0:	86 e0       	ldi	r24, 0x06	; 6
+     9b2:	65 e0       	ldi	r22, 0x05	; 5
+     9b4:	72 e0       	ldi	r23, 0x02	; 2
+     9b6:	4c e2       	ldi	r20, 0x2C	; 44
+     9b8:	51 e0       	ldi	r21, 0x01	; 1
+     9ba:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(7,573,300); 
+     9be:	87 e0       	ldi	r24, 0x07	; 7
+     9c0:	6d e3       	ldi	r22, 0x3D	; 61
+     9c2:	72 e0       	ldi	r23, 0x02	; 2
+     9c4:	4c e2       	ldi	r20, 0x2C	; 44
+     9c6:	51 e0       	ldi	r21, 0x01	; 1
+     9c8:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(8,478,300);
+     9cc:	88 e0       	ldi	r24, 0x08	; 8
+     9ce:	6e ed       	ldi	r22, 0xDE	; 222
+     9d0:	71 e0       	ldi	r23, 0x01	; 1
+     9d2:	4c e2       	ldi	r20, 0x2C	; 44
+     9d4:	51 e0       	ldi	r21, 0x01	; 1
+     9d6:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(9,440,300);
+     9da:	89 e0       	ldi	r24, 0x09	; 9
+     9dc:	68 eb       	ldi	r22, 0xB8	; 184
+     9de:	71 e0       	ldi	r23, 0x01	; 1
+     9e0:	4c e2       	ldi	r20, 0x2C	; 44
+     9e2:	51 e0       	ldi	r21, 0x01	; 1
+     9e4:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(10,547,300);//zhanzhi
+     9e8:	8a e0       	ldi	r24, 0x0A	; 10
+     9ea:	63 e2       	ldi	r22, 0x23	; 35
+     9ec:	72 e0       	ldi	r23, 0x02	; 2
+     9ee:	4c e2       	ldi	r20, 0x2C	; 44
+     9f0:	51 e0       	ldi	r21, 0x01	; 1
+     9f2:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     9f6:	88 eb       	ldi	r24, 0xB8	; 184
+     9f8:	9b e0       	ldi	r25, 0x0B	; 11
+     9fa:	20 e9       	ldi	r18, 0x90	; 144
+     9fc:	31 e0       	ldi	r19, 0x01	; 1
+     9fe:	f9 01       	movw	r30, r18
+     a00:	31 97       	sbiw	r30, 0x01	; 1
+     a02:	f1 f7       	brne	.-4      	; 0xa00 <zou+0x1f0>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     a04:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     a06:	d9 f7       	brne	.-10     	; 0x9fe <zou+0x1ee>
+        _delay_ms(300);
+
+
+		SetServoPosition(1,454,300);
+     a08:	81 e0       	ldi	r24, 0x01	; 1
+     a0a:	66 ec       	ldi	r22, 0xC6	; 198
+     a0c:	71 e0       	ldi	r23, 0x01	; 1
+     a0e:	4c e2       	ldi	r20, 0x2C	; 44
+     a10:	51 e0       	ldi	r21, 0x01	; 1
+     a12:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(2,727,300);
+     a16:	82 e0       	ldi	r24, 0x02	; 2
+     a18:	67 ed       	ldi	r22, 0xD7	; 215
+     a1a:	72 e0       	ldi	r23, 0x02	; 2
+     a1c:	4c e2       	ldi	r20, 0x2C	; 44
+     a1e:	51 e0       	ldi	r21, 0x01	; 1
+     a20:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+      	SetServoPosition(3,594,300); 
+     a24:	83 e0       	ldi	r24, 0x03	; 3
+     a26:	62 e5       	ldi	r22, 0x52	; 82
+     a28:	72 e0       	ldi	r23, 0x02	; 2
+     a2a:	4c e2       	ldi	r20, 0x2C	; 44
+     a2c:	51 e0       	ldi	r21, 0x01	; 1
+     a2e:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(4,916,300);
+     a32:	84 e0       	ldi	r24, 0x04	; 4
+     a34:	64 e9       	ldi	r22, 0x94	; 148
+     a36:	73 e0       	ldi	r23, 0x03	; 3
+     a38:	4c e2       	ldi	r20, 0x2C	; 44
+     a3a:	51 e0       	ldi	r21, 0x01	; 1
+     a3c:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(5,481,300);
+     a40:	85 e0       	ldi	r24, 0x05	; 5
+     a42:	61 ee       	ldi	r22, 0xE1	; 225
+     a44:	71 e0       	ldi	r23, 0x01	; 1
+     a46:	4c e2       	ldi	r20, 0x2C	; 44
+     a48:	51 e0       	ldi	r21, 0x01	; 1
+     a4a:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(6,516,300);//baiyoushou
+     a4e:	86 e0       	ldi	r24, 0x06	; 6
+     a50:	64 e0       	ldi	r22, 0x04	; 4
+     a52:	72 e0       	ldi	r23, 0x02	; 2
+     a54:	4c e2       	ldi	r20, 0x2C	; 44
+     a56:	51 e0       	ldi	r21, 0x01	; 1
+     a58:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     a5c:	80 ea       	ldi	r24, 0xA0	; 160
+     a5e:	9f e0       	ldi	r25, 0x0F	; 15
+     a60:	20 e9       	ldi	r18, 0x90	; 144
+     a62:	31 e0       	ldi	r19, 0x01	; 1
+     a64:	f9 01       	movw	r30, r18
+     a66:	31 97       	sbiw	r30, 0x01	; 1
+     a68:	f1 f7       	brne	.-4      	; 0xa66 <zou+0x256>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     a6a:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     a6c:	d9 f7       	brne	.-10     	; 0xa64 <zou+0x254>
+		_delay_ms(400);
+
+		SetServoPosition(7,472,300); 
+     a6e:	87 e0       	ldi	r24, 0x07	; 7
+     a70:	68 ed       	ldi	r22, 0xD8	; 216
+     a72:	71 e0       	ldi	r23, 0x01	; 1
+     a74:	4c e2       	ldi	r20, 0x2C	; 44
+     a76:	51 e0       	ldi	r21, 0x01	; 1
+     a78:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(8,380,300);
+     a7c:	88 e0       	ldi	r24, 0x08	; 8
+     a7e:	6c e7       	ldi	r22, 0x7C	; 124
+     a80:	71 e0       	ldi	r23, 0x01	; 1
+     a82:	4c e2       	ldi	r20, 0x2C	; 44
+     a84:	51 e0       	ldi	r21, 0x01	; 1
+     a86:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(9,348,300);
+     a8a:	89 e0       	ldi	r24, 0x09	; 9
+     a8c:	6c e5       	ldi	r22, 0x5C	; 92
+     a8e:	71 e0       	ldi	r23, 0x01	; 1
+     a90:	4c e2       	ldi	r20, 0x2C	; 44
+     a92:	51 e0       	ldi	r21, 0x01	; 1
+     a94:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(10,451,300);//kuazuojiao
+     a98:	8a e0       	ldi	r24, 0x0A	; 10
+     a9a:	63 ec       	ldi	r22, 0xC3	; 195
+     a9c:	71 e0       	ldi	r23, 0x01	; 1
+     a9e:	4c e2       	ldi	r20, 0x2C	; 44
+     aa0:	51 e0       	ldi	r21, 0x01	; 1
+     aa2:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     aa6:	88 e5       	ldi	r24, 0x58	; 88
+     aa8:	9b e1       	ldi	r25, 0x1B	; 27
+     aaa:	20 e9       	ldi	r18, 0x90	; 144
+     aac:	31 e0       	ldi	r19, 0x01	; 1
+     aae:	f9 01       	movw	r30, r18
+     ab0:	31 97       	sbiw	r30, 0x01	; 1
+     ab2:	f1 f7       	brne	.-4      	; 0xab0 <zou+0x2a0>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     ab4:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     ab6:	d9 f7       	brne	.-10     	; 0xaae <zou+0x29e>
+        _delay_ms(700);
+		//////////////////////////////////////////////////////
+		SetServoPosition(1,454,300);
+     ab8:	81 e0       	ldi	r24, 0x01	; 1
+     aba:	66 ec       	ldi	r22, 0xC6	; 198
+     abc:	71 e0       	ldi	r23, 0x01	; 1
+     abe:	4c e2       	ldi	r20, 0x2C	; 44
+     ac0:	51 e0       	ldi	r21, 0x01	; 1
+     ac2:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(2,747,300);
+     ac6:	82 e0       	ldi	r24, 0x02	; 2
+     ac8:	6b ee       	ldi	r22, 0xEB	; 235
+     aca:	72 e0       	ldi	r23, 0x02	; 2
+     acc:	4c e2       	ldi	r20, 0x2C	; 44
+     ace:	51 e0       	ldi	r21, 0x01	; 1
+     ad0:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+      	SetServoPosition(3,498,300); 
+     ad4:	83 e0       	ldi	r24, 0x03	; 3
+     ad6:	62 ef       	ldi	r22, 0xF2	; 242
+     ad8:	71 e0       	ldi	r23, 0x01	; 1
+     ada:	4c e2       	ldi	r20, 0x2C	; 44
+     adc:	51 e0       	ldi	r21, 0x01	; 1
+     ade:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(4,791,300);
+     ae2:	84 e0       	ldi	r24, 0x04	; 4
+     ae4:	67 e1       	ldi	r22, 0x17	; 23
+     ae6:	73 e0       	ldi	r23, 0x03	; 3
+     ae8:	4c e2       	ldi	r20, 0x2C	; 44
+     aea:	51 e0       	ldi	r21, 0x01	; 1
+     aec:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(5,481,300);
+     af0:	85 e0       	ldi	r24, 0x05	; 5
+     af2:	61 ee       	ldi	r22, 0xE1	; 225
+     af4:	71 e0       	ldi	r23, 0x01	; 1
+     af6:	4c e2       	ldi	r20, 0x2C	; 44
+     af8:	51 e0       	ldi	r21, 0x01	; 1
+     afa:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(6,517,300);
+     afe:	86 e0       	ldi	r24, 0x06	; 6
+     b00:	65 e0       	ldi	r22, 0x05	; 5
+     b02:	72 e0       	ldi	r23, 0x02	; 2
+     b04:	4c e2       	ldi	r20, 0x2C	; 44
+     b06:	51 e0       	ldi	r21, 0x01	; 1
+     b08:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(7,573,300); 
+     b0c:	87 e0       	ldi	r24, 0x07	; 7
+     b0e:	6d e3       	ldi	r22, 0x3D	; 61
+     b10:	72 e0       	ldi	r23, 0x02	; 2
+     b12:	4c e2       	ldi	r20, 0x2C	; 44
+     b14:	51 e0       	ldi	r21, 0x01	; 1
+     b16:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(8,478,300);
+     b1a:	88 e0       	ldi	r24, 0x08	; 8
+     b1c:	6e ed       	ldi	r22, 0xDE	; 222
+     b1e:	71 e0       	ldi	r23, 0x01	; 1
+     b20:	4c e2       	ldi	r20, 0x2C	; 44
+     b22:	51 e0       	ldi	r21, 0x01	; 1
+     b24:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(9,440,300);
+     b28:	89 e0       	ldi	r24, 0x09	; 9
+     b2a:	68 eb       	ldi	r22, 0xB8	; 184
+     b2c:	71 e0       	ldi	r23, 0x01	; 1
+     b2e:	4c e2       	ldi	r20, 0x2C	; 44
+     b30:	51 e0       	ldi	r21, 0x01	; 1
+     b32:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(10,547,300);//zhanzhi
+     b36:	8a e0       	ldi	r24, 0x0A	; 10
+     b38:	63 e2       	ldi	r22, 0x23	; 35
+     b3a:	72 e0       	ldi	r23, 0x02	; 2
+     b3c:	4c e2       	ldi	r20, 0x2C	; 44
+     b3e:	51 e0       	ldi	r21, 0x01	; 1
+     b40:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     b44:	80 ea       	ldi	r24, 0xA0	; 160
+     b46:	9f e0       	ldi	r25, 0x0F	; 15
+     b48:	20 e9       	ldi	r18, 0x90	; 144
+     b4a:	31 e0       	ldi	r19, 0x01	; 1
+     b4c:	f9 01       	movw	r30, r18
+     b4e:	31 97       	sbiw	r30, 0x01	; 1
+     b50:	f1 f7       	brne	.-4      	; 0xb4e <zou+0x33e>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     b52:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     b54:	d9 f7       	brne	.-10     	; 0xb4c <zou+0x33c>
+
+
+         _delay_ms(400);
+      	
+
+		SetServoPosition(1,454,300);
+     b56:	81 e0       	ldi	r24, 0x01	; 1
+     b58:	66 ec       	ldi	r22, 0xC6	; 198
+     b5a:	71 e0       	ldi	r23, 0x01	; 1
+     b5c:	4c e2       	ldi	r20, 0x2C	; 44
+     b5e:	51 e0       	ldi	r21, 0x01	; 1
+     b60:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(2,713,300);
+     b64:	82 e0       	ldi	r24, 0x02	; 2
+     b66:	69 ec       	ldi	r22, 0xC9	; 201
+     b68:	72 e0       	ldi	r23, 0x02	; 2
+     b6a:	4c e2       	ldi	r20, 0x2C	; 44
+     b6c:	51 e0       	ldi	r21, 0x01	; 1
+     b6e:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+      	SetServoPosition(3,369,300); 
+     b72:	83 e0       	ldi	r24, 0x03	; 3
+     b74:	61 e7       	ldi	r22, 0x71	; 113
+     b76:	71 e0       	ldi	r23, 0x01	; 1
+     b78:	4c e2       	ldi	r20, 0x2C	; 44
+     b7a:	51 e0       	ldi	r21, 0x01	; 1
+     b7c:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(4,694,300);
+     b80:	84 e0       	ldi	r24, 0x04	; 4
+     b82:	66 eb       	ldi	r22, 0xB6	; 182
+     b84:	72 e0       	ldi	r23, 0x02	; 2
+     b86:	4c e2       	ldi	r20, 0x2C	; 44
+     b88:	51 e0       	ldi	r21, 0x01	; 1
+     b8a:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(5,502,300);
+     b8e:	85 e0       	ldi	r24, 0x05	; 5
+     b90:	66 ef       	ldi	r22, 0xF6	; 246
+     b92:	71 e0       	ldi	r23, 0x01	; 1
+     b94:	4c e2       	ldi	r20, 0x2C	; 44
+     b96:	51 e0       	ldi	r21, 0x01	; 1
+     b98:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(6,513,300);//baizuoshou
+     b9c:	86 e0       	ldi	r24, 0x06	; 6
+     b9e:	61 e0       	ldi	r22, 0x01	; 1
+     ba0:	72 e0       	ldi	r23, 0x02	; 2
+     ba2:	4c e2       	ldi	r20, 0x2C	; 44
+     ba4:	51 e0       	ldi	r21, 0x01	; 1
+     ba6:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     baa:	80 ea       	ldi	r24, 0xA0	; 160
+     bac:	9f e0       	ldi	r25, 0x0F	; 15
+     bae:	20 e9       	ldi	r18, 0x90	; 144
+     bb0:	31 e0       	ldi	r19, 0x01	; 1
+     bb2:	f9 01       	movw	r30, r18
+     bb4:	31 97       	sbiw	r30, 0x01	; 1
+     bb6:	f1 f7       	brne	.-4      	; 0xbb4 <zou+0x3a4>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     bb8:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     bba:	d9 f7       	brne	.-10     	; 0xbb2 <zou+0x3a2>
+		_delay_ms(400);
+
+		SetServoPosition(7,647,300);
+     bbc:	87 e0       	ldi	r24, 0x07	; 7
+     bbe:	67 e8       	ldi	r22, 0x87	; 135
+     bc0:	72 e0       	ldi	r23, 0x02	; 2
+     bc2:	4c e2       	ldi	r20, 0x2C	; 44
+     bc4:	51 e0       	ldi	r21, 0x01	; 1
+     bc6:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+        SetServoPosition(8,550,300);
+     bca:	88 e0       	ldi	r24, 0x08	; 8
+     bcc:	66 e2       	ldi	r22, 0x26	; 38
+     bce:	72 e0       	ldi	r23, 0x02	; 2
+     bd0:	4c e2       	ldi	r20, 0x2C	; 44
+     bd2:	51 e0       	ldi	r21, 0x01	; 1
+     bd4:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(9,510,300);
+     bd8:	89 e0       	ldi	r24, 0x09	; 9
+     bda:	6e ef       	ldi	r22, 0xFE	; 254
+     bdc:	71 e0       	ldi	r23, 0x01	; 1
+     bde:	4c e2       	ldi	r20, 0x2C	; 44
+     be0:	51 e0       	ldi	r21, 0x01	; 1
+     be2:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(10,607,300);//kuayoujiao
+     be6:	8a e0       	ldi	r24, 0x0A	; 10
+     be8:	6f e5       	ldi	r22, 0x5F	; 95
+     bea:	72 e0       	ldi	r23, 0x02	; 2
+     bec:	4c e2       	ldi	r20, 0x2C	; 44
+     bee:	51 e0       	ldi	r21, 0x01	; 1
+     bf0:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     bf4:	80 ea       	ldi	r24, 0xA0	; 160
+     bf6:	9f e0       	ldi	r25, 0x0F	; 15
+     bf8:	20 e9       	ldi	r18, 0x90	; 144
+     bfa:	31 e0       	ldi	r19, 0x01	; 1
+     bfc:	f9 01       	movw	r30, r18
+     bfe:	31 97       	sbiw	r30, 0x01	; 1
+     c00:	f1 f7       	brne	.-4      	; 0xbfe <zou+0x3ee>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     c02:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     c04:	d9 f7       	brne	.-10     	; 0xbfc <zou+0x3ec>
+        _delay_ms(400);
+
+		SetServoPosition(1,454,300);
+     c06:	81 e0       	ldi	r24, 0x01	; 1
+     c08:	66 ec       	ldi	r22, 0xC6	; 198
+     c0a:	71 e0       	ldi	r23, 0x01	; 1
+     c0c:	4c e2       	ldi	r20, 0x2C	; 44
+     c0e:	51 e0       	ldi	r21, 0x01	; 1
+     c10:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(2,747,300);
+     c14:	82 e0       	ldi	r24, 0x02	; 2
+     c16:	6b ee       	ldi	r22, 0xEB	; 235
+     c18:	72 e0       	ldi	r23, 0x02	; 2
+     c1a:	4c e2       	ldi	r20, 0x2C	; 44
+     c1c:	51 e0       	ldi	r21, 0x01	; 1
+     c1e:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+      	SetServoPosition(3,498,300); 
+     c22:	83 e0       	ldi	r24, 0x03	; 3
+     c24:	62 ef       	ldi	r22, 0xF2	; 242
+     c26:	71 e0       	ldi	r23, 0x01	; 1
+     c28:	4c e2       	ldi	r20, 0x2C	; 44
+     c2a:	51 e0       	ldi	r21, 0x01	; 1
+     c2c:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(4,791,300);
+     c30:	84 e0       	ldi	r24, 0x04	; 4
+     c32:	67 e1       	ldi	r22, 0x17	; 23
+     c34:	73 e0       	ldi	r23, 0x03	; 3
+     c36:	4c e2       	ldi	r20, 0x2C	; 44
+     c38:	51 e0       	ldi	r21, 0x01	; 1
+     c3a:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(5,481,300);
+     c3e:	85 e0       	ldi	r24, 0x05	; 5
+     c40:	61 ee       	ldi	r22, 0xE1	; 225
+     c42:	71 e0       	ldi	r23, 0x01	; 1
+     c44:	4c e2       	ldi	r20, 0x2C	; 44
+     c46:	51 e0       	ldi	r21, 0x01	; 1
+     c48:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(6,517,300);
+     c4c:	86 e0       	ldi	r24, 0x06	; 6
+     c4e:	65 e0       	ldi	r22, 0x05	; 5
+     c50:	72 e0       	ldi	r23, 0x02	; 2
+     c52:	4c e2       	ldi	r20, 0x2C	; 44
+     c54:	51 e0       	ldi	r21, 0x01	; 1
+     c56:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(7,573,300); 
+     c5a:	87 e0       	ldi	r24, 0x07	; 7
+     c5c:	6d e3       	ldi	r22, 0x3D	; 61
+     c5e:	72 e0       	ldi	r23, 0x02	; 2
+     c60:	4c e2       	ldi	r20, 0x2C	; 44
+     c62:	51 e0       	ldi	r21, 0x01	; 1
+     c64:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(8,478,300);
+     c68:	88 e0       	ldi	r24, 0x08	; 8
+     c6a:	6e ed       	ldi	r22, 0xDE	; 222
+     c6c:	71 e0       	ldi	r23, 0x01	; 1
+     c6e:	4c e2       	ldi	r20, 0x2C	; 44
+     c70:	51 e0       	ldi	r21, 0x01	; 1
+     c72:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(9,440,300);
+     c76:	89 e0       	ldi	r24, 0x09	; 9
+     c78:	68 eb       	ldi	r22, 0xB8	; 184
+     c7a:	71 e0       	ldi	r23, 0x01	; 1
+     c7c:	4c e2       	ldi	r20, 0x2C	; 44
+     c7e:	51 e0       	ldi	r21, 0x01	; 1
+     c80:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(10,547,300);//zhanzhi
+     c84:	8a e0       	ldi	r24, 0x0A	; 10
+     c86:	63 e2       	ldi	r22, 0x23	; 35
+     c88:	72 e0       	ldi	r23, 0x02	; 2
+     c8a:	4c e2       	ldi	r20, 0x2C	; 44
+     c8c:	51 e0       	ldi	r21, 0x01	; 1
+     c8e:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     c92:	88 eb       	ldi	r24, 0xB8	; 184
+     c94:	9b e0       	ldi	r25, 0x0B	; 11
+     c96:	20 e9       	ldi	r18, 0x90	; 144
+     c98:	31 e0       	ldi	r19, 0x01	; 1
+     c9a:	f9 01       	movw	r30, r18
+     c9c:	31 97       	sbiw	r30, 0x01	; 1
+     c9e:	f1 f7       	brne	.-4      	; 0xc9c <zou+0x48c>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     ca0:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     ca2:	d9 f7       	brne	.-10     	; 0xc9a <zou+0x48a>
+        _delay_ms(300);
+
+
+		SetServoPosition(1,454,300);
+     ca4:	81 e0       	ldi	r24, 0x01	; 1
+     ca6:	66 ec       	ldi	r22, 0xC6	; 198
+     ca8:	71 e0       	ldi	r23, 0x01	; 1
+     caa:	4c e2       	ldi	r20, 0x2C	; 44
+     cac:	51 e0       	ldi	r21, 0x01	; 1
+     cae:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(2,727,300);
+     cb2:	82 e0       	ldi	r24, 0x02	; 2
+     cb4:	67 ed       	ldi	r22, 0xD7	; 215
+     cb6:	72 e0       	ldi	r23, 0x02	; 2
+     cb8:	4c e2       	ldi	r20, 0x2C	; 44
+     cba:	51 e0       	ldi	r21, 0x01	; 1
+     cbc:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+      	SetServoPosition(3,594,300); 
+     cc0:	83 e0       	ldi	r24, 0x03	; 3
+     cc2:	62 e5       	ldi	r22, 0x52	; 82
+     cc4:	72 e0       	ldi	r23, 0x02	; 2
+     cc6:	4c e2       	ldi	r20, 0x2C	; 44
+     cc8:	51 e0       	ldi	r21, 0x01	; 1
+     cca:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(4,916,300);
+     cce:	84 e0       	ldi	r24, 0x04	; 4
+     cd0:	64 e9       	ldi	r22, 0x94	; 148
+     cd2:	73 e0       	ldi	r23, 0x03	; 3
+     cd4:	4c e2       	ldi	r20, 0x2C	; 44
+     cd6:	51 e0       	ldi	r21, 0x01	; 1
+     cd8:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(5,481,300);
+     cdc:	85 e0       	ldi	r24, 0x05	; 5
+     cde:	61 ee       	ldi	r22, 0xE1	; 225
+     ce0:	71 e0       	ldi	r23, 0x01	; 1
+     ce2:	4c e2       	ldi	r20, 0x2C	; 44
+     ce4:	51 e0       	ldi	r21, 0x01	; 1
+     ce6:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(6,516,300);//baiyoushou
+     cea:	86 e0       	ldi	r24, 0x06	; 6
+     cec:	64 e0       	ldi	r22, 0x04	; 4
+     cee:	72 e0       	ldi	r23, 0x02	; 2
+     cf0:	4c e2       	ldi	r20, 0x2C	; 44
+     cf2:	51 e0       	ldi	r21, 0x01	; 1
+     cf4:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     cf8:	80 ea       	ldi	r24, 0xA0	; 160
+     cfa:	9f e0       	ldi	r25, 0x0F	; 15
+     cfc:	20 e9       	ldi	r18, 0x90	; 144
+     cfe:	31 e0       	ldi	r19, 0x01	; 1
+     d00:	f9 01       	movw	r30, r18
+     d02:	31 97       	sbiw	r30, 0x01	; 1
+     d04:	f1 f7       	brne	.-4      	; 0xd02 <zou+0x4f2>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     d06:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     d08:	d9 f7       	brne	.-10     	; 0xd00 <zou+0x4f0>
+		_delay_ms(400);
+
+		SetServoPosition(7,472,300); 
+     d0a:	87 e0       	ldi	r24, 0x07	; 7
+     d0c:	68 ed       	ldi	r22, 0xD8	; 216
+     d0e:	71 e0       	ldi	r23, 0x01	; 1
+     d10:	4c e2       	ldi	r20, 0x2C	; 44
+     d12:	51 e0       	ldi	r21, 0x01	; 1
+     d14:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(8,380,300);
+     d18:	88 e0       	ldi	r24, 0x08	; 8
+     d1a:	6c e7       	ldi	r22, 0x7C	; 124
+     d1c:	71 e0       	ldi	r23, 0x01	; 1
+     d1e:	4c e2       	ldi	r20, 0x2C	; 44
+     d20:	51 e0       	ldi	r21, 0x01	; 1
+     d22:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(9,348,300);
+     d26:	89 e0       	ldi	r24, 0x09	; 9
+     d28:	6c e5       	ldi	r22, 0x5C	; 92
+     d2a:	71 e0       	ldi	r23, 0x01	; 1
+     d2c:	4c e2       	ldi	r20, 0x2C	; 44
+     d2e:	51 e0       	ldi	r21, 0x01	; 1
+     d30:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(10,451,300);//kuazuojiao
+     d34:	8a e0       	ldi	r24, 0x0A	; 10
+     d36:	63 ec       	ldi	r22, 0xC3	; 195
+     d38:	71 e0       	ldi	r23, 0x01	; 1
+     d3a:	4c e2       	ldi	r20, 0x2C	; 44
+     d3c:	51 e0       	ldi	r21, 0x01	; 1
+     d3e:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     d42:	88 e5       	ldi	r24, 0x58	; 88
+     d44:	9b e1       	ldi	r25, 0x1B	; 27
+     d46:	20 e9       	ldi	r18, 0x90	; 144
+     d48:	31 e0       	ldi	r19, 0x01	; 1
+     d4a:	f9 01       	movw	r30, r18
+     d4c:	31 97       	sbiw	r30, 0x01	; 1
+     d4e:	f1 f7       	brne	.-4      	; 0xd4c <zou+0x53c>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     d50:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     d52:	d9 f7       	brne	.-10     	; 0xd4a <zou+0x53a>
+         _delay_ms(700);
+/////////////////////////////////////////////////////////////////////////////////
+		SetServoPosition(1,454,300);
+     d54:	81 e0       	ldi	r24, 0x01	; 1
+     d56:	66 ec       	ldi	r22, 0xC6	; 198
+     d58:	71 e0       	ldi	r23, 0x01	; 1
+     d5a:	4c e2       	ldi	r20, 0x2C	; 44
+     d5c:	51 e0       	ldi	r21, 0x01	; 1
+     d5e:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(2,747,300);
+     d62:	82 e0       	ldi	r24, 0x02	; 2
+     d64:	6b ee       	ldi	r22, 0xEB	; 235
+     d66:	72 e0       	ldi	r23, 0x02	; 2
+     d68:	4c e2       	ldi	r20, 0x2C	; 44
+     d6a:	51 e0       	ldi	r21, 0x01	; 1
+     d6c:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+      	SetServoPosition(3,498,300); 
+     d70:	83 e0       	ldi	r24, 0x03	; 3
+     d72:	62 ef       	ldi	r22, 0xF2	; 242
+     d74:	71 e0       	ldi	r23, 0x01	; 1
+     d76:	4c e2       	ldi	r20, 0x2C	; 44
+     d78:	51 e0       	ldi	r21, 0x01	; 1
+     d7a:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(4,791,300);
+     d7e:	84 e0       	ldi	r24, 0x04	; 4
+     d80:	67 e1       	ldi	r22, 0x17	; 23
+     d82:	73 e0       	ldi	r23, 0x03	; 3
+     d84:	4c e2       	ldi	r20, 0x2C	; 44
+     d86:	51 e0       	ldi	r21, 0x01	; 1
+     d88:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(5,481,300);
+     d8c:	85 e0       	ldi	r24, 0x05	; 5
+     d8e:	61 ee       	ldi	r22, 0xE1	; 225
+     d90:	71 e0       	ldi	r23, 0x01	; 1
+     d92:	4c e2       	ldi	r20, 0x2C	; 44
+     d94:	51 e0       	ldi	r21, 0x01	; 1
+     d96:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(6,517,300);
+     d9a:	86 e0       	ldi	r24, 0x06	; 6
+     d9c:	65 e0       	ldi	r22, 0x05	; 5
+     d9e:	72 e0       	ldi	r23, 0x02	; 2
+     da0:	4c e2       	ldi	r20, 0x2C	; 44
+     da2:	51 e0       	ldi	r21, 0x01	; 1
+     da4:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(7,573,300); 
+     da8:	87 e0       	ldi	r24, 0x07	; 7
+     daa:	6d e3       	ldi	r22, 0x3D	; 61
+     dac:	72 e0       	ldi	r23, 0x02	; 2
+     dae:	4c e2       	ldi	r20, 0x2C	; 44
+     db0:	51 e0       	ldi	r21, 0x01	; 1
+     db2:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(8,478,300);
+     db6:	88 e0       	ldi	r24, 0x08	; 8
+     db8:	6e ed       	ldi	r22, 0xDE	; 222
+     dba:	71 e0       	ldi	r23, 0x01	; 1
+     dbc:	4c e2       	ldi	r20, 0x2C	; 44
+     dbe:	51 e0       	ldi	r21, 0x01	; 1
+     dc0:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(9,440,300);
+     dc4:	89 e0       	ldi	r24, 0x09	; 9
+     dc6:	68 eb       	ldi	r22, 0xB8	; 184
+     dc8:	71 e0       	ldi	r23, 0x01	; 1
+     dca:	4c e2       	ldi	r20, 0x2C	; 44
+     dcc:	51 e0       	ldi	r21, 0x01	; 1
+     dce:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(10,547,300);//zhanzhi
+     dd2:	8a e0       	ldi	r24, 0x0A	; 10
+     dd4:	63 e2       	ldi	r22, 0x23	; 35
+     dd6:	72 e0       	ldi	r23, 0x02	; 2
+     dd8:	4c e2       	ldi	r20, 0x2C	; 44
+     dda:	51 e0       	ldi	r21, 0x01	; 1
+     ddc:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     de0:	80 ea       	ldi	r24, 0xA0	; 160
+     de2:	9f e0       	ldi	r25, 0x0F	; 15
+     de4:	20 e9       	ldi	r18, 0x90	; 144
+     de6:	31 e0       	ldi	r19, 0x01	; 1
+     de8:	f9 01       	movw	r30, r18
+     dea:	31 97       	sbiw	r30, 0x01	; 1
+     dec:	f1 f7       	brne	.-4      	; 0xdea <zou+0x5da>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     dee:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     df0:	d9 f7       	brne	.-10     	; 0xde8 <zou+0x5d8>
+
+
+         _delay_ms(400);
+      	
+
+		SetServoPosition(1,454,300);
+     df2:	81 e0       	ldi	r24, 0x01	; 1
+     df4:	66 ec       	ldi	r22, 0xC6	; 198
+     df6:	71 e0       	ldi	r23, 0x01	; 1
+     df8:	4c e2       	ldi	r20, 0x2C	; 44
+     dfa:	51 e0       	ldi	r21, 0x01	; 1
+     dfc:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(2,713,300);
+     e00:	82 e0       	ldi	r24, 0x02	; 2
+     e02:	69 ec       	ldi	r22, 0xC9	; 201
+     e04:	72 e0       	ldi	r23, 0x02	; 2
+     e06:	4c e2       	ldi	r20, 0x2C	; 44
+     e08:	51 e0       	ldi	r21, 0x01	; 1
+     e0a:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+      	SetServoPosition(3,369,300); 
+     e0e:	83 e0       	ldi	r24, 0x03	; 3
+     e10:	61 e7       	ldi	r22, 0x71	; 113
+     e12:	71 e0       	ldi	r23, 0x01	; 1
+     e14:	4c e2       	ldi	r20, 0x2C	; 44
+     e16:	51 e0       	ldi	r21, 0x01	; 1
+     e18:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(4,694,300);
+     e1c:	84 e0       	ldi	r24, 0x04	; 4
+     e1e:	66 eb       	ldi	r22, 0xB6	; 182
+     e20:	72 e0       	ldi	r23, 0x02	; 2
+     e22:	4c e2       	ldi	r20, 0x2C	; 44
+     e24:	51 e0       	ldi	r21, 0x01	; 1
+     e26:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(5,502,300);
+     e2a:	85 e0       	ldi	r24, 0x05	; 5
+     e2c:	66 ef       	ldi	r22, 0xF6	; 246
+     e2e:	71 e0       	ldi	r23, 0x01	; 1
+     e30:	4c e2       	ldi	r20, 0x2C	; 44
+     e32:	51 e0       	ldi	r21, 0x01	; 1
+     e34:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(6,513,300);//baizuoshou
+     e38:	86 e0       	ldi	r24, 0x06	; 6
+     e3a:	61 e0       	ldi	r22, 0x01	; 1
+     e3c:	72 e0       	ldi	r23, 0x02	; 2
+     e3e:	4c e2       	ldi	r20, 0x2C	; 44
+     e40:	51 e0       	ldi	r21, 0x01	; 1
+     e42:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     e46:	80 ea       	ldi	r24, 0xA0	; 160
+     e48:	9f e0       	ldi	r25, 0x0F	; 15
+     e4a:	20 e9       	ldi	r18, 0x90	; 144
+     e4c:	31 e0       	ldi	r19, 0x01	; 1
+     e4e:	f9 01       	movw	r30, r18
+     e50:	31 97       	sbiw	r30, 0x01	; 1
+     e52:	f1 f7       	brne	.-4      	; 0xe50 <zou+0x640>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     e54:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     e56:	d9 f7       	brne	.-10     	; 0xe4e <zou+0x63e>
+		_delay_ms(400);
+
+		SetServoPosition(7,647,300);
+     e58:	87 e0       	ldi	r24, 0x07	; 7
+     e5a:	67 e8       	ldi	r22, 0x87	; 135
+     e5c:	72 e0       	ldi	r23, 0x02	; 2
+     e5e:	4c e2       	ldi	r20, 0x2C	; 44
+     e60:	51 e0       	ldi	r21, 0x01	; 1
+     e62:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+        SetServoPosition(8,550,300);
+     e66:	88 e0       	ldi	r24, 0x08	; 8
+     e68:	66 e2       	ldi	r22, 0x26	; 38
+     e6a:	72 e0       	ldi	r23, 0x02	; 2
+     e6c:	4c e2       	ldi	r20, 0x2C	; 44
+     e6e:	51 e0       	ldi	r21, 0x01	; 1
+     e70:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(9,510,300);
+     e74:	89 e0       	ldi	r24, 0x09	; 9
+     e76:	6e ef       	ldi	r22, 0xFE	; 254
+     e78:	71 e0       	ldi	r23, 0x01	; 1
+     e7a:	4c e2       	ldi	r20, 0x2C	; 44
+     e7c:	51 e0       	ldi	r21, 0x01	; 1
+     e7e:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(10,607,300);//kuayoujiao
+     e82:	8a e0       	ldi	r24, 0x0A	; 10
+     e84:	6f e5       	ldi	r22, 0x5F	; 95
+     e86:	72 e0       	ldi	r23, 0x02	; 2
+     e88:	4c e2       	ldi	r20, 0x2C	; 44
+     e8a:	51 e0       	ldi	r21, 0x01	; 1
+     e8c:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+     e90:	80 ea       	ldi	r24, 0xA0	; 160
+     e92:	9f e0       	ldi	r25, 0x0F	; 15
+     e94:	20 e9       	ldi	r18, 0x90	; 144
+     e96:	31 e0       	ldi	r19, 0x01	; 1
+     e98:	f9 01       	movw	r30, r18
+     e9a:	31 97       	sbiw	r30, 0x01	; 1
+     e9c:	f1 f7       	brne	.-4      	; 0xe9a <zou+0x68a>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     e9e:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     ea0:	d9 f7       	brne	.-10     	; 0xe98 <zou+0x688>
+        _delay_ms(400);
+
+		zhixing(0,0);
+     ea2:	80 e0       	ldi	r24, 0x00	; 0
+     ea4:	90 e0       	ldi	r25, 0x00	; 0
+     ea6:	60 e0       	ldi	r22, 0x00	; 0
+     ea8:	70 e0       	ldi	r23, 0x00	; 0
+     eaa:	0e 94 ed 03 	call	0x7da	; 0x7da <zhixing>
+
+		SetServoPosition(1,454,300);
+     eae:	81 e0       	ldi	r24, 0x01	; 1
+     eb0:	66 ec       	ldi	r22, 0xC6	; 198
+     eb2:	71 e0       	ldi	r23, 0x01	; 1
+     eb4:	4c e2       	ldi	r20, 0x2C	; 44
+     eb6:	51 e0       	ldi	r21, 0x01	; 1
+     eb8:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(2,747,300);
+     ebc:	82 e0       	ldi	r24, 0x02	; 2
+     ebe:	6b ee       	ldi	r22, 0xEB	; 235
+     ec0:	72 e0       	ldi	r23, 0x02	; 2
+     ec2:	4c e2       	ldi	r20, 0x2C	; 44
+     ec4:	51 e0       	ldi	r21, 0x01	; 1
+     ec6:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+      	SetServoPosition(3,498,300); 
+     eca:	83 e0       	ldi	r24, 0x03	; 3
+     ecc:	62 ef       	ldi	r22, 0xF2	; 242
+     ece:	71 e0       	ldi	r23, 0x01	; 1
+     ed0:	4c e2       	ldi	r20, 0x2C	; 44
+     ed2:	51 e0       	ldi	r21, 0x01	; 1
+     ed4:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(4,791,300);
+     ed8:	84 e0       	ldi	r24, 0x04	; 4
+     eda:	67 e1       	ldi	r22, 0x17	; 23
+     edc:	73 e0       	ldi	r23, 0x03	; 3
+     ede:	4c e2       	ldi	r20, 0x2C	; 44
+     ee0:	51 e0       	ldi	r21, 0x01	; 1
+     ee2:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(5,481,300);
+     ee6:	85 e0       	ldi	r24, 0x05	; 5
+     ee8:	61 ee       	ldi	r22, 0xE1	; 225
+     eea:	71 e0       	ldi	r23, 0x01	; 1
+     eec:	4c e2       	ldi	r20, 0x2C	; 44
+     eee:	51 e0       	ldi	r21, 0x01	; 1
+     ef0:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(6,517,300);
+     ef4:	86 e0       	ldi	r24, 0x06	; 6
+     ef6:	65 e0       	ldi	r22, 0x05	; 5
+     ef8:	72 e0       	ldi	r23, 0x02	; 2
+     efa:	4c e2       	ldi	r20, 0x2C	; 44
+     efc:	51 e0       	ldi	r21, 0x01	; 1
+     efe:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(7,573,300); 
+     f02:	87 e0       	ldi	r24, 0x07	; 7
+     f04:	6d e3       	ldi	r22, 0x3D	; 61
+     f06:	72 e0       	ldi	r23, 0x02	; 2
+     f08:	4c e2       	ldi	r20, 0x2C	; 44
+     f0a:	51 e0       	ldi	r21, 0x01	; 1
+     f0c:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+	    SetServoPosition(8,478,300);
+     f10:	88 e0       	ldi	r24, 0x08	; 8
+     f12:	6e ed       	ldi	r22, 0xDE	; 222
+     f14:	71 e0       	ldi	r23, 0x01	; 1
+     f16:	4c e2       	ldi	r20, 0x2C	; 44
+     f18:	51 e0       	ldi	r21, 0x01	; 1
+     f1a:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(9,440,300);
+     f1e:	89 e0       	ldi	r24, 0x09	; 9
+     f20:	68 eb       	ldi	r22, 0xB8	; 184
+     f22:	71 e0       	ldi	r23, 0x01	; 1
+     f24:	4c e2       	ldi	r20, 0x2C	; 44
+     f26:	51 e0       	ldi	r21, 0x01	; 1
+     f28:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(10,547,300);//zhanzhi
+     f2c:	8a e0       	ldi	r24, 0x0A	; 10
+     f2e:	63 e2       	ldi	r22, 0x23	; 35
+     f30:	72 e0       	ldi	r23, 0x02	; 2
+     f32:	4c e2       	ldi	r20, 0x2C	; 44
+     f34:	51 e0       	ldi	r21, 0x01	; 1
+     f36:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+
+
+	}
+     f3a:	08 95       	ret
+
+00000f3c <main>:
+		  SetServoPosition(3,770,300);
+		
+}
+
+int main(void)
+{   
+     f3c:	8f 92       	push	r8
+     f3e:	9f 92       	push	r9
+     f40:	af 92       	push	r10
+     f42:	bf 92       	push	r11
+     f44:	cf 92       	push	r12
+     f46:	df 92       	push	r13
+     f48:	ef 92       	push	r14
+     f4a:	ff 92       	push	r15
+     f4c:	1f 93       	push	r17
+     f4e:	cf 93       	push	r28
+     f50:	df 93       	push	r29
+    PWM_init(); 
+     f52:	0e 94 17 0b 	call	0x162e	; 0x162e <PWM_init>
+	System_Init();
+     f56:	0e 94 8d 0b 	call	0x171a	; 0x171a <System_Init>
+	DDRA=0XFF;
+     f5a:	8f ef       	ldi	r24, 0xFF	; 255
+     f5c:	8a bb       	out	0x1a, r24	; 26
+	PORTA =0XFF;
+     f5e:	8b bb       	out	0x1b, r24	; 27
+	DDRC=0XFF;
+     f60:	84 bb       	out	0x14, r24	; 20
+	PORTC =0XFF;
+     f62:	85 bb       	out	0x15, r24	; 21
+	int s=0;
+	 int f=0;
+	 int g=0;
+     int  w=0;
+	int l=1,r=1;
+	cli();                        //关总中断
+     f64:	f8 94       	cli
+     f66:	11 e0       	ldi	r17, 0x01	; 1
+	for(m=1;m<=10;m++)                       //我们用10个舵机，
+    SetServoLimit(m,0,1023);           //设置舵机工作模式为舵机模式
+     f68:	81 2f       	mov	r24, r17
+     f6a:	60 e0       	ldi	r22, 0x00	; 0
+     f6c:	70 e0       	ldi	r23, 0x00	; 0
+     f6e:	4f ef       	ldi	r20, 0xFF	; 255
+     f70:	53 e0       	ldi	r21, 0x03	; 3
+     f72:	0e 94 2a 09 	call	0x1254	; 0x1254 <SetServoLimit>
+	 int f=0;
+	 int g=0;
+     int  w=0;
+	int l=1,r=1;
+	cli();                        //关总中断
+	for(m=1;m<=10;m++)                       //我们用10个舵机，
+     f76:	1f 5f       	subi	r17, 0xFF	; 255
+     f78:	1b 30       	cpi	r17, 0x0B	; 11
+     f7a:	b1 f7       	brne	.-20     	; 0xf68 <main+0x2c>
+    SetServoLimit(m,0,1023);           //设置舵机工作模式为舵机模式
+	for(int n=11;n<=14;n++)                    //我们用4个舵机，ID:11-14
+		SetServoLimit(n,0,0);                  //设置舵机工作模式为电机模式
+     f7c:	8b e0       	ldi	r24, 0x0B	; 11
+     f7e:	60 e0       	ldi	r22, 0x00	; 0
+     f80:	70 e0       	ldi	r23, 0x00	; 0
+     f82:	40 e0       	ldi	r20, 0x00	; 0
+     f84:	50 e0       	ldi	r21, 0x00	; 0
+     f86:	0e 94 2a 09 	call	0x1254	; 0x1254 <SetServoLimit>
+     f8a:	8c e0       	ldi	r24, 0x0C	; 12
+     f8c:	60 e0       	ldi	r22, 0x00	; 0
+     f8e:	70 e0       	ldi	r23, 0x00	; 0
+     f90:	40 e0       	ldi	r20, 0x00	; 0
+     f92:	50 e0       	ldi	r21, 0x00	; 0
+     f94:	0e 94 2a 09 	call	0x1254	; 0x1254 <SetServoLimit>
+     f98:	8d e0       	ldi	r24, 0x0D	; 13
+     f9a:	60 e0       	ldi	r22, 0x00	; 0
+     f9c:	70 e0       	ldi	r23, 0x00	; 0
+     f9e:	40 e0       	ldi	r20, 0x00	; 0
+     fa0:	50 e0       	ldi	r21, 0x00	; 0
+     fa2:	0e 94 2a 09 	call	0x1254	; 0x1254 <SetServoLimit>
+     fa6:	8e e0       	ldi	r24, 0x0E	; 14
+     fa8:	60 e0       	ldi	r22, 0x00	; 0
+     faa:	70 e0       	ldi	r23, 0x00	; 0
+     fac:	40 e0       	ldi	r20, 0x00	; 0
+     fae:	50 e0       	ldi	r21, 0x00	; 0
+     fb0:	0e 94 2a 09 	call	0x1254	; 0x1254 <SetServoLimit>
+     fb4:	80 e1       	ldi	r24, 0x10	; 16
+     fb6:	97 e2       	ldi	r25, 0x27	; 39
+     fb8:	20 e9       	ldi	r18, 0x90	; 144
+     fba:	31 e0       	ldi	r19, 0x01	; 1
+     fbc:	f9 01       	movw	r30, r18
+     fbe:	31 97       	sbiw	r30, 0x01	; 1
+     fc0:	f1 f7       	brne	.-4      	; 0xfbe <main+0x82>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+     fc2:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+     fc4:	d9 f7       	brne	.-10     	; 0xfbc <main+0x80>
+    	_delay_ms(1000);
+       dunjiinit();
+     fc6:	0e 94 1a 01 	call	0x234	; 0x234 <dunjiinit>
+          SetServoPosition(1,273,300);
+     fca:	81 e0       	ldi	r24, 0x01	; 1
+     fcc:	61 e1       	ldi	r22, 0x11	; 17
+     fce:	71 e0       	ldi	r23, 0x01	; 1
+     fd0:	4c e2       	ldi	r20, 0x2C	; 44
+     fd2:	51 e0       	ldi	r21, 0x01	; 1
+     fd4:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+          SetServoPosition(2,614,300);
+     fd8:	82 e0       	ldi	r24, 0x02	; 2
+     fda:	66 e6       	ldi	r22, 0x66	; 102
+     fdc:	72 e0       	ldi	r23, 0x02	; 2
+     fde:	4c e2       	ldi	r20, 0x2C	; 44
+     fe0:	51 e0       	ldi	r21, 0x01	; 1
+     fe2:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		  SetServoPosition(3,668,300);
+     fe6:	83 e0       	ldi	r24, 0x03	; 3
+     fe8:	6c e9       	ldi	r22, 0x9C	; 156
+     fea:	72 e0       	ldi	r23, 0x02	; 2
+     fec:	4c e2       	ldi	r20, 0x2C	; 44
+     fee:	51 e0       	ldi	r21, 0x01	; 1
+     ff0:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		  SetServoPosition(4,697,300);
+     ff4:	84 e0       	ldi	r24, 0x04	; 4
+     ff6:	69 eb       	ldi	r22, 0xB9	; 185
+     ff8:	72 e0       	ldi	r23, 0x02	; 2
+     ffa:	4c e2       	ldi	r20, 0x2C	; 44
+     ffc:	51 e0       	ldi	r21, 0x01	; 1
+     ffe:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		  SetServoPosition(5,601,300);
+    1002:	85 e0       	ldi	r24, 0x05	; 5
+    1004:	69 e5       	ldi	r22, 0x59	; 89
+    1006:	72 e0       	ldi	r23, 0x02	; 2
+    1008:	4c e2       	ldi	r20, 0x2C	; 44
+    100a:	51 e0       	ldi	r21, 0x01	; 1
+    100c:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		  SetServoPosition(6,667,300);
+    1010:	86 e0       	ldi	r24, 0x06	; 6
+    1012:	6b e9       	ldi	r22, 0x9B	; 155
+    1014:	72 e0       	ldi	r23, 0x02	; 2
+    1016:	4c e2       	ldi	r20, 0x2C	; 44
+    1018:	51 e0       	ldi	r21, 0x01	; 1
+    101a:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+    101e:	80 e2       	ldi	r24, 0x20	; 32
+    1020:	9e e4       	ldi	r25, 0x4E	; 78
+    1022:	20 e9       	ldi	r18, 0x90	; 144
+    1024:	31 e0       	ldi	r19, 0x01	; 1
+    1026:	f9 01       	movw	r30, r18
+    1028:	31 97       	sbiw	r30, 0x01	; 1
+    102a:	f1 f7       	brne	.-4      	; 0x1028 <main+0xec>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+    102c:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+    102e:	d9 f7       	brne	.-10     	; 0x1026 <main+0xea>
+    1030:	c0 e0       	ldi	r28, 0x00	; 0
+    1032:	d0 e0       	ldi	r29, 0x00	; 0
+    1034:	88 24       	eor	r8, r8
+    1036:	99 24       	eor	r9, r9
+    1038:	aa 24       	eor	r10, r10
+    103a:	bb 24       	eor	r11, r11
+    103c:	cc 24       	eor	r12, r12
+    103e:	dd 24       	eor	r13, r13
+    1040:	a0 e9       	ldi	r26, 0x90	; 144
+    1042:	ea 2e       	mov	r14, r26
+    1044:	a1 e0       	ldi	r26, 0x01	; 1
+    1046:	fa 2e       	mov	r15, r26
+	      _delay_ms(2000);
+	
+	while(1)
+	{   
+	    i=USART1_recieve();
+    1048:	0e 94 60 0b 	call	0x16c0	; 0x16c0 <USART1_recieve>
+    104c:	18 2f       	mov	r17, r24
+		switch(i)
+    104e:	87 36       	cpi	r24, 0x67	; 103
+    1050:	09 f4       	brne	.+2      	; 0x1054 <main+0x118>
+    1052:	86 c0       	rjmp	.+268    	; 0x1160 <__stack+0x61>
+    1054:	88 36       	cpi	r24, 0x68	; 104
+    1056:	c8 f4       	brcc	.+50     	; 0x108a <main+0x14e>
+    1058:	83 33       	cpi	r24, 0x33	; 51
+    105a:	09 f4       	brne	.+2      	; 0x105e <main+0x122>
+    105c:	51 c0       	rjmp	.+162    	; 0x1100 <__stack+0x1>
+    105e:	84 33       	cpi	r24, 0x34	; 52
+    1060:	50 f4       	brcc	.+20     	; 0x1076 <main+0x13a>
+    1062:	81 33       	cpi	r24, 0x31	; 49
+    1064:	09 f4       	brne	.+2      	; 0x1068 <main+0x12c>
+    1066:	3e c0       	rjmp	.+124    	; 0x10e4 <main+0x1a8>
+    1068:	82 33       	cpi	r24, 0x32	; 50
+    106a:	08 f0       	brcs	.+2      	; 0x106e <main+0x132>
+    106c:	57 c0       	rjmp	.+174    	; 0x111c <__stack+0x1d>
+    106e:	80 33       	cpi	r24, 0x30	; 48
+    1070:	09 f0       	breq	.+2      	; 0x1074 <main+0x138>
+    1072:	e7 c0       	rjmp	.+462    	; 0x1242 <__stack+0x143>
+    1074:	29 c0       	rjmp	.+82     	; 0x10c8 <main+0x18c>
+    1076:	88 33       	cpi	r24, 0x38	; 56
+    1078:	09 f4       	brne	.+2      	; 0x107c <main+0x140>
+    107a:	66 c0       	rjmp	.+204    	; 0x1148 <__stack+0x49>
+    107c:	83 36       	cpi	r24, 0x63	; 99
+    107e:	09 f4       	brne	.+2      	; 0x1082 <main+0x146>
+    1080:	7f c0       	rjmp	.+254    	; 0x1180 <__stack+0x81>
+    1082:	85 33       	cpi	r24, 0x35	; 53
+    1084:	09 f0       	breq	.+2      	; 0x1088 <main+0x14c>
+    1086:	dd c0       	rjmp	.+442    	; 0x1242 <__stack+0x143>
+    1088:	8f c0       	rjmp	.+286    	; 0x11a8 <__stack+0xa9>
+    108a:	8d 36       	cpi	r24, 0x6D	; 109
+    108c:	09 f4       	brne	.+2      	; 0x1090 <main+0x154>
+    108e:	b5 c0       	rjmp	.+362    	; 0x11fa <__stack+0xfb>
+    1090:	8e 36       	cpi	r24, 0x6E	; 110
+    1092:	50 f4       	brcc	.+20     	; 0x10a8 <main+0x16c>
+    1094:	8a 36       	cpi	r24, 0x6A	; 106
+    1096:	09 f4       	brne	.+2      	; 0x109a <main+0x15e>
+    1098:	9b c0       	rjmp	.+310    	; 0x11d0 <__stack+0xd1>
+    109a:	8b 36       	cpi	r24, 0x6B	; 107
+    109c:	09 f4       	brne	.+2      	; 0x10a0 <main+0x164>
+    109e:	a0 c0       	rjmp	.+320    	; 0x11e0 <__stack+0xe1>
+    10a0:	88 36       	cpi	r24, 0x68	; 104
+    10a2:	09 f0       	breq	.+2      	; 0x10a6 <main+0x16a>
+    10a4:	ce c0       	rjmp	.+412    	; 0x1242 <__stack+0x143>
+    10a6:	56 c0       	rjmp	.+172    	; 0x1154 <__stack+0x55>
+    10a8:	82 37       	cpi	r24, 0x72	; 114
+    10aa:	09 f4       	brne	.+2      	; 0x10ae <main+0x172>
+    10ac:	73 c0       	rjmp	.+230    	; 0x1194 <__stack+0x95>
+    10ae:	83 37       	cpi	r24, 0x73	; 115
+    10b0:	20 f4       	brcc	.+8      	; 0x10ba <main+0x17e>
+    10b2:	81 37       	cpi	r24, 0x71	; 113
+    10b4:	09 f0       	breq	.+2      	; 0x10b8 <main+0x17c>
+    10b6:	c5 c0       	rjmp	.+394    	; 0x1242 <__stack+0x143>
+    10b8:	a3 c0       	rjmp	.+326    	; 0x1200 <__stack+0x101>
+    10ba:	84 37       	cpi	r24, 0x74	; 116
+    10bc:	09 f4       	brne	.+2      	; 0x10c0 <main+0x184>
+    10be:	8d c0       	rjmp	.+282    	; 0x11da <__stack+0xdb>
+    10c0:	8a 37       	cpi	r24, 0x7A	; 122
+    10c2:	09 f0       	breq	.+2      	; 0x10c6 <main+0x18a>
+    10c4:	be c0       	rjmp	.+380    	; 0x1242 <__stack+0x143>
+    10c6:	9f c0       	rjmp	.+318    	; 0x1206 <__stack+0x107>
+		{      
+		     case '0': zhixing(580,-600 ); _delay_ms(70);zhixing(0,0);s=0;break;
+    10c8:	84 e4       	ldi	r24, 0x44	; 68
+    10ca:	92 e0       	ldi	r25, 0x02	; 2
+    10cc:	68 ea       	ldi	r22, 0xA8	; 168
+    10ce:	7d ef       	ldi	r23, 0xFD	; 253
+    10d0:	0e 94 ed 03 	call	0x7da	; 0x7da <zhixing>
+    10d4:	8c eb       	ldi	r24, 0xBC	; 188
+    10d6:	92 e0       	ldi	r25, 0x02	; 2
+    10d8:	f7 01       	movw	r30, r14
+    10da:	31 97       	sbiw	r30, 0x01	; 1
+    10dc:	f1 f7       	brne	.-4      	; 0x10da <main+0x19e>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+    10de:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+    10e0:	d9 f7       	brne	.-10     	; 0x10d8 <main+0x19c>
+    10e2:	29 c0       	rjmp	.+82     	; 0x1136 <__stack+0x37>
+			case '1': zhixing(-580,600 ); _delay_ms(70);zhixing(0,0);s=0;break;
+    10e4:	8c eb       	ldi	r24, 0xBC	; 188
+    10e6:	9d ef       	ldi	r25, 0xFD	; 253
+    10e8:	68 e5       	ldi	r22, 0x58	; 88
+    10ea:	72 e0       	ldi	r23, 0x02	; 2
+    10ec:	0e 94 ed 03 	call	0x7da	; 0x7da <zhixing>
+    10f0:	8c eb       	ldi	r24, 0xBC	; 188
+    10f2:	92 e0       	ldi	r25, 0x02	; 2
+    10f4:	f7 01       	movw	r30, r14
+    10f6:	31 97       	sbiw	r30, 0x01	; 1
+    10f8:	f1 f7       	brne	.-4      	; 0x10f6 <main+0x1ba>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+    10fa:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+    10fc:	d9 f7       	brne	.-10     	; 0x10f4 <main+0x1b8>
+    10fe:	1b c0       	rjmp	.+54     	; 0x1136 <__stack+0x37>
+			case '3': zhixing(500,500 );_delay_ms(70);zhixing(0,0);s=0;break;
+    1100:	84 ef       	ldi	r24, 0xF4	; 244
+    1102:	91 e0       	ldi	r25, 0x01	; 1
+    1104:	64 ef       	ldi	r22, 0xF4	; 244
+    1106:	71 e0       	ldi	r23, 0x01	; 1
+    1108:	0e 94 ed 03 	call	0x7da	; 0x7da <zhixing>
+    110c:	8c eb       	ldi	r24, 0xBC	; 188
+    110e:	92 e0       	ldi	r25, 0x02	; 2
+    1110:	f7 01       	movw	r30, r14
+    1112:	31 97       	sbiw	r30, 0x01	; 1
+    1114:	f1 f7       	brne	.-4      	; 0x1112 <__stack+0x13>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+    1116:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+    1118:	d9 f7       	brne	.-10     	; 0x1110 <__stack+0x11>
+    111a:	0d c0       	rjmp	.+26     	; 0x1136 <__stack+0x37>
+			case '2': zhixing(-500,-500 );_delay_ms(70);zhixing(0,0);s=0;break;
+    111c:	8c e0       	ldi	r24, 0x0C	; 12
+    111e:	9e ef       	ldi	r25, 0xFE	; 254
+    1120:	6c e0       	ldi	r22, 0x0C	; 12
+    1122:	7e ef       	ldi	r23, 0xFE	; 254
+    1124:	0e 94 ed 03 	call	0x7da	; 0x7da <zhixing>
+    1128:	8c eb       	ldi	r24, 0xBC	; 188
+    112a:	92 e0       	ldi	r25, 0x02	; 2
+    112c:	f7 01       	movw	r30, r14
+    112e:	31 97       	sbiw	r30, 0x01	; 1
+    1130:	f1 f7       	brne	.-4      	; 0x112e <__stack+0x2f>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+    1132:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+    1134:	d9 f7       	brne	.-10     	; 0x112c <__stack+0x2d>
+    1136:	80 e0       	ldi	r24, 0x00	; 0
+    1138:	90 e0       	ldi	r25, 0x00	; 0
+    113a:	60 e0       	ldi	r22, 0x00	; 0
+    113c:	70 e0       	ldi	r23, 0x00	; 0
+    113e:	0e 94 ed 03 	call	0x7da	; 0x7da <zhixing>
+    1142:	c0 e0       	ldi	r28, 0x00	; 0
+    1144:	d0 e0       	ldi	r29, 0x00	; 0
+    1146:	7d c0       	rjmp	.+250    	; 0x1242 <__stack+0x143>
+	        case '8': if(s==0){rightping();} break;       //右手平举动作
+    1148:	20 97       	sbiw	r28, 0x00	; 0
+    114a:	09 f0       	breq	.+2      	; 0x114e <__stack+0x4f>
+    114c:	7a c0       	rjmp	.+244    	; 0x1242 <__stack+0x143>
+    114e:	0e 94 ae 01 	call	0x35c	; 0x35c <rightping>
+    1152:	77 c0       	rjmp	.+238    	; 0x1242 <__stack+0x143>
+		    case 'h': if(s==0){leftping();} break;       //左手平举动作
+    1154:	20 97       	sbiw	r28, 0x00	; 0
+    1156:	09 f0       	breq	.+2      	; 0x115a <__stack+0x5b>
+    1158:	74 c0       	rjmp	.+232    	; 0x1242 <__stack+0x143>
+    115a:	0e 94 98 01 	call	0x330	; 0x330 <leftping>
+    115e:	71 c0       	rjmp	.+226    	; 0x1242 <__stack+0x143>
+		    case 'g':   f=f+1;  if (f%3==1){baoqiu1();s=1;}break;// g=g+1;  if (g%3==1)zou(); break;//leftxia();   break;//左手半下举
+    1160:	08 94       	sec
+    1162:	81 1c       	adc	r8, r1
+    1164:	91 1c       	adc	r9, r1
+    1166:	c4 01       	movw	r24, r8
+    1168:	63 e0       	ldi	r22, 0x03	; 3
+    116a:	70 e0       	ldi	r23, 0x00	; 0
+    116c:	0e 94 9b 0b 	call	0x1736	; 0x1736 <__divmodhi4>
+    1170:	01 97       	sbiw	r24, 0x01	; 1
+    1172:	09 f0       	breq	.+2      	; 0x1176 <__stack+0x77>
+    1174:	66 c0       	rjmp	.+204    	; 0x1242 <__stack+0x143>
+    1176:	0e 94 85 00 	call	0x10a	; 0x10a <baoqiu1>
+    117a:	c1 e0       	ldi	r28, 0x01	; 1
+    117c:	d0 e0       	ldi	r29, 0x00	; 0
+    117e:	61 c0       	rjmp	.+194    	; 0x1242 <__stack+0x143>
+		    case 'c':  PORTC &= 0XDF; _delay_ms(1000); PORTC|= 0X20; break;//5
+    1180:	ad 98       	cbi	0x15, 5	; 21
+    1182:	80 e1       	ldi	r24, 0x10	; 16
+    1184:	97 e2       	ldi	r25, 0x27	; 39
+    1186:	f7 01       	movw	r30, r14
+    1188:	31 97       	sbiw	r30, 0x01	; 1
+    118a:	f1 f7       	brne	.-4      	; 0x1188 <__stack+0x89>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+    118c:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+    118e:	d9 f7       	brne	.-10     	; 0x1186 <__stack+0x87>
+    1190:	ad 9a       	sbi	0x15, 5	; 21
+    1192:	57 c0       	rjmp	.+174    	; 0x1242 <__stack+0x143>
+			case 'r':  PORTC &= 0XEF; _delay_ms(1000); PORTC|= 0X10;break;//4结束语音rightHand.Y < kneeRight.Y
+    1194:	ac 98       	cbi	0x15, 4	; 21
+    1196:	80 e1       	ldi	r24, 0x10	; 16
+    1198:	97 e2       	ldi	r25, 0x27	; 39
+    119a:	f7 01       	movw	r30, r14
+    119c:	31 97       	sbiw	r30, 0x01	; 1
+    119e:	f1 f7       	brne	.-4      	; 0x119c <__stack+0x9d>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+    11a0:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+    11a2:	d9 f7       	brne	.-10     	; 0x119a <__stack+0x9b>
+    11a4:	ac 9a       	sbi	0x15, 4	; 21
+    11a6:	4d c0       	rjmp	.+154    	; 0x1242 <__stack+0x143>
+		    case '5':  w=w+1; if (w==1){ PORTC &= 0X7F;_delay_ms(1000);PORTC |= 0X80; wushu(); }break;   //7开始语音  //武术语音leftHand.Y < kneeLeft.Y
+    11a8:	08 94       	sec
+    11aa:	c1 1c       	adc	r12, r1
+    11ac:	d1 1c       	adc	r13, r1
+    11ae:	81 e0       	ldi	r24, 0x01	; 1
+    11b0:	c8 16       	cp	r12, r24
+    11b2:	d1 04       	cpc	r13, r1
+    11b4:	09 f0       	breq	.+2      	; 0x11b8 <__stack+0xb9>
+    11b6:	45 c0       	rjmp	.+138    	; 0x1242 <__stack+0x143>
+    11b8:	af 98       	cbi	0x15, 7	; 21
+    11ba:	80 e1       	ldi	r24, 0x10	; 16
+    11bc:	97 e2       	ldi	r25, 0x27	; 39
+    11be:	f7 01       	movw	r30, r14
+    11c0:	31 97       	sbiw	r30, 0x01	; 1
+    11c2:	f1 f7       	brne	.-4      	; 0x11c0 <__stack+0xc1>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+    11c4:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+    11c6:	d9 f7       	brne	.-10     	; 0x11be <__stack+0xbf>
+    11c8:	af 9a       	sbi	0x15, 7	; 21
+    11ca:	0e 94 7d 02 	call	0x4fa	; 0x4fa <wushu>
+    11ce:	39 c0       	rjmp	.+114    	; 0x1242 <__stack+0x143>
+	        case 'j': if(s==0){rightinit() ;} break;  //右手前伸
+    11d0:	20 97       	sbiw	r28, 0x00	; 0
+    11d2:	b9 f5       	brne	.+110    	; 0x1242 <__stack+0x143>
+    11d4:	0e 94 33 02 	call	0x466	; 0x466 <rightinit>
+    11d8:	34 c0       	rjmp	.+104    	; 0x1242 <__stack+0x143>
+			case 't':qiaoluo() ;  break;//qiaoluo
+    11da:	0e 94 49 02 	call	0x492	; 0x492 <qiaoluo>
+    11de:	31 c0       	rjmp	.+98     	; 0x1242 <__stack+0x143>
+			case 'k': g=g+1;  if (g%3==1)zou(); break;  // break;  右手半前伸
+    11e0:	08 94       	sec
+    11e2:	a1 1c       	adc	r10, r1
+    11e4:	b1 1c       	adc	r11, r1
+    11e6:	c5 01       	movw	r24, r10
+    11e8:	63 e0       	ldi	r22, 0x03	; 3
+    11ea:	70 e0       	ldi	r23, 0x00	; 0
+    11ec:	0e 94 9b 0b 	call	0x1736	; 0x1736 <__divmodhi4>
+    11f0:	01 97       	sbiw	r24, 0x01	; 1
+    11f2:	39 f5       	brne	.+78     	; 0x1242 <__stack+0x143>
+    11f4:	0e 94 08 04 	call	0x810	; 0x810 <zou>
+    11f8:	24 c0       	rjmp	.+72     	; 0x1242 <__stack+0x143>
+            case 'm':leftinit() ;  break; //左手前伸
+    11fa:	0e 94 1d 02 	call	0x43a	; 0x43a <leftinit>
+    11fe:	21 c0       	rjmp	.+66     	; 0x1242 <__stack+0x143>
+			case 'q':leftrightinit() ;   break;  //youjiaoqianshen	
+    1200:	0e 94 c4 01 	call	0x388	; 0x388 <leftrightinit>
+    1204:	1e c0       	rjmp	.+60     	; 0x1242 <__stack+0x143>
+			case 'z': dun();zhixing(600,-600 );   _delay_ms(4000);
+    1206:	0e 94 40 01 	call	0x280	; 0x280 <dun>
+    120a:	88 e5       	ldi	r24, 0x58	; 88
+    120c:	92 e0       	ldi	r25, 0x02	; 2
+    120e:	68 ea       	ldi	r22, 0xA8	; 168
+    1210:	7d ef       	ldi	r23, 0xFD	; 253
+    1212:	0e 94 ed 03 	call	0x7da	; 0x7da <zhixing>
+    1216:	80 e4       	ldi	r24, 0x40	; 64
+    1218:	9c e9       	ldi	r25, 0x9C	; 156
+    121a:	f7 01       	movw	r30, r14
+    121c:	31 97       	sbiw	r30, 0x01	; 1
+    121e:	f1 f7       	brne	.-4      	; 0x121c <__stack+0x11d>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+    1220:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+    1222:	d9 f7       	brne	.-10     	; 0x121a <__stack+0x11b>
+			           zhixing(0,0 );  dunjiinit() ;	_delay_ms(1500);
+    1224:	80 e0       	ldi	r24, 0x00	; 0
+    1226:	90 e0       	ldi	r25, 0x00	; 0
+    1228:	60 e0       	ldi	r22, 0x00	; 0
+    122a:	70 e0       	ldi	r23, 0x00	; 0
+    122c:	0e 94 ed 03 	call	0x7da	; 0x7da <zhixing>
+    1230:	0e 94 1a 01 	call	0x234	; 0x234 <dunjiinit>
+    1234:	88 e9       	ldi	r24, 0x98	; 152
+    1236:	9a e3       	ldi	r25, 0x3A	; 58
+    1238:	f7 01       	movw	r30, r14
+    123a:	31 97       	sbiw	r30, 0x01	; 1
+    123c:	f1 f7       	brne	.-4      	; 0x123a <__stack+0x13b>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+    123e:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+    1240:	d9 f7       	brne	.-10     	; 0x1238 <__stack+0x139>
+		///	case 'l':break;  //右手半拥抱
+			//	case 'n': break; //左手半前伸
+				default : break;
+		}
+		
+		USART1_send(i);  
+    1242:	81 2f       	mov	r24, r17
+    1244:	90 e0       	ldi	r25, 0x00	; 0
+    1246:	0e 94 58 0b 	call	0x16b0	; 0x16b0 <USART1_send>
+    124a:	fe ce       	rjmp	.-516    	; 0x1048 <main+0x10c>
+
+0000124c <SendUart0Byte>:
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    124c:	5d 9b       	sbis	0x0b, 5	; 11
+    124e:	fe cf       	rjmp	.-4      	; 0x124c <SendUart0Byte>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1250:	8c b9       	out	0x0c, r24	; 12
+
+ }
+    1252:	08 95       	ret
+
+00001254 <SetServoLimit>:
+
+void SetServoLimit(unsigned char id, unsigned short int cw_limit, unsigned short int ccw_limit)
+ {
+    1254:	e8 2f       	mov	r30, r24
+    1256:	84 e0       	ldi	r24, 0x04	; 4
+    1258:	40 30       	cpi	r20, 0x00	; 0
+    125a:	58 07       	cpc	r21, r24
+    125c:	10 f0       	brcs	.+4      	; 0x1262 <SetServoLimit+0xe>
+    125e:	4f ef       	ldi	r20, 0xFF	; 255
+    1260:	53 e0       	ldi	r21, 0x03	; 3
+    1262:	9b 01       	movw	r18, r22
+    1264:	84 e0       	ldi	r24, 0x04	; 4
+    1266:	60 30       	cpi	r22, 0x00	; 0
+    1268:	78 07       	cpc	r23, r24
+    126a:	10 f0       	brcs	.+4      	; 0x1270 <SetServoLimit+0x1c>
+    126c:	2f ef       	ldi	r18, 0xFF	; 255
+    126e:	33 e0       	ldi	r19, 0x03	; 3
+     else
+	    {
+		 temp_cw = cw_limit;
+	    }
+
+     temp_ccw_h = (unsigned char)(temp_ccw >> 8);
+    1270:	65 2f       	mov	r22, r21
+     temp_ccw_l = (unsigned char)temp_ccw; // 将16bit数据拆为2个8bit数据 // (split 16 bits to 2 bytes)
+    1272:	94 2f       	mov	r25, r20
+	 temp_cw_h = (unsigned char)(temp_cw >> 8);
+    1274:	43 2f       	mov	r20, r19
+	 temp_cw_l = (unsigned char)temp_cw; // 将16bit数据拆为2个8bit数据 // (split 16 bits to 2 bytes)
+	 PORTG &= ~_BV(PG4);
+    1276:	80 91 65 00 	lds	r24, 0x0065
+    127a:	8f 7e       	andi	r24, 0xEF	; 239
+    127c:	80 93 65 00 	sts	0x0065, r24
+	 PORTG |= _BV(PG3); // 使总线处于主机发送状态 // (Set the bus to host transmit state)
+    1280:	80 91 65 00 	lds	r24, 0x0065
+    1284:	88 60       	ori	r24, 0x08	; 8
+    1286:	80 93 65 00 	sts	0x0065, r24
+	 UCSR0A |= (1<<TXC0); // 清除UART0写完成标志 // (Clear written flag of UART0)
+    128a:	5e 9a       	sbi	0x0b, 6	; 11
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    128c:	5d 9b       	sbis	0x0b, 5	; 11
+    128e:	fe cf       	rjmp	.-4      	; 0x128c <SetServoLimit+0x38>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1290:	8f ef       	ldi	r24, 0xFF	; 255
+    1292:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1294:	5d 9b       	sbis	0x0b, 5	; 11
+    1296:	fe cf       	rjmp	.-4      	; 0x1294 <SetServoLimit+0x40>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1298:	8f ef       	ldi	r24, 0xFF	; 255
+    129a:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    129c:	5d 9b       	sbis	0x0b, 5	; 11
+    129e:	fe cf       	rjmp	.-4      	; 0x129c <SetServoLimit+0x48>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    12a0:	ec b9       	out	0x0c, r30	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    12a2:	5d 9b       	sbis	0x0b, 5	; 11
+    12a4:	fe cf       	rjmp	.-4      	; 0x12a2 <SetServoLimit+0x4e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    12a6:	87 e0       	ldi	r24, 0x07	; 7
+    12a8:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    12aa:	5d 9b       	sbis	0x0b, 5	; 11
+    12ac:	fe cf       	rjmp	.-4      	; 0x12aa <SetServoLimit+0x56>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    12ae:	83 e0       	ldi	r24, 0x03	; 3
+    12b0:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    12b2:	5d 9b       	sbis	0x0b, 5	; 11
+    12b4:	fe cf       	rjmp	.-4      	; 0x12b2 <SetServoLimit+0x5e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    12b6:	86 e0       	ldi	r24, 0x06	; 6
+    12b8:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    12ba:	5d 9b       	sbis	0x0b, 5	; 11
+    12bc:	fe cf       	rjmp	.-4      	; 0x12ba <SetServoLimit+0x66>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    12be:	2c b9       	out	0x0c, r18	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    12c0:	5d 9b       	sbis	0x0b, 5	; 11
+    12c2:	fe cf       	rjmp	.-4      	; 0x12c0 <SetServoLimit+0x6c>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    12c4:	4c b9       	out	0x0c, r20	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    12c6:	5d 9b       	sbis	0x0b, 5	; 11
+    12c8:	fe cf       	rjmp	.-4      	; 0x12c6 <SetServoLimit+0x72>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    12ca:	9c b9       	out	0x0c, r25	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    12cc:	5d 9b       	sbis	0x0b, 5	; 11
+    12ce:	fe cf       	rjmp	.-4      	; 0x12cc <SetServoLimit+0x78>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    12d0:	6c b9       	out	0x0c, r22	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    12d2:	5d 9b       	sbis	0x0b, 5	; 11
+    12d4:	fe cf       	rjmp	.-4      	; 0x12d2 <SetServoLimit+0x7e>
+	 SendUart0Byte(0x06); // 舵机控制寄存器首地址 // (Send the start address of control rigister)
+	 SendUart0Byte(temp_cw_l); // 发送顺时针位置限制低位
+	 SendUart0Byte(temp_cw_h); // 发送顺时针位置限制高位 //(Send the high byte of clockwise position limit)
+	 SendUart0Byte(temp_ccw_l); // 发送逆时针位置限制低位 // (Send the low byte of counterclockwise position limit)
+	 SendUart0Byte(temp_ccw_h); // 发送逆时针位置限制高位 // (Send the low byte of counterclockwise position limit)
+	 temp_sum = id + 7 + 0x03 + 0x06 + temp_cw_l + temp_cw_h + temp_ccw_l + temp_ccw_h;
+    12d6:	e0 5f       	subi	r30, 0xF0	; 240
+    12d8:	e2 0f       	add	r30, r18
+    12da:	e9 0f       	add	r30, r25
+    12dc:	e4 0f       	add	r30, r20
+    12de:	e6 0f       	add	r30, r22
+	 temp_sum = ~temp_sum; // 计算校验和 // (Calculate the checksum)
+    12e0:	e0 95       	com	r30
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    12e2:	ec b9       	out	0x0c, r30	; 12
+	 SendUart0Byte(temp_ccw_l); // 发送逆时针位置限制低位 // (Send the low byte of counterclockwise position limit)
+	 SendUart0Byte(temp_ccw_h); // 发送逆时针位置限制高位 // (Send the low byte of counterclockwise position limit)
+	 temp_sum = id + 7 + 0x03 + 0x06 + temp_cw_l + temp_cw_h + temp_ccw_l + temp_ccw_h;
+	 temp_sum = ~temp_sum; // 计算校验和 // (Calculate the checksum)
+	 SendUart0Byte(temp_sum); // 发送校验和 // (Send checksum)
+	 while ( !( UCSR0A & (1<<TXC0)) ); // 等待发送完成
+    12e4:	5e 9b       	sbis	0x0b, 6	; 11
+    12e6:	fe cf       	rjmp	.-4      	; 0x12e4 <SetServoLimit+0x90>
+
+	 PORTG |= _BV(PG4);
+    12e8:	80 91 65 00 	lds	r24, 0x0065
+    12ec:	80 61       	ori	r24, 0x10	; 16
+    12ee:	80 93 65 00 	sts	0x0065, r24
+
+	 PORTG &= ~_BV(PG3);  // 使总线处于主机接收状态 // (Set the UART bus to host receiving state)
+    12f2:	80 91 65 00 	lds	r24, 0x0065
+    12f6:	87 7f       	andi	r24, 0xF7	; 247
+    12f8:	80 93 65 00 	sts	0x0065, r24
+    12fc:	80 e4       	ldi	r24, 0x40	; 64
+    12fe:	9f e1       	ldi	r25, 0x1F	; 31
+    1300:	01 97       	sbiw	r24, 0x01	; 1
+    1302:	f1 f7       	brne	.-4      	; 0x1300 <SetServoLimit+0xac>
+	 _delay_ms(2);        //送完成后，总线会被从机占用，反馈应答数据，所以进行延时
+					               // (The bus will be overrode by slave after finishing sending
+								   // to receive the answer, so here delays 2 ms.)
+
+}
+    1304:	08 95       	ret
+
+00001306 <SetServoPosition>:
+
+
+
+
+void SetServoPosition(unsigned char id, unsigned short int position, unsigned short int velocity)
+{
+    1306:	e8 2f       	mov	r30, r24
+    1308:	84 e0       	ldi	r24, 0x04	; 4
+    130a:	40 30       	cpi	r20, 0x00	; 0
+    130c:	58 07       	cpc	r21, r24
+    130e:	10 f0       	brcs	.+4      	; 0x1314 <SetServoPosition+0xe>
+    1310:	4f ef       	ldi	r20, 0xFF	; 255
+    1312:	53 e0       	ldi	r21, 0x03	; 3
+    1314:	9b 01       	movw	r18, r22
+    1316:	84 e0       	ldi	r24, 0x04	; 4
+    1318:	60 30       	cpi	r22, 0x00	; 0
+    131a:	78 07       	cpc	r23, r24
+    131c:	10 f0       	brcs	.+4      	; 0x1322 <SetServoPosition+0x1c>
+    131e:	2f ef       	ldi	r18, 0xFF	; 255
+    1320:	33 e0       	ldi	r19, 0x03	; 3
+   else
+   {
+   temp_position = position;
+   }
+
+   temp_velocity_h = (unsigned char)(temp_velocity >> 8); // 将16bit数据拆为2个8bit数据 // (split 16 bits to 2 bytes)
+    1322:	65 2f       	mov	r22, r21
+   temp_velocity_l = (unsigned char)temp_velocity;
+    1324:	94 2f       	mov	r25, r20
+   temp_position_h = (unsigned char)(temp_position >> 8); // 将16bit数据拆为2个8bit数据 // (split 16 bits to 2 bytes)
+    1326:	43 2f       	mov	r20, r19
+   temp_position_l = (unsigned char)temp_position;
+   PORTG &= ~_BV(PG4);
+    1328:	80 91 65 00 	lds	r24, 0x0065
+    132c:	8f 7e       	andi	r24, 0xEF	; 239
+    132e:	80 93 65 00 	sts	0x0065, r24
+   	 PORTG |= _BV(PG3); // 使总线处于主机发送状态 // (Set the bus to host transmit state)
+    1332:	80 91 65 00 	lds	r24, 0x0065
+    1336:	88 60       	ori	r24, 0x08	; 8
+    1338:	80 93 65 00 	sts	0x0065, r24
+   UCSR0A |= (1<<TXC0); // 清除UART0写完成标志 // (Clear written flag of UART0)
+    133c:	5e 9a       	sbi	0x0b, 6	; 11
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    133e:	5d 9b       	sbis	0x0b, 5	; 11
+    1340:	fe cf       	rjmp	.-4      	; 0x133e <SetServoPosition+0x38>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1342:	8f ef       	ldi	r24, 0xFF	; 255
+    1344:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1346:	5d 9b       	sbis	0x0b, 5	; 11
+    1348:	fe cf       	rjmp	.-4      	; 0x1346 <SetServoPosition+0x40>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    134a:	8f ef       	ldi	r24, 0xFF	; 255
+    134c:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    134e:	5d 9b       	sbis	0x0b, 5	; 11
+    1350:	fe cf       	rjmp	.-4      	; 0x134e <SetServoPosition+0x48>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1352:	ec b9       	out	0x0c, r30	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1354:	5d 9b       	sbis	0x0b, 5	; 11
+    1356:	fe cf       	rjmp	.-4      	; 0x1354 <SetServoPosition+0x4e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1358:	87 e0       	ldi	r24, 0x07	; 7
+    135a:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    135c:	5d 9b       	sbis	0x0b, 5	; 11
+    135e:	fe cf       	rjmp	.-4      	; 0x135c <SetServoPosition+0x56>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1360:	83 e0       	ldi	r24, 0x03	; 3
+    1362:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1364:	5d 9b       	sbis	0x0b, 5	; 11
+    1366:	fe cf       	rjmp	.-4      	; 0x1364 <SetServoPosition+0x5e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1368:	8e e1       	ldi	r24, 0x1E	; 30
+    136a:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    136c:	5d 9b       	sbis	0x0b, 5	; 11
+    136e:	fe cf       	rjmp	.-4      	; 0x136c <SetServoPosition+0x66>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1370:	2c b9       	out	0x0c, r18	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1372:	5d 9b       	sbis	0x0b, 5	; 11
+    1374:	fe cf       	rjmp	.-4      	; 0x1372 <SetServoPosition+0x6c>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1376:	4c b9       	out	0x0c, r20	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1378:	5d 9b       	sbis	0x0b, 5	; 11
+    137a:	fe cf       	rjmp	.-4      	; 0x1378 <SetServoPosition+0x72>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    137c:	9c b9       	out	0x0c, r25	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    137e:	5d 9b       	sbis	0x0b, 5	; 11
+    1380:	fe cf       	rjmp	.-4      	; 0x137e <SetServoPosition+0x78>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1382:	6c b9       	out	0x0c, r22	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1384:	5d 9b       	sbis	0x0b, 5	; 11
+    1386:	fe cf       	rjmp	.-4      	; 0x1384 <SetServoPosition+0x7e>
+   SendUart0Byte(0x1E); // 舵机控制寄存器首地址 // (Send the start address of control register)
+   SendUart0Byte(temp_position_l); // 发送速度数据低位 // (Send the low byte of velocity)
+   SendUart0Byte(temp_position_h); // 发送速度数据高位 // (Send the high byte of velocity)
+   SendUart0Byte(temp_velocity_l); //发送位置低字节 // (Send the low byte of position)
+   SendUart0Byte(temp_velocity_h); // 发送位置高字节 // (Send the high byte of position)
+   temp_sum = id + 7 + 0x03 + 0x1E + temp_position_l + temp_position_h + temp_velocity_l + temp_velocity_h;
+    1388:	e8 5d       	subi	r30, 0xD8	; 216
+    138a:	e2 0f       	add	r30, r18
+    138c:	e9 0f       	add	r30, r25
+    138e:	e4 0f       	add	r30, r20
+    1390:	e6 0f       	add	r30, r22
+   temp_sum = ~temp_sum; // 计算校验和
+    1392:	e0 95       	com	r30
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1394:	ec b9       	out	0x0c, r30	; 12
+   SendUart0Byte(temp_velocity_l); //发送位置低字节 // (Send the low byte of position)
+   SendUart0Byte(temp_velocity_h); // 发送位置高字节 // (Send the high byte of position)
+   temp_sum = id + 7 + 0x03 + 0x1E + temp_position_l + temp_position_h + temp_velocity_l + temp_velocity_h;
+   temp_sum = ~temp_sum; // 计算校验和
+   SendUart0Byte(temp_sum); // 发送校验和 (Send the checksum)
+   while ( !( UCSR0A & (1<<TXC0)) ) // 等待发送完成
+    1396:	5e 9b       	sbis	0x0b, 6	; 11
+    1398:	fe cf       	rjmp	.-4      	; 0x1396 <SetServoPosition+0x90>
+   {
+                 // (Waiting for finishing sending)
+   ;
+   }
+   PORTG |= _BV(PG4);
+    139a:	80 91 65 00 	lds	r24, 0x0065
+    139e:	80 61       	ori	r24, 0x10	; 16
+    13a0:	80 93 65 00 	sts	0x0065, r24
+
+  	 PORTG &= ~_BV(PG3);  // 使总线处于主机接收状态 // (Set the UART bus to host receiving state)
+    13a4:	80 91 65 00 	lds	r24, 0x0065
+    13a8:	87 7f       	andi	r24, 0xF7	; 247
+    13aa:	80 93 65 00 	sts	0x0065, r24
+    13ae:	80 e4       	ldi	r24, 0x40	; 64
+    13b0:	9f e1       	ldi	r25, 0x1F	; 31
+    13b2:	01 97       	sbiw	r24, 0x01	; 1
+    13b4:	f1 f7       	brne	.-4      	; 0x13b2 <SetServoPosition+0xac>
+   _delay_ms(2); // 发送完成后，总线会被从机占用，反馈应答数据，所以进行延时
+                 // (The bus will be overrode by slave after finishing sending
+				 // to receive the answer, so here delays 2 ms.)
+
+}
+    13b6:	08 95       	ret
+
+000013b8 <Action_write>:
+
+void Action_write(unsigned char id,unsigned short int position,unsigned short int velocity)
+{
+    13b8:	98 2f       	mov	r25, r24
+	temp_position=position;
+	temp_velocity_h=(unsigned char)(temp_velocity>>8);
+	temp_velocity_l=(unsigned char)temp_velocity;
+	temp_position_h=(unsigned char)(temp_position>>8);
+	temp_position_l=(unsigned char)temp_position;
+	 PORTG &= ~_BV(PG4); 
+    13ba:	80 91 65 00 	lds	r24, 0x0065
+    13be:	8f 7e       	andi	r24, 0xEF	; 239
+    13c0:	80 93 65 00 	sts	0x0065, r24
+    PORTG |= _BV(PG3); // 使总线处于主机发送状态 
+    13c4:	80 91 65 00 	lds	r24, 0x0065
+    13c8:	88 60       	ori	r24, 0x08	; 8
+    13ca:	80 93 65 00 	sts	0x0065, r24
+
+    UCSR0A |= (1<<TXC0); // 清除UART0写完成标志 
+    13ce:	5e 9a       	sbi	0x0b, 6	; 11
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    13d0:	5d 9b       	sbis	0x0b, 5	; 11
+    13d2:	fe cf       	rjmp	.-4      	; 0x13d0 <Action_write+0x18>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    13d4:	8f ef       	ldi	r24, 0xFF	; 255
+    13d6:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    13d8:	5d 9b       	sbis	0x0b, 5	; 11
+    13da:	fe cf       	rjmp	.-4      	; 0x13d8 <Action_write+0x20>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    13dc:	8f ef       	ldi	r24, 0xFF	; 255
+    13de:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    13e0:	5d 9b       	sbis	0x0b, 5	; 11
+    13e2:	fe cf       	rjmp	.-4      	; 0x13e0 <Action_write+0x28>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    13e4:	9c b9       	out	0x0c, r25	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    13e6:	5d 9b       	sbis	0x0b, 5	; 11
+    13e8:	fe cf       	rjmp	.-4      	; 0x13e6 <Action_write+0x2e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    13ea:	87 e0       	ldi	r24, 0x07	; 7
+    13ec:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    13ee:	5d 9b       	sbis	0x0b, 5	; 11
+    13f0:	fe cf       	rjmp	.-4      	; 0x13ee <Action_write+0x36>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    13f2:	84 e0       	ldi	r24, 0x04	; 4
+    13f4:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    13f6:	5d 9b       	sbis	0x0b, 5	; 11
+    13f8:	fe cf       	rjmp	.-4      	; 0x13f6 <Action_write+0x3e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    13fa:	8e e1       	ldi	r24, 0x1E	; 30
+    13fc:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    13fe:	5d 9b       	sbis	0x0b, 5	; 11
+    1400:	fe cf       	rjmp	.-4      	; 0x13fe <Action_write+0x46>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1402:	6c b9       	out	0x0c, r22	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1404:	5d 9b       	sbis	0x0b, 5	; 11
+    1406:	fe cf       	rjmp	.-4      	; 0x1404 <Action_write+0x4c>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1408:	7c b9       	out	0x0c, r23	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    140a:	5d 9b       	sbis	0x0b, 5	; 11
+    140c:	fe cf       	rjmp	.-4      	; 0x140a <Action_write+0x52>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    140e:	4c b9       	out	0x0c, r20	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1410:	5d 9b       	sbis	0x0b, 5	; 11
+    1412:	fe cf       	rjmp	.-4      	; 0x1410 <Action_write+0x58>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1414:	5c b9       	out	0x0c, r21	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1416:	5d 9b       	sbis	0x0b, 5	; 11
+    1418:	fe cf       	rjmp	.-4      	; 0x1416 <Action_write+0x5e>
+	SendUart0Byte(0x1E);
+	SendUart0Byte(temp_position_l);
+	SendUart0Byte(temp_position_h);
+	SendUart0Byte(temp_velocity_l);
+	SendUart0Byte(temp_velocity_h);
+	temp_sum=id+ 7 + 0x04 + 0x1e + temp_position_l + temp_position_h + temp_velocity_l + temp_velocity_h;
+    141a:	97 5d       	subi	r25, 0xD7	; 215
+    141c:	96 0f       	add	r25, r22
+    141e:	94 0f       	add	r25, r20
+    1420:	97 0f       	add	r25, r23
+    1422:	95 0f       	add	r25, r21
+	temp_sum=~temp_sum;
+    1424:	90 95       	com	r25
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1426:	9c b9       	out	0x0c, r25	; 12
+	SendUart0Byte(temp_velocity_h);
+	temp_sum=id+ 7 + 0x04 + 0x1e + temp_position_l + temp_position_h + temp_velocity_l + temp_velocity_h;
+	temp_sum=~temp_sum;
+	SendUart0Byte(temp_sum);
+	
+	 while ( !( UCSR0A & (1<<TXC0)) ) // 等待发送完成 
+    1428:	5e 9b       	sbis	0x0b, 6	; 11
+    142a:	fe cf       	rjmp	.-4      	; 0x1428 <Action_write+0x70>
+{ 
+; 
+} 
+PORTG &=~_BV(PG3);
+    142c:	80 91 65 00 	lds	r24, 0x0065
+    1430:	87 7f       	andi	r24, 0xF7	; 247
+    1432:	80 93 65 00 	sts	0x0065, r24
+PORTG |=_BV(PG4); // 使总线处于主机接收状态 
+    1436:	80 91 65 00 	lds	r24, 0x0065
+    143a:	80 61       	ori	r24, 0x10	; 16
+    143c:	80 93 65 00 	sts	0x0065, r24
+    1440:	80 e4       	ldi	r24, 0x40	; 64
+    1442:	9f e1       	ldi	r25, 0x1F	; 31
+    1444:	01 97       	sbiw	r24, 0x01	; 1
+    1446:	f1 f7       	brne	.-4      	; 0x1444 <Action_write+0x8c>
+_delay_ms(2);
+}
+    1448:	08 95       	ret
+
+0000144a <Action>:
+void Action()
+{
+	unsigned char temp_sum=0;
+    PORTG &= ~_BV(PG4); 
+    144a:	80 91 65 00 	lds	r24, 0x0065
+    144e:	8f 7e       	andi	r24, 0xEF	; 239
+    1450:	80 93 65 00 	sts	0x0065, r24
+    PORTG |= _BV(PG3); // 使总线处于主机发送状态 
+    1454:	80 91 65 00 	lds	r24, 0x0065
+    1458:	88 60       	ori	r24, 0x08	; 8
+    145a:	80 93 65 00 	sts	0x0065, r24
+
+    UCSR0A |= (1<<TXC0); // 清除UART0写完成标志 	
+    145e:	5e 9a       	sbi	0x0b, 6	; 11
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1460:	5d 9b       	sbis	0x0b, 5	; 11
+    1462:	fe cf       	rjmp	.-4      	; 0x1460 <Action+0x16>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1464:	8f ef       	ldi	r24, 0xFF	; 255
+    1466:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1468:	5d 9b       	sbis	0x0b, 5	; 11
+    146a:	fe cf       	rjmp	.-4      	; 0x1468 <Action+0x1e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    146c:	8f ef       	ldi	r24, 0xFF	; 255
+    146e:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1470:	5d 9b       	sbis	0x0b, 5	; 11
+    1472:	fe cf       	rjmp	.-4      	; 0x1470 <Action+0x26>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1474:	8e ef       	ldi	r24, 0xFE	; 254
+    1476:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1478:	5d 9b       	sbis	0x0b, 5	; 11
+    147a:	fe cf       	rjmp	.-4      	; 0x1478 <Action+0x2e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    147c:	82 e0       	ldi	r24, 0x02	; 2
+    147e:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1480:	5d 9b       	sbis	0x0b, 5	; 11
+    1482:	fe cf       	rjmp	.-4      	; 0x1480 <Action+0x36>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1484:	85 e0       	ldi	r24, 0x05	; 5
+    1486:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1488:	5d 9b       	sbis	0x0b, 5	; 11
+    148a:	fe cf       	rjmp	.-4      	; 0x1488 <Action+0x3e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    148c:	8a ef       	ldi	r24, 0xFA	; 250
+    148e:	8c b9       	out	0x0c, r24	; 12
+	SendUart0Byte(0x05);
+	temp_sum=0xFE + 0x02 + 0x05;
+	temp_sum=~temp_sum;
+	SendUart0Byte(temp_sum);
+	
+	 while ( !( UCSR0A & (1<<TXC0)) ) // 等待发送完成 
+    1490:	5e 9b       	sbis	0x0b, 6	; 11
+    1492:	fe cf       	rjmp	.-4      	; 0x1490 <Action+0x46>
+{ 
+; 
+} 
+PORTG &=~_BV(PG3);
+    1494:	80 91 65 00 	lds	r24, 0x0065
+    1498:	87 7f       	andi	r24, 0xF7	; 247
+    149a:	80 93 65 00 	sts	0x0065, r24
+PORTG |=_BV(PG4); // 使总线处于主机接收状态 
+    149e:	80 91 65 00 	lds	r24, 0x0065
+    14a2:	80 61       	ori	r24, 0x10	; 16
+    14a4:	80 93 65 00 	sts	0x0065, r24
+    14a8:	80 e4       	ldi	r24, 0x40	; 64
+    14aa:	9f e1       	ldi	r25, 0x1F	; 31
+    14ac:	01 97       	sbiw	r24, 0x01	; 1
+    14ae:	f1 f7       	brne	.-4      	; 0x14ac <Action+0x62>
+_delay_ms(2);
+}
+    14b0:	08 95       	ret
+
+000014b2 <SetServoVelocity>:
+
+
+void SetServoVelocity(unsigned char id, signed short int velocity)
+{
+    14b2:	48 2f       	mov	r20, r24
+     unsigned char temp_sign = 0; // 临时符号，用于进行方向判别 // (temp variable to judge the direction)
+	 unsigned short int temp_velocity = 0; // 临时速度，用于进行方向判别 // (temp velocity to judge the direction)
+	 unsigned char temp_value_h = 0; // 待发送数据h位 // (h bits to send)
+	 unsigned char temp_value_l = 0; // 待发送数据l位 // (l bits to send)
+	 unsigned char temp_sum = 0; // 校验和寄存变量 // (temp variable to save checksum)
+	 if (velocity < 0)
+    14b4:	77 ff       	sbrs	r23, 7
+    14b6:	06 c0       	rjmp	.+12     	; 0x14c4 <SetServoVelocity+0x12>
+	 { temp_velocity = -velocity; // 如果为负数，则取绝对值 // (if negative, get the absolute value)
+    14b8:	88 27       	eor	r24, r24
+    14ba:	99 27       	eor	r25, r25
+    14bc:	86 1b       	sub	r24, r22
+    14be:	97 0b       	sbc	r25, r23
+    14c0:	51 e0       	ldi	r21, 0x01	; 1
+    14c2:	02 c0       	rjmp	.+4      	; 0x14c8 <SetServoVelocity+0x16>
+	 temp_sign = 1; // 设置负数符号标志 // (Set negative flag)
+	 }
+	 else
+	 {
+	 temp_velocity = velocity;
+    14c4:	cb 01       	movw	r24, r22
+    14c6:	50 e0       	ldi	r21, 0x00	; 0
+    14c8:	9c 01       	movw	r18, r24
+    14ca:	84 e0       	ldi	r24, 0x04	; 4
+    14cc:	20 30       	cpi	r18, 0x00	; 0
+    14ce:	38 07       	cpc	r19, r24
+    14d0:	10 f0       	brcs	.+4      	; 0x14d6 <SetServoVelocity+0x24>
+    14d2:	2f ef       	ldi	r18, 0xFF	; 255
+    14d4:	33 e0       	ldi	r19, 0x03	; 3
+	 if (temp_velocity > 1023)
+	 {
+	 temp_velocity = 1023; // 限制速度值在可用范围内 // (Limit the velocity to 0-1023)
+	 } // 设置bit10为方向位，这时temp_velocity就是待发送的速度数据了
+	 // (Set bit0 as direction bit, then temp_velocity is the data to be sended)
+	 temp_velocity |= (temp_sign << 10); temp_value_h = (unsigned char)(temp_velocity >> 8); // 将16bit数据拆为2个8bit数据
+    14d6:	95 2f       	mov	r25, r21
+    14d8:	99 0f       	add	r25, r25
+    14da:	99 0f       	add	r25, r25
+    14dc:	80 e0       	ldi	r24, 0x00	; 0
+    14de:	82 2b       	or	r24, r18
+    14e0:	93 2b       	or	r25, r19
+    14e2:	29 2f       	mov	r18, r25
+	 // (Split the 16 bits to 2 bytes)
+	 temp_value_l = (unsigned char)temp_velocity;
+    14e4:	98 2f       	mov	r25, r24
+	 PORTG &= ~_BV(PG4);
+    14e6:	80 91 65 00 	lds	r24, 0x0065
+    14ea:	8f 7e       	andi	r24, 0xEF	; 239
+    14ec:	80 93 65 00 	sts	0x0065, r24
+	 	 PORTG |= _BV(PG3); // 使总线处于主机发送状态 // (Set the bus to host transmit state)
+    14f0:	80 91 65 00 	lds	r24, 0x0065
+    14f4:	88 60       	ori	r24, 0x08	; 8
+    14f6:	80 93 65 00 	sts	0x0065, r24
+	 UCSR0A |= (1<<TXC0); // 清除UART0写完成标志 // (Clear written flag of UART0)
+    14fa:	5e 9a       	sbi	0x0b, 6	; 11
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    14fc:	5d 9b       	sbis	0x0b, 5	; 11
+    14fe:	fe cf       	rjmp	.-4      	; 0x14fc <SetServoVelocity+0x4a>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1500:	8f ef       	ldi	r24, 0xFF	; 255
+    1502:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1504:	5d 9b       	sbis	0x0b, 5	; 11
+    1506:	fe cf       	rjmp	.-4      	; 0x1504 <SetServoVelocity+0x52>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1508:	8f ef       	ldi	r24, 0xFF	; 255
+    150a:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    150c:	5d 9b       	sbis	0x0b, 5	; 11
+    150e:	fe cf       	rjmp	.-4      	; 0x150c <SetServoVelocity+0x5a>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1510:	4c b9       	out	0x0c, r20	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1512:	5d 9b       	sbis	0x0b, 5	; 11
+    1514:	fe cf       	rjmp	.-4      	; 0x1512 <SetServoVelocity+0x60>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1516:	85 e0       	ldi	r24, 0x05	; 5
+    1518:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    151a:	5d 9b       	sbis	0x0b, 5	; 11
+    151c:	fe cf       	rjmp	.-4      	; 0x151a <SetServoVelocity+0x68>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    151e:	83 e0       	ldi	r24, 0x03	; 3
+    1520:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1522:	5d 9b       	sbis	0x0b, 5	; 11
+    1524:	fe cf       	rjmp	.-4      	; 0x1522 <SetServoVelocity+0x70>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1526:	80 e2       	ldi	r24, 0x20	; 32
+    1528:	8c b9       	out	0x0c, r24	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    152a:	5d 9b       	sbis	0x0b, 5	; 11
+    152c:	fe cf       	rjmp	.-4      	; 0x152a <SetServoVelocity+0x78>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    152e:	9c b9       	out	0x0c, r25	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1530:	5d 9b       	sbis	0x0b, 5	; 11
+    1532:	fe cf       	rjmp	.-4      	; 0x1530 <SetServoVelocity+0x7e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1534:	2c b9       	out	0x0c, r18	; 12
+#include "system_init.h"              //定义与系统初始化有关函数
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+    1536:	5d 9b       	sbis	0x0b, 5	; 11
+    1538:	fe cf       	rjmp	.-4      	; 0x1536 <SetServoVelocity+0x84>
+	 SendUart0Byte(5); // 发送数据长度为参数长度+2，参数长度为3 // (Send the length of frame)
+	 SendUart0Byte(0x03); // 命令数据为“WRITE DATA” // (Send command “WRITE DATA”)
+	 SendUart0Byte(0x20); // 舵机控制寄存器首地址 // (Send the start address of control register)
+	 SendUart0Byte(temp_value_l); // 发送速度数据低位 // (Send the low byte of velocity)
+	 SendUart0Byte(temp_value_h); // 发送速度数据高位 // (Send the high byte of velocity)
+	 temp_sum = id + 5 + 0x03 + 0x20 + temp_value_l + temp_value_h; temp_sum = ~temp_sum; // 计算校验和 // (Calculate the checksum)
+    153a:	48 5d       	subi	r20, 0xD8	; 216
+    153c:	49 0f       	add	r20, r25
+    153e:	42 0f       	add	r20, r18
+    1540:	40 95       	com	r20
+#define uint    unsigned int
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+    1542:	4c b9       	out	0x0c, r20	; 12
+	 SendUart0Byte(0x20); // 舵机控制寄存器首地址 // (Send the start address of control register)
+	 SendUart0Byte(temp_value_l); // 发送速度数据低位 // (Send the low byte of velocity)
+	 SendUart0Byte(temp_value_h); // 发送速度数据高位 // (Send the high byte of velocity)
+	 temp_sum = id + 5 + 0x03 + 0x20 + temp_value_l + temp_value_h; temp_sum = ~temp_sum; // 计算校验和 // (Calculate the checksum)
+	 SendUart0Byte(temp_sum); // 发送校验和 // (Send the checksum)
+	 while ( !( UCSR0A & (1<<TXC0)) ) // 等待发送完成
+    1544:	5e 9b       	sbis	0x0b, 6	; 11
+    1546:	fe cf       	rjmp	.-4      	; 0x1544 <SetServoVelocity+0x92>
+	        {   ;}           // (Waiting for finishing sending)
+
+	 PORTG |= _BV(PG4);
+    1548:	80 91 65 00 	lds	r24, 0x0065
+    154c:	80 61       	ori	r24, 0x10	; 16
+    154e:	80 93 65 00 	sts	0x0065, r24
+
+		 PORTG &= ~_BV(PG3);  // 使总线处于主机接收状态 // (Set the UART bus to host receiving state)
+    1552:	80 91 65 00 	lds	r24, 0x0065
+    1556:	87 7f       	andi	r24, 0xF7	; 247
+    1558:	80 93 65 00 	sts	0x0065, r24
+    155c:	80 e4       	ldi	r24, 0x40	; 64
+    155e:	9f e1       	ldi	r25, 0x1F	; 31
+    1560:	01 97       	sbiw	r24, 0x01	; 1
+    1562:	f1 f7       	brne	.-4      	; 0x1560 <SetServoVelocity+0xae>
+	 _delay_ms(2);      // 发送完成后，总线会被从机占用，反馈应答数据，所以进行延时
+	 }
+    1564:	08 95       	ret
+
+00001566 <Servo_all>:
+
+void  Servo_all(uint pos1,uint pos2,uint pos3,uint pos4,uint pos5,uint pos6)
+     {
+    1566:	8f 92       	push	r8
+    1568:	9f 92       	push	r9
+    156a:	af 92       	push	r10
+    156c:	bf 92       	push	r11
+    156e:	cf 92       	push	r12
+    1570:	df 92       	push	r13
+    1572:	ef 92       	push	r14
+    1574:	ff 92       	push	r15
+    1576:	0f 93       	push	r16
+    1578:	1f 93       	push	r17
+    157a:	fc 01       	movw	r30, r24
+    157c:	6b 01       	movw	r12, r22
+    157e:	5a 01       	movw	r10, r20
+    1580:	49 01       	movw	r8, r18
+        SetServoPosition(1,pos1,300);
+    1582:	81 e0       	ldi	r24, 0x01	; 1
+    1584:	bf 01       	movw	r22, r30
+    1586:	4c e2       	ldi	r20, 0x2C	; 44
+    1588:	51 e0       	ldi	r21, 0x01	; 1
+    158a:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+        SetServoPosition(2,pos2,300);
+    158e:	82 e0       	ldi	r24, 0x02	; 2
+    1590:	b6 01       	movw	r22, r12
+    1592:	4c e2       	ldi	r20, 0x2C	; 44
+    1594:	51 e0       	ldi	r21, 0x01	; 1
+    1596:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+        SetServoPosition(3,pos3,300);
+    159a:	83 e0       	ldi	r24, 0x03	; 3
+    159c:	b5 01       	movw	r22, r10
+    159e:	4c e2       	ldi	r20, 0x2C	; 44
+    15a0:	51 e0       	ldi	r21, 0x01	; 1
+    15a2:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(4,pos4,300);
+    15a6:	84 e0       	ldi	r24, 0x04	; 4
+    15a8:	b4 01       	movw	r22, r8
+    15aa:	4c e2       	ldi	r20, 0x2C	; 44
+    15ac:	51 e0       	ldi	r21, 0x01	; 1
+    15ae:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+		SetServoPosition(5,pos5,300);
+    15b2:	85 e0       	ldi	r24, 0x05	; 5
+    15b4:	b8 01       	movw	r22, r16
+    15b6:	4c e2       	ldi	r20, 0x2C	; 44
+    15b8:	51 e0       	ldi	r21, 0x01	; 1
+    15ba:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+        SetServoPosition(6,pos6,300);
+    15be:	86 e0       	ldi	r24, 0x06	; 6
+    15c0:	b7 01       	movw	r22, r14
+    15c2:	4c e2       	ldi	r20, 0x2C	; 44
+    15c4:	51 e0       	ldi	r21, 0x01	; 1
+    15c6:	0e 94 83 09 	call	0x1306	; 0x1306 <SetServoPosition>
+    15ca:	80 e1       	ldi	r24, 0x10	; 16
+    15cc:	97 e2       	ldi	r25, 0x27	; 39
+    15ce:	20 e9       	ldi	r18, 0x90	; 144
+    15d0:	31 e0       	ldi	r19, 0x01	; 1
+    15d2:	f9 01       	movw	r30, r18
+    15d4:	31 97       	sbiw	r30, 0x01	; 1
+    15d6:	f1 f7       	brne	.-4      	; 0x15d4 <Servo_all+0x6e>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+    15d8:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+    15da:	d9 f7       	brne	.-10     	; 0x15d2 <Servo_all+0x6c>
+       
+        _delay_ms(1000);
+      }
+    15dc:	1f 91       	pop	r17
+    15de:	0f 91       	pop	r16
+    15e0:	ff 90       	pop	r15
+    15e2:	ef 90       	pop	r14
+    15e4:	df 90       	pop	r13
+    15e6:	cf 90       	pop	r12
+    15e8:	bf 90       	pop	r11
+    15ea:	af 90       	pop	r10
+    15ec:	9f 90       	pop	r9
+    15ee:	8f 90       	pop	r8
+    15f0:	08 95       	ret
+
+000015f2 <Init_Gpio>:
+#include<util/delay.h>
+#include<avr/interrupt.h>
+#include"system_init.h"
+void Init_Gpio(void)
+ {
+     DDRE &= ~(_BV(PE5) | _BV(PE4));
+    15f2:	82 b1       	in	r24, 0x02	; 2
+    15f4:	8f 7c       	andi	r24, 0xCF	; 207
+    15f6:	82 b9       	out	0x02, r24	; 2
+	 PORTE |= (_BV(PE5) | _BV(PE4));
+    15f8:	83 b1       	in	r24, 0x03	; 3
+    15fa:	80 63       	ori	r24, 0x30	; 48
+    15fc:	83 b9       	out	0x03, r24	; 3
+ }
+    15fe:	08 95       	ret
+
+00001600 <ADC_Init>:
+
+void ADC_Init(void)
+{
+
+	DDRF  = 0X00;		//PF用于ADC0~ADC7
+    1600:	10 92 61 00 	sts	0x0061, r1
+	PORTF = 0X00;		//禁止内部上拉
+    1604:	10 92 62 00 	sts	0x0062, r1
+	ADMUX   = 0B01000000;  //REFS1:REFS0=01 AVCC为基准电压;ADLAR=1 右对齐
+    1608:	80 e4       	ldi	r24, 0x40	; 64
+    160a:	87 b9       	out	0x07, r24	; 7
+	ADCSRA  = 0B10000110;  //ADEN=1 ADC使能；ADPS2:0=110 64分频
+    160c:	86 e8       	ldi	r24, 0x86	; 134
+    160e:	86 b9       	out	0x06, r24	; 6
+}
+    1610:	08 95       	ret
+
+00001612 <Get_ADC>:
+
+
+unsigned int Get_ADC(unsigned char ID)      //参数为为AD通道ID号
+{
+	unsigned int temp = 0;
+	ADMUX  =  0x40|ID;     //端口选择需要先清除
+    1612:	80 64       	ori	r24, 0x40	; 64
+    1614:	87 b9       	out	0x07, r24	; 7
+		ADCSRA |= (1<<ADSC);       //开始转换
+    1616:	36 9a       	sbi	0x06, 6	; 6
+		while(!( ADCSRA  &  (1<<ADIF) ) ); //等待转换完成
+    1618:	34 9b       	sbis	0x06, 4	; 6
+    161a:	fe cf       	rjmp	.-4      	; 0x1618 <Get_ADC+0x6>
+		temp = ADCL+ADCH*256;
+    161c:	94 b1       	in	r25, 0x04	; 4
+    161e:	85 b1       	in	r24, 0x05	; 5
+		ADCSRA |= (1<<ADIF);	   //标志位清除
+    1620:	34 9a       	sbi	0x06, 4	; 6
+    1622:	38 2f       	mov	r19, r24
+    1624:	20 e0       	ldi	r18, 0x00	; 0
+    1626:	29 0f       	add	r18, r25
+    1628:	31 1d       	adc	r19, r1
+
+
+	return temp;
+}
+    162a:	c9 01       	movw	r24, r18
+    162c:	08 95       	ret
+
+0000162e <PWM_init>:
+
+/***************PWM初始化**********************/
+void PWM_init()
+{	
+	DDRC=0XFF;             //PB5,PB6  输出 对应于OC1A,OC1B
+    162e:	8f ef       	ldi	r24, 0xFF	; 255
+    1630:	84 bb       	out	0x14, r24	; 20
+	DDRB|=0X60;  
+    1632:	87 b3       	in	r24, 0x17	; 23
+    1634:	80 66       	ori	r24, 0x60	; 96
+    1636:	87 bb       	out	0x17, r24	; 23
+	TCCR1A = 0b10100010;
+    1638:	82 ea       	ldi	r24, 0xA2	; 162
+    163a:	8f bd       	out	0x2f, r24	; 47
+	TCCR1B = 0b00011010;
+    163c:	8a e1       	ldi	r24, 0x1A	; 26
+    163e:	8e bd       	out	0x2e, r24	; 46
+	TCCR1C=0X00;
+    1640:	10 92 7a 00 	sts	0x007A, r1
+	ICR1=300;             //最大的比对值
+    1644:	8c e2       	ldi	r24, 0x2C	; 44
+    1646:	91 e0       	ldi	r25, 0x01	; 1
+    1648:	97 bd       	out	0x27, r25	; 39
+    164a:	86 bd       	out	0x26, r24	; 38
+}
+    164c:	08 95       	ret
+
+0000164e <move>:
+void move(int l_speed,int r_speed)     //l_speed,r_speed的范围为-300 ~ +300
+
+{                                        //当速度达到200~300时基本没有太大的变化
+    164e:	9c 01       	movw	r18, r24
+    if(l_speed>=0&&r_speed>=0)
+    1650:	97 fd       	sbrc	r25, 7
+    1652:	0e c0       	rjmp	.+28     	; 0x1670 <move+0x22>
+    1654:	77 fd       	sbrc	r23, 7
+    1656:	03 c0       	rjmp	.+6      	; 0x165e <move+0x10>
+	{     
+		PORTC |= 0X02;//PC1=1
+    1658:	a9 9a       	sbi	0x15, 1	; 21
+		PORTC &= 0XFE;//PC0=0
+    165a:	a8 98       	cbi	0x15, 0	; 21
+    165c:	18 c0       	rjmp	.+48     	; 0x168e <move+0x40>
+	}
+    else if(l_speed>0&&r_speed<0)
+    165e:	00 97       	sbiw	r24, 0x00	; 0
+    1660:	71 f0       	breq	.+28     	; 0x167e <move+0x30>
+	{     
+		PORTC |= 0x03; //PC0.1=1
+    1662:	85 b3       	in	r24, 0x15	; 21
+    1664:	83 60       	ori	r24, 0x03	; 3
+    1666:	85 bb       	out	0x15, r24	; 21
+		r_speed=0-r_speed;
+    1668:	70 95       	com	r23
+    166a:	61 95       	neg	r22
+    166c:	7f 4f       	sbci	r23, 0xFF	; 255
+    166e:	0f c0       	rjmp	.+30     	; 0x168e <move+0x40>
+	}
+	else if(l_speed<0&&r_speed>0)
+    1670:	16 16       	cp	r1, r22
+    1672:	17 06       	cpc	r1, r23
+    1674:	24 f4       	brge	.+8      	; 0x167e <move+0x30>
+	{     
+		PORTC &= 0xFC;//PC0.1=0
+    1676:	85 b3       	in	r24, 0x15	; 21
+    1678:	8c 7f       	andi	r24, 0xFC	; 252
+    167a:	85 bb       	out	0x15, r24	; 21
+    167c:	05 c0       	rjmp	.+10     	; 0x1688 <move+0x3a>
+		l_speed=0-l_speed;
+	}
+	else
+	{
+		PORTC |= 0X01;//PC0=1
+    167e:	a8 9a       	sbi	0x15, 0	; 21
+		PORTC &= 0XFD;//PC1=0
+    1680:	a9 98       	cbi	0x15, 1	; 21
+		r_speed=0-r_speed;l_speed=0-l_speed;
+    1682:	70 95       	com	r23
+    1684:	61 95       	neg	r22
+    1686:	7f 4f       	sbci	r23, 0xFF	; 255
+    1688:	30 95       	com	r19
+    168a:	21 95       	neg	r18
+    168c:	3f 4f       	sbci	r19, 0xFF	; 255
+	}
+	OCR1A = l_speed;
+    168e:	3b bd       	out	0x2b, r19	; 43
+    1690:	2a bd       	out	0x2a, r18	; 42
+	OCR1B = r_speed;
+    1692:	79 bd       	out	0x29, r23	; 41
+    1694:	68 bd       	out	0x28, r22	; 40
+
+	
+}
+    1696:	08 95       	ret
+
+00001698 <USART1_init>:
+
+void USART1_init()
+{
+	UCSR1A = 0X00;
+    1698:	10 92 9b 00 	sts	0x009B, r1
+	/*接收结束中断使能， 接收器与发送器使能(1<<RXCIE0)|*/
+	UCSR1B = 0B00011000;
+    169c:	88 e1       	ldi	r24, 0x18	; 24
+    169e:	80 93 9a 00 	sts	0x009A, r24
+	/* 设置帧格式: 异步，禁止奇偶校验，1个停止位，8个数据位*/
+	UCSR1C = 0B00000110;
+    16a2:	86 e0       	ldi	r24, 0x06	; 6
+    16a4:	80 93 9d 00 	sts	0x009D, r24
+	/* 设置波特率为9600*/
+	UBRR1L = 103;
+    16a8:	87 e6       	ldi	r24, 0x67	; 103
+    16aa:	80 93 99 00 	sts	0x0099, r24
+}
+    16ae:	08 95       	ret
+
+000016b0 <USART1_send>:
+
+
+void USART1_send(unsigned char data)
+{
+    16b0:	98 2f       	mov	r25, r24
+	/* 等待发送缓冲器为空 */
+	while ( !( UCSR1A & (1<<UDRE)) ) ;
+    16b2:	80 91 9b 00 	lds	r24, 0x009B
+    16b6:	85 ff       	sbrs	r24, 5
+    16b8:	fc cf       	rjmp	.-8      	; 0x16b2 <USART1_send+0x2>
+	/* 将数据放入缓冲器，发送数据*/
+	UDR1 = data;
+    16ba:	90 93 9c 00 	sts	0x009C, r25
+}
+    16be:	08 95       	ret
+
+000016c0 <USART1_recieve>:
+
+unsigned char USART1_recieve()
+{
+	/* 等待接收数据*/
+	while ( !(UCSR1A & (1<<RXC)) ) ;
+    16c0:	80 91 9b 00 	lds	r24, 0x009B
+    16c4:	87 ff       	sbrs	r24, 7
+    16c6:	fc cf       	rjmp	.-8      	; 0x16c0 <USART1_recieve>
+	/* 从缓冲器中获取并返回数据*/
+	return UDR1;
+    16c8:	80 91 9c 00 	lds	r24, 0x009C
+}
+    16cc:	08 95       	ret
+
+000016ce <Init_Uart0>:
+#include<util/delay.h>
+#include<avr/interrupt.h>
+#include"system_init.h"
+void Init_Gpio(void)
+ {
+     DDRE &= ~(_BV(PE5) | _BV(PE4));
+    16ce:	82 b1       	in	r24, 0x02	; 2
+    16d0:	8f 7c       	andi	r24, 0xCF	; 207
+    16d2:	82 b9       	out	0x02, r24	; 2
+	 PORTE |= (_BV(PE5) | _BV(PE4));
+    16d4:	83 b1       	in	r24, 0x03	; 3
+    16d6:	80 63       	ori	r24, 0x30	; 48
+    16d8:	83 b9       	out	0x03, r24	; 3
+	return UDR1;
+}
+void Init_Uart0(void)
+{
+	Init_Gpio();
+    UCSR0A = 0x02;                  // 设置为倍速模式（Set to double velocity mode）                    // 主时钟频率为16M时，波特率为1M // (Set main clock to 16M, baud rate to 1M)
+    16da:	82 e0       	ldi	r24, 0x02	; 2
+    16dc:	8b b9       	out	0x0b, r24	; 11
+	UBRR0H=0X00;
+    16de:	10 92 90 00 	sts	0x0090, r1
+	UBRR0L=0X01;                    // 接收器与发送器使能 // (Enable UART0’s receiver and transmitter)
+    16e2:	81 e0       	ldi	r24, 0x01	; 1
+    16e4:	89 b9       	out	0x09, r24	; 9
+    UCSR0B = (1<<RXEN)|(1<<TXEN);   // 设置帧格式: 8 个数据位, 1 个停止位 // (Set data frame:8 data bits,1 stop bit)接收中断使能
+    16e6:	88 e1       	ldi	r24, 0x18	; 24
+    16e8:	8a b9       	out	0x0a, r24	; 10
+    UCSR0C = (3<<UCSZ0);            /* 设置端口状态(Set port state) */
+    16ea:	86 e0       	ldi	r24, 0x06	; 6
+    16ec:	80 93 95 00 	sts	0x0095, r24
+    DDRE &= ~_BV(PE0);              // 初始化RX端口默认方向为输入 // (Set default direction of RX to input mode)
+    16f0:	10 98       	cbi	0x02, 0	; 2
+	PORTE &= ~_BV(PE0);             // 初始化RX端口默认状态为高阻 // (Set default state of RX to tri-state)
+    16f2:	18 98       	cbi	0x03, 0	; 3
+	DDRE |= _BV(PE1);               // 初始化TX端口默认方向为输出 // (Set default direction of TX to output mode)
+    16f4:	11 9a       	sbi	0x02, 1	; 2
+	PORTE |= _BV(PE1);              // 初始化TX端口默认状态为高电平 // (Set default state of RX to high state)
+    16f6:	19 9a       	sbi	0x03, 1	; 3
+	DDRG |= _BV(PG3);               // 初始化使能端口状态方向为输出 // (Enable direction of Port A as output)
+    16f8:	a4 e6       	ldi	r26, 0x64	; 100
+    16fa:	b0 e0       	ldi	r27, 0x00	; 0
+    16fc:	8c 91       	ld	r24, X
+    16fe:	88 60       	ori	r24, 0x08	; 8
+    1700:	8c 93       	st	X, r24
+	PORTG &= ~_BV(PG3);             // 初始化使能端口状态为RX状态 // (Set Port A state as same to RX)
+    1702:	e5 e6       	ldi	r30, 0x65	; 101
+    1704:	f0 e0       	ldi	r31, 0x00	; 0
+    1706:	80 81       	ld	r24, Z
+    1708:	87 7f       	andi	r24, 0xF7	; 247
+    170a:	80 83       	st	Z, r24
+	DDRG |= _BV(PG4);               // 初始化使能端口状态方向为输出 // (Set Port A state as same to RX)
+    170c:	8c 91       	ld	r24, X
+    170e:	80 61       	ori	r24, 0x10	; 16
+    1710:	8c 93       	st	X, r24
+    PORTG |= _BV(PG4);              // 初始化使能端口状态方为RX状态 // (Set Port A state as same to RX)
+    1712:	80 81       	ld	r24, Z
+    1714:	80 61       	ori	r24, 0x10	; 16
+    1716:	80 83       	st	Z, r24
+}
+    1718:	08 95       	ret
+
+0000171a <System_Init>:
+void System_Init(void)
+{
+
+
+ 
+    Init_Uart0();
+    171a:	0e 94 67 0b 	call	0x16ce	; 0x16ce <Init_Uart0>
+	
+}
+
+void USART1_init()
+{
+	UCSR1A = 0X00;
+    171e:	10 92 9b 00 	sts	0x009B, r1
+	/*接收结束中断使能， 接收器与发送器使能(1<<RXCIE0)|*/
+	UCSR1B = 0B00011000;
+    1722:	88 e1       	ldi	r24, 0x18	; 24
+    1724:	80 93 9a 00 	sts	0x009A, r24
+	/* 设置帧格式: 异步，禁止奇偶校验，1个停止位，8个数据位*/
+	UCSR1C = 0B00000110;
+    1728:	86 e0       	ldi	r24, 0x06	; 6
+    172a:	80 93 9d 00 	sts	0x009D, r24
+	/* 设置波特率为9600*/
+	UBRR1L = 103;
+    172e:	87 e6       	ldi	r24, 0x67	; 103
+    1730:	80 93 99 00 	sts	0x0099, r24
+    USART1_init();
+
+ 
+
+
+ }
+    1734:	08 95       	ret
+
+00001736 <__divmodhi4>:
+    1736:	97 fb       	bst	r25, 7
+    1738:	09 2e       	mov	r0, r25
+    173a:	07 26       	eor	r0, r23
+    173c:	0a d0       	rcall	.+20     	; 0x1752 <__divmodhi4_neg1>
+    173e:	77 fd       	sbrc	r23, 7
+    1740:	04 d0       	rcall	.+8      	; 0x174a <__divmodhi4_neg2>
+    1742:	0c d0       	rcall	.+24     	; 0x175c <__udivmodhi4>
+    1744:	06 d0       	rcall	.+12     	; 0x1752 <__divmodhi4_neg1>
+    1746:	00 20       	and	r0, r0
+    1748:	1a f4       	brpl	.+6      	; 0x1750 <__divmodhi4_exit>
+
+0000174a <__divmodhi4_neg2>:
+    174a:	70 95       	com	r23
+    174c:	61 95       	neg	r22
+    174e:	7f 4f       	sbci	r23, 0xFF	; 255
+
+00001750 <__divmodhi4_exit>:
+    1750:	08 95       	ret
+
+00001752 <__divmodhi4_neg1>:
+    1752:	f6 f7       	brtc	.-4      	; 0x1750 <__divmodhi4_exit>
+    1754:	90 95       	com	r25
+    1756:	81 95       	neg	r24
+    1758:	9f 4f       	sbci	r25, 0xFF	; 255
+    175a:	08 95       	ret
+
+0000175c <__udivmodhi4>:
+    175c:	aa 1b       	sub	r26, r26
+    175e:	bb 1b       	sub	r27, r27
+    1760:	51 e1       	ldi	r21, 0x11	; 17
+    1762:	07 c0       	rjmp	.+14     	; 0x1772 <__udivmodhi4_ep>
+
+00001764 <__udivmodhi4_loop>:
+    1764:	aa 1f       	adc	r26, r26
+    1766:	bb 1f       	adc	r27, r27
+    1768:	a6 17       	cp	r26, r22
+    176a:	b7 07       	cpc	r27, r23
+    176c:	10 f0       	brcs	.+4      	; 0x1772 <__udivmodhi4_ep>
+    176e:	a6 1b       	sub	r26, r22
+    1770:	b7 0b       	sbc	r27, r23
+
+00001772 <__udivmodhi4_ep>:
+    1772:	88 1f       	adc	r24, r24
+    1774:	99 1f       	adc	r25, r25
+    1776:	5a 95       	dec	r21
+    1778:	a9 f7       	brne	.-22     	; 0x1764 <__udivmodhi4_loop>
+    177a:	80 95       	com	r24
+    177c:	90 95       	com	r25
+    177e:	bc 01       	movw	r22, r24
+    1780:	cd 01       	movw	r24, r26
+    1782:	08 95       	ret
+
+00001784 <_exit>:
+    1784:	f8 94       	cli
+
+00001786 <__stop_program>:
+    1786:	ff cf       	rjmp	.-2      	; 0x1786 <__stop_program>
