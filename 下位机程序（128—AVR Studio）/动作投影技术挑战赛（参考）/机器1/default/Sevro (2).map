@@ -1,0 +1,440 @@
+Archive member included because of file (symbol)
+
+j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_divmodhi4.o)
+                              main.o (__divmodhi4)
+j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_exit.o)
+                              j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm128.o (exit)
+j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_udivmodhi4.o)
+                              j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_divmodhi4.o) (__udivmodhi4)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm128.o
+LOAD main.o
+LOAD servo.o
+LOAD system_init.o
+LOAD j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a
+LOAD j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51\libc.a
+LOAD j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x1692
+ *(.vectors)
+ .vectors       0x00000000       0x8c j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm128.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x0000008c                . = ALIGN (0x2)
+                0x0000008c                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000008c        0x0 linker stubs
+ *(.trampolines*)
+                0x0000008c                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000008c                __ctors_start = .
+ *(.ctors)
+                0x0000008c                __ctors_end = .
+                0x0000008c                __dtors_start = .
+ *(.dtors)
+                0x0000008c                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000008c        0x0 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm128.o
+                0x0000008c                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000008c        0xc j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm128.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000098       0x1a j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm128.o
+                0x00000098                __do_copy_data
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000000b2        0x8 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm128.o
+ *(.init9)
+ *(.text)
+ .text          0x000000ba        0x4 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm128.o
+                0x000000ba                __vector_22
+                0x000000ba                __vector_28
+                0x000000ba                __vector_1
+                0x000000ba                __vector_32
+                0x000000ba                __vector_34
+                0x000000ba                __vector_24
+                0x000000ba                __vector_12
+                0x000000ba                __bad_interrupt
+                0x000000ba                __vector_6
+                0x000000ba                __vector_31
+                0x000000ba                __vector_3
+                0x000000ba                __vector_23
+                0x000000ba                __vector_30
+                0x000000ba                __vector_25
+                0x000000ba                __vector_11
+                0x000000ba                __vector_13
+                0x000000ba                __vector_17
+                0x000000ba                __vector_19
+                0x000000ba                __vector_7
+                0x000000ba                __vector_27
+                0x000000ba                __vector_5
+                0x000000ba                __vector_33
+                0x000000ba                __vector_4
+                0x000000ba                __vector_9
+                0x000000ba                __vector_2
+                0x000000ba                __vector_21
+                0x000000ba                __vector_15
+                0x000000ba                __vector_29
+                0x000000ba                __vector_8
+                0x000000ba                __vector_26
+                0x000000ba                __vector_14
+                0x000000ba                __vector_10
+                0x000000ba                __vector_16
+                0x000000ba                __vector_18
+                0x000000ba                __vector_20
+ .text          0x000000be     0x1070 main.o
+                0x00000320                rightping
+                0x000000be                zuo
+                0x000004be                wushu
+                0x0000029e                leftrightping
+                0x0000034c                leftrightinit
+                0x000003fe                leftinit
+                0x0000010a                baoqiu1
+                0x00000206                dunjiinit
+                0x000002f4                leftping
+                0x00000252                dun
+                0x0000095c                zou
+                0x0000042a                rightinit
+                0x00000918                zhixing
+                0x00000dec                main
+                0x00000456                qiaoluo
+ .text          0x0000112e      0x3ce servo.o
+                0x00001394                SetServoVelocity
+                0x0000129a                Action_write
+                0x00001448                Servo_all
+                0x000011e8                SetServoPosition
+                0x0000132c                Action
+                0x00001136                SetServoLimit
+                0x0000112e                SendUart0Byte
+ .text          0x000014fc      0x144 system_init.o
+                0x000014fc                Init_Gpio
+                0x00001538                PWM_init
+                0x00001558                move
+                0x00001624                System_Init
+                0x000015ca                USART1_recieve
+                0x000015ba                USART1_send
+                0x0000150a                ADC_Init
+                0x0000151c                Get_ADC
+                0x000015a2                USART1_init
+                0x000015d8                Init_Uart0
+ .text          0x00001640        0x0 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_divmodhi4.o)
+ .text          0x00001640        0x0 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_exit.o)
+ .text          0x00001640        0x0 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_udivmodhi4.o)
+                0x00001640                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x00001640       0x26 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_divmodhi4.o)
+                0x00001640                __divmodhi4
+                0x00001640                _div
+ .text.libgcc   0x00001666        0x0 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_exit.o)
+ .text.libgcc   0x00001666       0x28 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_udivmodhi4.o)
+                0x00001666                __udivmodhi4
+                0x0000168e                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000168e        0x0 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_exit.o)
+                0x0000168e                exit
+                0x0000168e                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000168e        0x4 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00001692                _etext = .
+
+.data           0x00800100        0x0 load address 0x00001692
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm128.o
+ .data          0x00800100        0x0 main.o
+ .data          0x00800100        0x0 servo.o
+ .data          0x00800100        0x0 system_init.o
+ .data          0x00800100        0x0 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_divmodhi4.o)
+ .data          0x00800100        0x0 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_exit.o)
+ .data          0x00800100        0x0 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_udivmodhi4.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800100                . = ALIGN (0x2)
+                0x00800100                _edata = .
+                0x00800100                PROVIDE (__data_end, .)
+
+.bss            0x00800100        0x0
+                0x00800100                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800100        0x0 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr51/crtm128.o
+ .bss           0x00800100        0x0 main.o
+ .bss           0x00800100        0x0 servo.o
+ .bss           0x00800100        0x0 system_init.o
+ .bss           0x00800100        0x0 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_divmodhi4.o)
+ .bss           0x00800100        0x0 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_exit.o)
+ .bss           0x00800100        0x0 j:/atmel/avr tools/avrstudio4/bin/../lib/gcc/avr/4.3.2/avr51\libgcc.a(_udivmodhi4.o)
+ *(.bss*)
+ *(COMMON)
+                0x00800100                PROVIDE (__bss_end, .)
+                0x00001692                __data_load_start = LOADADDR (.data)
+                0x00001692                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800100        0x0
+                0x00800100                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800100                PROVIDE (__noinit_end, .)
+                0x00800100                _end = .
+                0x00800100                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x60
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 main.o
+ .debug_aranges
+                0x00000020       0x20 servo.o
+ .debug_aranges
+                0x00000040       0x20 system_init.o
+
+.debug_pubnames
+                0x00000000      0x1f4
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0xc9 main.o
+ .debug_pubnames
+                0x000000c9       0x8a servo.o
+ .debug_pubnames
+                0x00000153       0xa1 system_init.o
+
+.debug_info     0x00000000     0x17ef
+ *(.debug_info)
+ .debug_info    0x00000000      0xc3b main.o
+ .debug_info    0x00000c3b      0xa01 servo.o
+ .debug_info    0x0000163c      0x1b3 system_init.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x472
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x1d4 main.o
+ .debug_abbrev  0x000001d4      0x17c servo.o
+ .debug_abbrev  0x00000350      0x122 system_init.o
+
+.debug_line     0x00000000     0x1684
+ *(.debug_line)
+ .debug_line    0x00000000      0xcf1 main.o
+ .debug_line    0x00000cf1      0x6c9 servo.o
+ .debug_line    0x000013ba      0x2ca system_init.o
+
+.debug_frame    0x00000000      0x230
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x100 main.o
+ .debug_frame   0x00000100       0x80 servo.o
+ .debug_frame   0x00000180       0xb0 system_init.o
+
+.debug_str      0x00000000      0x309
+ *(.debug_str)
+ .debug_str     0x00000000       0xfd main.o
+                                0x145 (size before relaxing)
+ .debug_str     0x000000fd      0x17f servo.o
+                                0x266 (size before relaxing)
+ .debug_str     0x0000027c       0x8d system_init.o
+                                0x11b (size before relaxing)
+
+.debug_loc      0x00000000      0xb45
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x76e main.o
+ .debug_loc     0x0000076e      0x33e servo.o
+ .debug_loc     0x00000aac       0x99 system_init.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(Sevro.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000       0xa8
+ .debug_ranges  0x00000000       0x48 main.o
+ .debug_ranges  0x00000048       0x60 servo.o

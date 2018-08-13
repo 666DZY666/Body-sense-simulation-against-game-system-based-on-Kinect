@@ -1,0 +1,2246 @@
+
+20131008.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000002  00800100  00000a90  00000b04  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000a90  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .debug_aranges 00000060  00000000  00000000  00000b06  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_pubnames 000001df  00000000  00000000  00000b66  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_info   00001099  00000000  00000000  00000d45  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 000003c1  00000000  00000000  00001dde  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   00000e97  00000000  00000000  0000219f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_frame  000001f0  00000000  00000000  00003038  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    0000033c  00000000  00000000  00003228  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    0000070e  00000000  00000000  00003564  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 000000a8  00000000  00000000  00003c72  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 46 00 	jmp	0x8c	; 0x8c <__ctors_end>
+   4:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+   8:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+   c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  10:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  14:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  18:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  1c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  20:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  24:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  28:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  2c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  30:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  34:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  38:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  3c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  40:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  44:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  48:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  4c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  50:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  54:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  58:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  5c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  60:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  64:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  68:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  6c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  70:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  74:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  78:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  7c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  80:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  84:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  88:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e0 e9       	ldi	r30, 0x90	; 144
+  a0:	fa e0       	ldi	r31, 0x0A	; 10
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a2 30       	cpi	r26, 0x02	; 2
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+  b2:	0e 94 04 02 	call	0x408	; 0x408 <main>
+  b6:	0c 94 46 05 	jmp	0xa8c	; 0xa8c <_exit>
+
+000000ba <__bad_interrupt>:
+  ba:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000be <rightxia>:
+		Action();
+	    _delay_ms(700);
+	 }
+void  rightxia()    //右手下举
+     {
+	    Action_write(1,346,300);
+  be:	81 e0       	ldi	r24, 0x01	; 1
+  c0:	90 e0       	ldi	r25, 0x00	; 0
+  c2:	6a e5       	ldi	r22, 0x5A	; 90
+  c4:	71 e0       	ldi	r23, 0x01	; 1
+  c6:	4c e2       	ldi	r20, 0x2C	; 44
+  c8:	51 e0       	ldi	r21, 0x01	; 1
+  ca:	0e 94 cf 03 	call	0x79e	; 0x79e <Action_write>
+		Action_write(2,639,300);
+  ce:	82 e0       	ldi	r24, 0x02	; 2
+  d0:	90 e0       	ldi	r25, 0x00	; 0
+  d2:	6f e7       	ldi	r22, 0x7F	; 127
+  d4:	72 e0       	ldi	r23, 0x02	; 2
+  d6:	4c e2       	ldi	r20, 0x2C	; 44
+  d8:	51 e0       	ldi	r21, 0x01	; 1
+  da:	0e 94 cf 03 	call	0x79e	; 0x79e <Action_write>
+		Action_write(3,290,300);
+  de:	83 e0       	ldi	r24, 0x03	; 3
+  e0:	90 e0       	ldi	r25, 0x00	; 0
+  e2:	62 e2       	ldi	r22, 0x22	; 34
+  e4:	71 e0       	ldi	r23, 0x01	; 1
+  e6:	4c e2       	ldi	r20, 0x2C	; 44
+  e8:	51 e0       	ldi	r21, 0x01	; 1
+  ea:	0e 94 cf 03 	call	0x79e	; 0x79e <Action_write>
+		Action_write(4,532,300);
+  ee:	84 e0       	ldi	r24, 0x04	; 4
+  f0:	90 e0       	ldi	r25, 0x00	; 0
+  f2:	64 e1       	ldi	r22, 0x14	; 20
+  f4:	72 e0       	ldi	r23, 0x02	; 2
+  f6:	4c e2       	ldi	r20, 0x2C	; 44
+  f8:	51 e0       	ldi	r21, 0x01	; 1
+  fa:	0e 94 cf 03 	call	0x79e	; 0x79e <Action_write>
+     	Action();
+  fe:	0e 94 18 04 	call	0x830	; 0x830 <Action>
+ 102:	88 e5       	ldi	r24, 0x58	; 88
+ 104:	9b e1       	ldi	r25, 0x1B	; 27
+    milliseconds can be achieved.
+ */
+void
+_delay_loop_2(uint16_t __count)
+{
+	__asm__ volatile (
+ 106:	20 e9       	ldi	r18, 0x90	; 144
+ 108:	31 e0       	ldi	r19, 0x01	; 1
+ 10a:	f9 01       	movw	r30, r18
+ 10c:	31 97       	sbiw	r30, 0x01	; 1
+ 10e:	f1 f7       	brne	.-4      	; 0x10c <rightxia+0x4e>
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 110:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 112:	d9 f7       	brne	.-10     	; 0x10a <rightxia+0x4c>
+	    _delay_ms(700);
+	 }
+ 114:	08 95       	ret
+
+00000116 <leftxia>:
+     
+	 }
+void  leftxia()    //左手下举
+     {
+	   
+		Action_write(5,725,300);
+ 116:	85 e0       	ldi	r24, 0x05	; 5
+ 118:	90 e0       	ldi	r25, 0x00	; 0
+ 11a:	65 ed       	ldi	r22, 0xD5	; 213
+ 11c:	72 e0       	ldi	r23, 0x02	; 2
+ 11e:	4c e2       	ldi	r20, 0x2C	; 44
+ 120:	51 e0       	ldi	r21, 0x01	; 1
+ 122:	0e 94 cf 03 	call	0x79e	; 0x79e <Action_write>
+		Action_write(6,226,300);
+ 126:	86 e0       	ldi	r24, 0x06	; 6
+ 128:	90 e0       	ldi	r25, 0x00	; 0
+ 12a:	62 ee       	ldi	r22, 0xE2	; 226
+ 12c:	70 e0       	ldi	r23, 0x00	; 0
+ 12e:	4c e2       	ldi	r20, 0x2C	; 44
+ 130:	51 e0       	ldi	r21, 0x01	; 1
+ 132:	0e 94 cf 03 	call	0x79e	; 0x79e <Action_write>
+		Action_write(7,695,300);
+ 136:	87 e0       	ldi	r24, 0x07	; 7
+ 138:	90 e0       	ldi	r25, 0x00	; 0
+ 13a:	67 eb       	ldi	r22, 0xB7	; 183
+ 13c:	72 e0       	ldi	r23, 0x02	; 2
+ 13e:	4c e2       	ldi	r20, 0x2C	; 44
+ 140:	51 e0       	ldi	r21, 0x01	; 1
+ 142:	0e 94 cf 03 	call	0x79e	; 0x79e <Action_write>
+		Action_write(8,492,300);
+ 146:	88 e0       	ldi	r24, 0x08	; 8
+ 148:	90 e0       	ldi	r25, 0x00	; 0
+ 14a:	6c ee       	ldi	r22, 0xEC	; 236
+ 14c:	71 e0       	ldi	r23, 0x01	; 1
+ 14e:	4c e2       	ldi	r20, 0x2C	; 44
+ 150:	51 e0       	ldi	r21, 0x01	; 1
+ 152:	0e 94 cf 03 	call	0x79e	; 0x79e <Action_write>
+		Action();
+ 156:	0e 94 18 04 	call	0x830	; 0x830 <Action>
+ 15a:	88 e5       	ldi	r24, 0x58	; 88
+ 15c:	9b e1       	ldi	r25, 0x1B	; 27
+ 15e:	20 e9       	ldi	r18, 0x90	; 144
+ 160:	31 e0       	ldi	r19, 0x01	; 1
+ 162:	f9 01       	movw	r30, r18
+ 164:	31 97       	sbiw	r30, 0x01	; 1
+ 166:	f1 f7       	brne	.-4      	; 0x164 <leftxia+0x4e>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 168:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 16a:	d9 f7       	brne	.-10     	; 0x162 <leftxia+0x4c>
+	    _delay_ms(700);
+	 }
+ 16c:	08 95       	ret
+
+0000016e <leftrightgao>:
+		 //SetServoPosition(4,532,300);
+     
+	 }
+void  leftrightgao()    //左右手高举
+     {
+	     SetServoPosition(1,956,Duosu);
+ 16e:	40 91 00 01 	lds	r20, 0x0100
+ 172:	50 91 01 01 	lds	r21, 0x0101
+ 176:	81 e0       	ldi	r24, 0x01	; 1
+ 178:	6c eb       	ldi	r22, 0xBC	; 188
+ 17a:	73 e0       	ldi	r23, 0x03	; 3
+ 17c:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		 SetServoPosition(2,631,Duosu);
+ 180:	40 91 00 01 	lds	r20, 0x0100
+ 184:	50 91 01 01 	lds	r21, 0x0101
+ 188:	82 e0       	ldi	r24, 0x02	; 2
+ 18a:	67 e7       	ldi	r22, 0x77	; 119
+ 18c:	72 e0       	ldi	r23, 0x02	; 2
+ 18e:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+	     SetServoPosition(3,472,Duosu);
+ 192:	40 91 00 01 	lds	r20, 0x0100
+ 196:	50 91 01 01 	lds	r21, 0x0101
+ 19a:	83 e0       	ldi	r24, 0x03	; 3
+ 19c:	68 ed       	ldi	r22, 0xD8	; 216
+ 19e:	71 e0       	ldi	r23, 0x01	; 1
+ 1a0:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		SetServoPosition(4,533,Duosu);
+ 1a4:	40 91 00 01 	lds	r20, 0x0100
+ 1a8:	50 91 01 01 	lds	r21, 0x0101
+ 1ac:	84 e0       	ldi	r24, 0x04	; 4
+ 1ae:	65 e1       	ldi	r22, 0x15	; 21
+ 1b0:	72 e0       	ldi	r23, 0x02	; 2
+ 1b2:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+	    SetServoPosition(5,48,Duosu);
+ 1b6:	40 91 00 01 	lds	r20, 0x0100
+ 1ba:	50 91 01 01 	lds	r21, 0x0101
+ 1be:	85 e0       	ldi	r24, 0x05	; 5
+ 1c0:	60 e3       	ldi	r22, 0x30	; 48
+ 1c2:	70 e0       	ldi	r23, 0x00	; 0
+ 1c4:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		SetServoPosition(6,899,Duosu);
+ 1c8:	40 91 00 01 	lds	r20, 0x0100
+ 1cc:	50 91 01 01 	lds	r21, 0x0101
+ 1d0:	86 e0       	ldi	r24, 0x06	; 6
+ 1d2:	63 e8       	ldi	r22, 0x83	; 131
+ 1d4:	73 e0       	ldi	r23, 0x03	; 3
+ 1d6:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		 //SetServoPosition(7,721,300);
+		 //SetServoPosition(8,492,300);
+     
+	 }
+ 1da:	08 95       	ret
+
+000001dc <rightgao>:
+		//SetServoPosition(8,492,400);
+	
+	 }
+void  rightgao()    //右手高举
+     {
+	     SetServoPosition(1,956,Duosu);
+ 1dc:	40 91 00 01 	lds	r20, 0x0100
+ 1e0:	50 91 01 01 	lds	r21, 0x0101
+ 1e4:	81 e0       	ldi	r24, 0x01	; 1
+ 1e6:	6c eb       	ldi	r22, 0xBC	; 188
+ 1e8:	73 e0       	ldi	r23, 0x03	; 3
+ 1ea:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		 SetServoPosition(2,631,Duosu);
+ 1ee:	40 91 00 01 	lds	r20, 0x0100
+ 1f2:	50 91 01 01 	lds	r21, 0x0101
+ 1f6:	82 e0       	ldi	r24, 0x02	; 2
+ 1f8:	67 e7       	ldi	r22, 0x77	; 119
+ 1fa:	72 e0       	ldi	r23, 0x02	; 2
+ 1fc:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+	     SetServoPosition(3,472,Duosu);
+ 200:	40 91 00 01 	lds	r20, 0x0100
+ 204:	50 91 01 01 	lds	r21, 0x0101
+ 208:	83 e0       	ldi	r24, 0x03	; 3
+ 20a:	68 ed       	ldi	r22, 0xD8	; 216
+ 20c:	71 e0       	ldi	r23, 0x01	; 1
+ 20e:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		 //SetServoPosition(4,532,300);
+     
+	 }
+ 212:	08 95       	ret
+
+00000214 <leftgao>:
+     	
+	 }
+void  leftgao()    //左手高举
+     {
+	   
+		SetServoPosition(4,533,Duosu);
+ 214:	40 91 00 01 	lds	r20, 0x0100
+ 218:	50 91 01 01 	lds	r21, 0x0101
+ 21c:	84 e0       	ldi	r24, 0x04	; 4
+ 21e:	65 e1       	ldi	r22, 0x15	; 21
+ 220:	72 e0       	ldi	r23, 0x02	; 2
+ 222:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+	    SetServoPosition(5,48,Duosu);
+ 226:	40 91 00 01 	lds	r20, 0x0100
+ 22a:	50 91 01 01 	lds	r21, 0x0101
+ 22e:	85 e0       	ldi	r24, 0x05	; 5
+ 230:	60 e3       	ldi	r22, 0x30	; 48
+ 232:	70 e0       	ldi	r23, 0x00	; 0
+ 234:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		SetServoPosition(6,899,Duosu);
+ 238:	40 91 00 01 	lds	r20, 0x0100
+ 23c:	50 91 01 01 	lds	r21, 0x0101
+ 240:	86 e0       	ldi	r24, 0x06	; 6
+ 242:	63 e8       	ldi	r22, 0x83	; 131
+ 244:	73 e0       	ldi	r23, 0x03	; 3
+ 246:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		//SetServoPosition(8,492,400);
+	
+	 }
+ 24a:	08 95       	ret
+
+0000024c <leftrightping>:
+		
+	 }
+ void  leftrightping()    //左右手平举
+     {
+	   
+	 SetServoPosition(1,889,Duosu);
+ 24c:	40 91 00 01 	lds	r20, 0x0100
+ 250:	50 91 01 01 	lds	r21, 0x0101
+ 254:	81 e0       	ldi	r24, 0x01	; 1
+ 256:	69 e7       	ldi	r22, 0x79	; 121
+ 258:	73 e0       	ldi	r23, 0x03	; 3
+ 25a:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		SetServoPosition(2,631,Duosu);
+ 25e:	40 91 00 01 	lds	r20, 0x0100
+ 262:	50 91 01 01 	lds	r21, 0x0101
+ 266:	82 e0       	ldi	r24, 0x02	; 2
+ 268:	67 e7       	ldi	r22, 0x77	; 119
+ 26a:	72 e0       	ldi	r23, 0x02	; 2
+ 26c:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		SetServoPosition(3,472,Duosu);
+ 270:	40 91 00 01 	lds	r20, 0x0100
+ 274:	50 91 01 01 	lds	r21, 0x0101
+ 278:	83 e0       	ldi	r24, 0x03	; 3
+ 27a:	68 ed       	ldi	r22, 0xD8	; 216
+ 27c:	71 e0       	ldi	r23, 0x01	; 1
+ 27e:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		  SetServoPosition(4,533,Duosu);
+ 282:	40 91 00 01 	lds	r20, 0x0100
+ 286:	50 91 01 01 	lds	r21, 0x0101
+ 28a:	84 e0       	ldi	r24, 0x04	; 4
+ 28c:	65 e1       	ldi	r22, 0x15	; 21
+ 28e:	72 e0       	ldi	r23, 0x02	; 2
+ 290:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		SetServoPosition(5,146,Duosu);
+ 294:	40 91 00 01 	lds	r20, 0x0100
+ 298:	50 91 01 01 	lds	r21, 0x0101
+ 29c:	85 e0       	ldi	r24, 0x05	; 5
+ 29e:	62 e9       	ldi	r22, 0x92	; 146
+ 2a0:	70 e0       	ldi	r23, 0x00	; 0
+ 2a2:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		SetServoPosition(6,869,Duosu);
+ 2a6:	40 91 00 01 	lds	r20, 0x0100
+ 2aa:	50 91 01 01 	lds	r21, 0x0101
+ 2ae:	86 e0       	ldi	r24, 0x06	; 6
+ 2b0:	65 e6       	ldi	r22, 0x65	; 101
+ 2b2:	73 e0       	ldi	r23, 0x03	; 3
+ 2b4:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		//SetServoPosition(7,427,400);
+		//SetServoPosition(8,492,400);
+     	
+	 }
+ 2b8:	08 95       	ret
+
+000002ba <leftping>:
+     
+	 }
+ void  leftping()    //左手平举
+     {
+	   
+	    SetServoPosition(4,533,Duosu);
+ 2ba:	40 91 00 01 	lds	r20, 0x0100
+ 2be:	50 91 01 01 	lds	r21, 0x0101
+ 2c2:	84 e0       	ldi	r24, 0x04	; 4
+ 2c4:	65 e1       	ldi	r22, 0x15	; 21
+ 2c6:	72 e0       	ldi	r23, 0x02	; 2
+ 2c8:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		SetServoPosition(5,146,Duosu);
+ 2cc:	40 91 00 01 	lds	r20, 0x0100
+ 2d0:	50 91 01 01 	lds	r21, 0x0101
+ 2d4:	85 e0       	ldi	r24, 0x05	; 5
+ 2d6:	62 e9       	ldi	r22, 0x92	; 146
+ 2d8:	70 e0       	ldi	r23, 0x00	; 0
+ 2da:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		SetServoPosition(6,869,Duosu);
+ 2de:	40 91 00 01 	lds	r20, 0x0100
+ 2e2:	50 91 01 01 	lds	r21, 0x0101
+ 2e6:	86 e0       	ldi	r24, 0x06	; 6
+ 2e8:	65 e6       	ldi	r22, 0x65	; 101
+ 2ea:	73 e0       	ldi	r23, 0x03	; 3
+ 2ec:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+	   // SetServoPosition(8,492,400);//左手平举
+		
+	 }
+ 2f0:	08 95       	ret
+
+000002f2 <rightping>:
+		 //SetServoPosition(8,512,300);
+	
+	  }
+void  rightping()    //右手平举
+     {
+	    SetServoPosition(1,889,Duosu);
+ 2f2:	40 91 00 01 	lds	r20, 0x0100
+ 2f6:	50 91 01 01 	lds	r21, 0x0101
+ 2fa:	81 e0       	ldi	r24, 0x01	; 1
+ 2fc:	69 e7       	ldi	r22, 0x79	; 121
+ 2fe:	73 e0       	ldi	r23, 0x03	; 3
+ 300:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		SetServoPosition(2,631,Duosu);
+ 304:	40 91 00 01 	lds	r20, 0x0100
+ 308:	50 91 01 01 	lds	r21, 0x0101
+ 30c:	82 e0       	ldi	r24, 0x02	; 2
+ 30e:	67 e7       	ldi	r22, 0x77	; 119
+ 310:	72 e0       	ldi	r23, 0x02	; 2
+ 312:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		SetServoPosition(3,472,Duosu);
+ 316:	40 91 00 01 	lds	r20, 0x0100
+ 31a:	50 91 01 01 	lds	r21, 0x0101
+ 31e:	83 e0       	ldi	r24, 0x03	; 3
+ 320:	68 ed       	ldi	r22, 0xD8	; 216
+ 322:	71 e0       	ldi	r23, 0x01	; 1
+ 324:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		//SetServoPosition(4,563,400);
+     
+	 }
+ 328:	08 95       	ret
+
+0000032a <leftrightinit>:
+		
+	  }
+void   leftrightinit()                      //左右手初始化     
+      {
+		 
+		SetServoPosition(1,720,Duosu);
+ 32a:	40 91 00 01 	lds	r20, 0x0100
+ 32e:	50 91 01 01 	lds	r21, 0x0101
+ 332:	81 e0       	ldi	r24, 0x01	; 1
+ 334:	60 ed       	ldi	r22, 0xD0	; 208
+ 336:	72 e0       	ldi	r23, 0x02	; 2
+ 338:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		 SetServoPosition(2,785,Duosu);
+ 33c:	40 91 00 01 	lds	r20, 0x0100
+ 340:	50 91 01 01 	lds	r21, 0x0101
+ 344:	82 e0       	ldi	r24, 0x02	; 2
+ 346:	61 e1       	ldi	r22, 0x11	; 17
+ 348:	73 e0       	ldi	r23, 0x03	; 3
+ 34a:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		 SetServoPosition(3,447,Duosu);
+ 34e:	40 91 00 01 	lds	r20, 0x0100
+ 352:	50 91 01 01 	lds	r21, 0x0101
+ 356:	83 e0       	ldi	r24, 0x03	; 3
+ 358:	6f eb       	ldi	r22, 0xBF	; 191
+ 35a:	71 e0       	ldi	r23, 0x01	; 1
+ 35c:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		 SetServoPosition(4,502,Duosu);
+ 360:	40 91 00 01 	lds	r20, 0x0100
+ 364:	50 91 01 01 	lds	r21, 0x0101
+ 368:	84 e0       	ldi	r24, 0x04	; 4
+ 36a:	66 ef       	ldi	r22, 0xF6	; 246
+ 36c:	71 e0       	ldi	r23, 0x01	; 1
+ 36e:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		 SetServoPosition(5,340,Duosu);
+ 372:	40 91 00 01 	lds	r20, 0x0100
+ 376:	50 91 01 01 	lds	r21, 0x0101
+ 37a:	85 e0       	ldi	r24, 0x05	; 5
+ 37c:	64 e5       	ldi	r22, 0x54	; 84
+ 37e:	71 e0       	ldi	r23, 0x01	; 1
+ 380:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		 SetServoPosition(6,883,Duosu);
+ 384:	40 91 00 01 	lds	r20, 0x0100
+ 388:	50 91 01 01 	lds	r21, 0x0101
+ 38c:	86 e0       	ldi	r24, 0x06	; 6
+ 38e:	63 e7       	ldi	r22, 0x73	; 115
+ 390:	73 e0       	ldi	r23, 0x03	; 3
+ 392:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		 //SetServoPosition(7,512,300);
+		 //SetServoPosition(8,512,300);
+	
+	  }
+ 396:	08 95       	ret
+
+00000398 <leftinit>:
+		}
+	
+void   leftinit()                      //左手初始化     
+      {
+		
+		 SetServoPosition(4,502,Duosu);
+ 398:	40 91 00 01 	lds	r20, 0x0100
+ 39c:	50 91 01 01 	lds	r21, 0x0101
+ 3a0:	84 e0       	ldi	r24, 0x04	; 4
+ 3a2:	66 ef       	ldi	r22, 0xF6	; 246
+ 3a4:	71 e0       	ldi	r23, 0x01	; 1
+ 3a6:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		 SetServoPosition(5,340,Duosu);
+ 3aa:	40 91 00 01 	lds	r20, 0x0100
+ 3ae:	50 91 01 01 	lds	r21, 0x0101
+ 3b2:	85 e0       	ldi	r24, 0x05	; 5
+ 3b4:	64 e5       	ldi	r22, 0x54	; 84
+ 3b6:	71 e0       	ldi	r23, 0x01	; 1
+ 3b8:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		 SetServoPosition(6,883,Duosu);
+ 3bc:	40 91 00 01 	lds	r20, 0x0100
+ 3c0:	50 91 01 01 	lds	r21, 0x0101
+ 3c4:	86 e0       	ldi	r24, 0x06	; 6
+ 3c6:	63 e7       	ldi	r22, 0x73	; 115
+ 3c8:	73 e0       	ldi	r23, 0x03	; 3
+ 3ca:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		 //SetServoPosition(8,512,300);
+		
+	  }
+ 3ce:	08 95       	ret
+
+000003d0 <rightinit>:
+	}	
+}
+void   rightinit()                      //右手初始化     
+      { 
+	
+		 SetServoPosition(1,720,Duosu);
+ 3d0:	40 91 00 01 	lds	r20, 0x0100
+ 3d4:	50 91 01 01 	lds	r21, 0x0101
+ 3d8:	81 e0       	ldi	r24, 0x01	; 1
+ 3da:	60 ed       	ldi	r22, 0xD0	; 208
+ 3dc:	72 e0       	ldi	r23, 0x02	; 2
+ 3de:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		 SetServoPosition(2,785,Duosu);
+ 3e2:	40 91 00 01 	lds	r20, 0x0100
+ 3e6:	50 91 01 01 	lds	r21, 0x0101
+ 3ea:	82 e0       	ldi	r24, 0x02	; 2
+ 3ec:	61 e1       	ldi	r22, 0x11	; 17
+ 3ee:	73 e0       	ldi	r23, 0x03	; 3
+ 3f0:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		 SetServoPosition(3,447,Duosu);
+ 3f4:	40 91 00 01 	lds	r20, 0x0100
+ 3f8:	50 91 01 01 	lds	r21, 0x0101
+ 3fc:	83 e0       	ldi	r24, 0x03	; 3
+ 3fe:	6f eb       	ldi	r22, 0xBF	; 191
+ 400:	71 e0       	ldi	r23, 0x01	; 1
+ 402:	0e 94 76 03 	call	0x6ec	; 0x6ec <SetServoPosition>
+		// SetServoPosition(4,512,300);
+		}
+ 406:	08 95       	ret
+
+00000408 <main>:
+void  zuorightxia(void);
+int Duosu = 550;
+
+  
+int main(void)
+{   
+ 408:	1f 93       	push	r17
+ 40a:	cf 93       	push	r28
+ 40c:	df 93       	push	r29
+
+
+    PWM_init(); 
+ 40e:	0e 94 c4 04 	call	0x988	; 0x988 <PWM_init>
+	System_Init();
+ 412:	0e 94 38 05 	call	0xa70	; 0xa70 <System_Init>
+    
+	DDRA=0XFF;
+ 416:	8f ef       	ldi	r24, 0xFF	; 255
+ 418:	8a bb       	out	0x1a, r24	; 26
+	DDRC=0XF0;
+ 41a:	80 ef       	ldi	r24, 0xF0	; 240
+ 41c:	84 bb       	out	0x14, r24	; 20
+	//PORTC = 0XFF;
+	unsigned char i,m;
+	int l=200,r=200,a=100,b=100;
+	cli();                        //关总中断
+ 41e:	f8 94       	cli
+	for(m=1;m<=6;m++)                       //我们用8个舵机，ID:1-8
+        SetServoLimit(m,0,1023);           //设置舵机工作模式为舵机模式
+ 420:	81 e0       	ldi	r24, 0x01	; 1
+ 422:	60 e0       	ldi	r22, 0x00	; 0
+ 424:	70 e0       	ldi	r23, 0x00	; 0
+ 426:	4f ef       	ldi	r20, 0xFF	; 255
+ 428:	53 e0       	ldi	r21, 0x03	; 3
+ 42a:	0e 94 1d 03 	call	0x63a	; 0x63a <SetServoLimit>
+ 42e:	82 e0       	ldi	r24, 0x02	; 2
+ 430:	60 e0       	ldi	r22, 0x00	; 0
+ 432:	70 e0       	ldi	r23, 0x00	; 0
+ 434:	4f ef       	ldi	r20, 0xFF	; 255
+ 436:	53 e0       	ldi	r21, 0x03	; 3
+ 438:	0e 94 1d 03 	call	0x63a	; 0x63a <SetServoLimit>
+ 43c:	83 e0       	ldi	r24, 0x03	; 3
+ 43e:	60 e0       	ldi	r22, 0x00	; 0
+ 440:	70 e0       	ldi	r23, 0x00	; 0
+ 442:	4f ef       	ldi	r20, 0xFF	; 255
+ 444:	53 e0       	ldi	r21, 0x03	; 3
+ 446:	0e 94 1d 03 	call	0x63a	; 0x63a <SetServoLimit>
+ 44a:	84 e0       	ldi	r24, 0x04	; 4
+ 44c:	60 e0       	ldi	r22, 0x00	; 0
+ 44e:	70 e0       	ldi	r23, 0x00	; 0
+ 450:	4f ef       	ldi	r20, 0xFF	; 255
+ 452:	53 e0       	ldi	r21, 0x03	; 3
+ 454:	0e 94 1d 03 	call	0x63a	; 0x63a <SetServoLimit>
+ 458:	85 e0       	ldi	r24, 0x05	; 5
+ 45a:	60 e0       	ldi	r22, 0x00	; 0
+ 45c:	70 e0       	ldi	r23, 0x00	; 0
+ 45e:	4f ef       	ldi	r20, 0xFF	; 255
+ 460:	53 e0       	ldi	r21, 0x03	; 3
+ 462:	0e 94 1d 03 	call	0x63a	; 0x63a <SetServoLimit>
+ 466:	86 e0       	ldi	r24, 0x06	; 6
+ 468:	60 e0       	ldi	r22, 0x00	; 0
+ 46a:	70 e0       	ldi	r23, 0x00	; 0
+ 46c:	4f ef       	ldi	r20, 0xFF	; 255
+ 46e:	53 e0       	ldi	r21, 0x03	; 3
+ 470:	0e 94 1d 03 	call	0x63a	; 0x63a <SetServoLimit>
+ 474:	80 e1       	ldi	r24, 0x10	; 16
+ 476:	97 e2       	ldi	r25, 0x27	; 39
+ 478:	20 e9       	ldi	r18, 0x90	; 144
+ 47a:	31 e0       	ldi	r19, 0x01	; 1
+ 47c:	f9 01       	movw	r30, r18
+ 47e:	31 97       	sbiw	r30, 0x01	; 1
+ 480:	f1 f7       	brne	.-4      	; 0x47e <main+0x76>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 482:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 484:	d9 f7       	brne	.-10     	; 0x47c <main+0x74>
+         _delay_ms(1000);
+		 leftrightinit();
+ 486:	0e 94 95 01 	call	0x32a	; 0x32a <leftrightinit>
+ 48a:	80 e1       	ldi	r24, 0x10	; 16
+ 48c:	97 e2       	ldi	r25, 0x27	; 39
+ 48e:	20 e9       	ldi	r18, 0x90	; 144
+ 490:	31 e0       	ldi	r19, 0x01	; 1
+ 492:	f9 01       	movw	r30, r18
+ 494:	31 97       	sbiw	r30, 0x01	; 1
+ 496:	f1 f7       	brne	.-4      	; 0x494 <main+0x8c>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 498:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 49a:	d9 f7       	brne	.-10     	; 0x492 <main+0x8a>
+ 49c:	c0 e9       	ldi	r28, 0x90	; 144
+ 49e:	d1 e0       	ldi	r29, 0x01	; 1
+
+         while(1)
+	{   //move(100,100);   _delay_ms(1000);move(0,0);break;
+        //move(l,r);_delay_ms(50);
+		//move(0,0);_delay_ms(5);
+		i=USART1_recieve();
+ 4a0:	0e 94 0b 05 	call	0xa16	; 0xa16 <USART1_recieve>
+ 4a4:	18 2f       	mov	r17, r24
+		switch(i)
+ 4a6:	89 33       	cpi	r24, 0x39	; 57
+ 4a8:	09 f4       	brne	.+2      	; 0x4ac <main+0xa4>
+ 4aa:	a6 c0       	rjmp	.+332    	; 0x5f8 <main+0x1f0>
+ 4ac:	8a 33       	cpi	r24, 0x3A	; 58
+ 4ae:	a8 f4       	brcc	.+42     	; 0x4da <main+0xd2>
+ 4b0:	82 33       	cpi	r24, 0x32	; 50
+ 4b2:	09 f4       	brne	.+2      	; 0x4b6 <main+0xae>
+ 4b4:	47 c0       	rjmp	.+142    	; 0x544 <main+0x13c>
+ 4b6:	83 33       	cpi	r24, 0x33	; 51
+ 4b8:	30 f4       	brcc	.+12     	; 0x4c6 <main+0xbe>
+ 4ba:	80 33       	cpi	r24, 0x30	; 48
+ 4bc:	39 f1       	breq	.+78     	; 0x50c <main+0x104>
+ 4be:	81 33       	cpi	r24, 0x31	; 49
+ 4c0:	09 f0       	breq	.+2      	; 0x4c4 <main+0xbc>
+ 4c2:	b2 c0       	rjmp	.+356    	; 0x628 <main+0x220>
+ 4c4:	31 c0       	rjmp	.+98     	; 0x528 <main+0x120>
+ 4c6:	84 33       	cpi	r24, 0x34	; 52
+ 4c8:	09 f4       	brne	.+2      	; 0x4cc <main+0xc4>
+ 4ca:	58 c0       	rjmp	.+176    	; 0x57c <main+0x174>
+ 4cc:	84 33       	cpi	r24, 0x34	; 52
+ 4ce:	08 f4       	brcc	.+2      	; 0x4d2 <main+0xca>
+ 4d0:	47 c0       	rjmp	.+142    	; 0x560 <main+0x158>
+ 4d2:	85 33       	cpi	r24, 0x35	; 53
+ 4d4:	09 f0       	breq	.+2      	; 0x4d8 <main+0xd0>
+ 4d6:	a8 c0       	rjmp	.+336    	; 0x628 <main+0x220>
+ 4d8:	9c c0       	rjmp	.+312    	; 0x612 <main+0x20a>
+ 4da:	8d 36       	cpi	r24, 0x6D	; 109
+ 4dc:	09 f4       	brne	.+2      	; 0x4e0 <main+0xd8>
+ 4de:	a2 c0       	rjmp	.+324    	; 0x624 <main+0x21c>
+ 4e0:	8e 36       	cpi	r24, 0x6E	; 110
+ 4e2:	50 f4       	brcc	.+20     	; 0x4f8 <main+0xf0>
+ 4e4:	89 36       	cpi	r24, 0x69	; 105
+ 4e6:	09 f4       	brne	.+2      	; 0x4ea <main+0xe2>
+ 4e8:	8a c0       	rjmp	.+276    	; 0x5fe <main+0x1f6>
+ 4ea:	8a 36       	cpi	r24, 0x6A	; 106
+ 4ec:	09 f4       	brne	.+2      	; 0x4f0 <main+0xe8>
+ 4ee:	94 c0       	rjmp	.+296    	; 0x618 <main+0x210>
+ 4f0:	85 36       	cpi	r24, 0x65	; 101
+ 4f2:	09 f0       	breq	.+2      	; 0x4f6 <main+0xee>
+ 4f4:	99 c0       	rjmp	.+306    	; 0x628 <main+0x220>
+ 4f6:	93 c0       	rjmp	.+294    	; 0x61e <main+0x216>
+ 4f8:	83 37       	cpi	r24, 0x73	; 115
+ 4fa:	09 f4       	brne	.+2      	; 0x4fe <main+0xf6>
+ 4fc:	5b c0       	rjmp	.+182    	; 0x5b4 <main+0x1ac>
+ 4fe:	84 37       	cpi	r24, 0x74	; 116
+ 500:	09 f4       	brne	.+2      	; 0x504 <main+0xfc>
+ 502:	66 c0       	rjmp	.+204    	; 0x5d0 <main+0x1c8>
+ 504:	80 37       	cpi	r24, 0x70	; 112
+ 506:	09 f0       	breq	.+2      	; 0x50a <main+0x102>
+ 508:	8f c0       	rjmp	.+286    	; 0x628 <main+0x220>
+ 50a:	46 c0       	rjmp	.+140    	; 0x598 <main+0x190>
+		//	case '0': move(l,r);   _delay_ms(70);move(0,0);break;
+		//	case '1': move(-l,-r); _delay_ms(70);move(0,0);break;
+		//	case '2': move(-l,r); _delay_ms(60);move(0,0);break;
+		//	case '3': move(l,-r); _delay_ms(60);move(0,0);break;//move(0,0);
+		//	case 'z': move(a,b); _delay_ms(1000);move(0,0);break;
+			case '0': move(120,120);   _delay_ms(70);move(0,0);break;
+ 50c:	88 e7       	ldi	r24, 0x78	; 120
+ 50e:	90 e0       	ldi	r25, 0x00	; 0
+ 510:	68 e7       	ldi	r22, 0x78	; 120
+ 512:	70 e0       	ldi	r23, 0x00	; 0
+ 514:	0e 94 d4 04 	call	0x9a8	; 0x9a8 <move>
+ 518:	8c eb       	ldi	r24, 0xBC	; 188
+ 51a:	92 e0       	ldi	r25, 0x02	; 2
+ 51c:	fe 01       	movw	r30, r28
+ 51e:	31 97       	sbiw	r30, 0x01	; 1
+ 520:	f1 f7       	brne	.-4      	; 0x51e <main+0x116>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 522:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 524:	d9 f7       	brne	.-10     	; 0x51c <main+0x114>
+ 526:	61 c0       	rjmp	.+194    	; 0x5ea <main+0x1e2>
+			case '1': move(-120,-120); _delay_ms(70);move(0,0);break;
+ 528:	88 e8       	ldi	r24, 0x88	; 136
+ 52a:	9f ef       	ldi	r25, 0xFF	; 255
+ 52c:	68 e8       	ldi	r22, 0x88	; 136
+ 52e:	7f ef       	ldi	r23, 0xFF	; 255
+ 530:	0e 94 d4 04 	call	0x9a8	; 0x9a8 <move>
+ 534:	8c eb       	ldi	r24, 0xBC	; 188
+ 536:	92 e0       	ldi	r25, 0x02	; 2
+ 538:	fe 01       	movw	r30, r28
+ 53a:	31 97       	sbiw	r30, 0x01	; 1
+ 53c:	f1 f7       	brne	.-4      	; 0x53a <main+0x132>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 53e:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 540:	d9 f7       	brne	.-10     	; 0x538 <main+0x130>
+ 542:	53 c0       	rjmp	.+166    	; 0x5ea <main+0x1e2>
+			case '2': move(-120,120); _delay_ms(60);move(0,0);break;
+ 544:	88 e8       	ldi	r24, 0x88	; 136
+ 546:	9f ef       	ldi	r25, 0xFF	; 255
+ 548:	68 e7       	ldi	r22, 0x78	; 120
+ 54a:	70 e0       	ldi	r23, 0x00	; 0
+ 54c:	0e 94 d4 04 	call	0x9a8	; 0x9a8 <move>
+ 550:	88 e5       	ldi	r24, 0x58	; 88
+ 552:	92 e0       	ldi	r25, 0x02	; 2
+ 554:	fe 01       	movw	r30, r28
+ 556:	31 97       	sbiw	r30, 0x01	; 1
+ 558:	f1 f7       	brne	.-4      	; 0x556 <main+0x14e>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 55a:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 55c:	d9 f7       	brne	.-10     	; 0x554 <main+0x14c>
+ 55e:	45 c0       	rjmp	.+138    	; 0x5ea <main+0x1e2>
+			case '3': move(120,-120); _delay_ms(60);move(0,0);break;//move(0,0);
+ 560:	88 e7       	ldi	r24, 0x78	; 120
+ 562:	90 e0       	ldi	r25, 0x00	; 0
+ 564:	68 e8       	ldi	r22, 0x88	; 136
+ 566:	7f ef       	ldi	r23, 0xFF	; 255
+ 568:	0e 94 d4 04 	call	0x9a8	; 0x9a8 <move>
+ 56c:	88 e5       	ldi	r24, 0x58	; 88
+ 56e:	92 e0       	ldi	r25, 0x02	; 2
+ 570:	fe 01       	movw	r30, r28
+ 572:	31 97       	sbiw	r30, 0x01	; 1
+ 574:	f1 f7       	brne	.-4      	; 0x572 <main+0x16a>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 576:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 578:	d9 f7       	brne	.-10     	; 0x570 <main+0x168>
+ 57a:	37 c0       	rjmp	.+110    	; 0x5ea <main+0x1e2>
+			case '4': move(220,220); _delay_ms(70);move(0,0);break;//move(0,0);
+ 57c:	8c ed       	ldi	r24, 0xDC	; 220
+ 57e:	90 e0       	ldi	r25, 0x00	; 0
+ 580:	6c ed       	ldi	r22, 0xDC	; 220
+ 582:	70 e0       	ldi	r23, 0x00	; 0
+ 584:	0e 94 d4 04 	call	0x9a8	; 0x9a8 <move>
+ 588:	8c eb       	ldi	r24, 0xBC	; 188
+ 58a:	92 e0       	ldi	r25, 0x02	; 2
+ 58c:	fe 01       	movw	r30, r28
+ 58e:	31 97       	sbiw	r30, 0x01	; 1
+ 590:	f1 f7       	brne	.-4      	; 0x58e <main+0x186>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 592:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 594:	d9 f7       	brne	.-10     	; 0x58c <main+0x184>
+ 596:	29 c0       	rjmp	.+82     	; 0x5ea <main+0x1e2>
+			case 'p': move(-170,-170); _delay_ms(70);move(0,0);break;
+ 598:	86 e5       	ldi	r24, 0x56	; 86
+ 59a:	9f ef       	ldi	r25, 0xFF	; 255
+ 59c:	66 e5       	ldi	r22, 0x56	; 86
+ 59e:	7f ef       	ldi	r23, 0xFF	; 255
+ 5a0:	0e 94 d4 04 	call	0x9a8	; 0x9a8 <move>
+ 5a4:	8c eb       	ldi	r24, 0xBC	; 188
+ 5a6:	92 e0       	ldi	r25, 0x02	; 2
+ 5a8:	fe 01       	movw	r30, r28
+ 5aa:	31 97       	sbiw	r30, 0x01	; 1
+ 5ac:	f1 f7       	brne	.-4      	; 0x5aa <main+0x1a2>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 5ae:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 5b0:	d9 f7       	brne	.-10     	; 0x5a8 <main+0x1a0>
+ 5b2:	1b c0       	rjmp	.+54     	; 0x5ea <main+0x1e2>
+			case 's': move(-290,-290); _delay_ms(60);move(0,0);break;//move(0,0);
+ 5b4:	8e ed       	ldi	r24, 0xDE	; 222
+ 5b6:	9e ef       	ldi	r25, 0xFE	; 254
+ 5b8:	6e ed       	ldi	r22, 0xDE	; 222
+ 5ba:	7e ef       	ldi	r23, 0xFE	; 254
+ 5bc:	0e 94 d4 04 	call	0x9a8	; 0x9a8 <move>
+ 5c0:	88 e5       	ldi	r24, 0x58	; 88
+ 5c2:	92 e0       	ldi	r25, 0x02	; 2
+ 5c4:	fe 01       	movw	r30, r28
+ 5c6:	31 97       	sbiw	r30, 0x01	; 1
+ 5c8:	f1 f7       	brne	.-4      	; 0x5c6 <main+0x1be>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 5ca:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 5cc:	d9 f7       	brne	.-10     	; 0x5c4 <main+0x1bc>
+ 5ce:	0d c0       	rjmp	.+26     	; 0x5ea <main+0x1e2>
+            case 't': move(290,290); _delay_ms(60);move(0,0);break;
+ 5d0:	82 e2       	ldi	r24, 0x22	; 34
+ 5d2:	91 e0       	ldi	r25, 0x01	; 1
+ 5d4:	62 e2       	ldi	r22, 0x22	; 34
+ 5d6:	71 e0       	ldi	r23, 0x01	; 1
+ 5d8:	0e 94 d4 04 	call	0x9a8	; 0x9a8 <move>
+ 5dc:	88 e5       	ldi	r24, 0x58	; 88
+ 5de:	92 e0       	ldi	r25, 0x02	; 2
+ 5e0:	fe 01       	movw	r30, r28
+ 5e2:	31 97       	sbiw	r30, 0x01	; 1
+ 5e4:	f1 f7       	brne	.-4      	; 0x5e2 <main+0x1da>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 5e6:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 5e8:	d9 f7       	brne	.-10     	; 0x5e0 <main+0x1d8>
+ 5ea:	80 e0       	ldi	r24, 0x00	; 0
+ 5ec:	90 e0       	ldi	r25, 0x00	; 0
+ 5ee:	60 e0       	ldi	r22, 0x00	; 0
+ 5f0:	70 e0       	ldi	r23, 0x00	; 0
+ 5f2:	0e 94 d4 04 	call	0x9a8	; 0x9a8 <move>
+ 5f6:	18 c0       	rjmp	.+48     	; 0x628 <main+0x220>
+			//case '5': rightgao();  break; //右手半上举	//	SetServoPosition(4,536,300);
+		    //case '6': rightxia();  break;//右手半下举
+	    	//case '7': rightping(); break;//右手平举动作
+		    case '9':
+	    
+			 rightinit(); break; //右手初始化
+ 5f8:	0e 94 e8 01 	call	0x3d0	; 0x3d0 <rightinit>
+ 5fc:	15 c0       	rjmp	.+42     	; 0x628 <main+0x220>
+	    	//	case 'h': leftping();  break;//左手平举动作
+	    	//   case 'f': leftgao();   break; //左手半上举
+	    	//	case 'g': leftxia();   break;//左手半下举
+			case 'i':  
+			
+			leftinit();  
+ 5fe:	0e 94 cc 01 	call	0x398	; 0x398 <leftinit>
+ 602:	88 e5       	ldi	r24, 0x58	; 88
+ 604:	9b e1       	ldi	r25, 0x1B	; 27
+ 606:	fe 01       	movw	r30, r28
+ 608:	31 97       	sbiw	r30, 0x01	; 1
+ 60a:	f1 f7       	brne	.-4      	; 0x608 <main+0x200>
+		{
+			// wait 1/10 ms
+			_delay_loop_2(((F_CPU) / 4e3) / 10);
+			__ticks --;
+ 60c:	01 97       	sbiw	r24, 0x01	; 1
+		__ticks = 1;
+	else if (__tmp > 65535)
+	{
+		//	__ticks = requested delay in 1/10 ms
+		__ticks = (uint16_t) (__ms * 10.0);
+		while(__ticks)
+ 60e:	d9 f7       	brne	.-10     	; 0x606 <main+0x1fe>
+ 610:	0b c0       	rjmp	.+22     	; 0x628 <main+0x220>
+		    //case 'e':  PORTC &= 0XDF; _delay_ms(1000); PORTC |= 0X20; break;//武术语音   
+	    	//case 'r': PORTC &= 0XEF; _delay_ms(1000); PORTC |= 0X10;break;//结束语音rightHand.Y < kneeRight.Y
+	    	//case 'c': PORTC &= 0X7F;_delay_ms(1000);PORTC |= 0X80;break;//开始语音leftHand.Y < kneeLeft.Y
+	    	case '5':   
+			    
+				rightgao();break; //右手高举
+ 612:	0e 94 ee 00 	call	0x1dc	; 0x1dc <rightgao>
+ 616:	08 c0       	rjmp	.+16     	; 0x628 <main+0x220>
+			case 'j':
+			    
+				rightping(); break;  //右手前伸
+ 618:	0e 94 79 01 	call	0x2f2	; 0x2f2 <rightping>
+ 61c:	05 c0       	rjmp	.+10     	; 0x628 <main+0x220>
+		//	case 'k':break;  //右手半前伸
+			case 'e':
+		    	
+    			leftgao();break;  //左手高举
+ 61e:	0e 94 0a 01 	call	0x214	; 0x214 <leftgao>
+ 622:	02 c0       	rjmp	.+4      	; 0x628 <main+0x220>
+			case 'm':
+		    
+			leftping(); break;//左手前伸
+ 624:	0e 94 5d 01 	call	0x2ba	; 0x2ba <leftping>
+		//	case 'o':break;  //左手半拥抱
+		//	case '5': break; //  抱球=kinect右手高举动作
+			default : break;
+		}
+		
+		USART1_send(i);  
+ 628:	81 2f       	mov	r24, r17
+ 62a:	90 e0       	ldi	r25, 0x00	; 0
+ 62c:	0e 94 03 05 	call	0xa06	; 0xa06 <USART1_send>
+ 630:	37 cf       	rjmp	.-402    	; 0x4a0 <main+0x98>
+
+00000632 <SendUart0Byte>:
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 632:	5d 9b       	sbis	0x0b, 5	; 11
+ 634:	fe cf       	rjmp	.-4      	; 0x632 <SendUart0Byte>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 636:	8c b9       	out	0x0c, r24	; 12
+
+ }
+ 638:	08 95       	ret
+
+0000063a <SetServoLimit>:
+
+void SetServoLimit(unsigned char id, unsigned short int cw_limit, unsigned short int ccw_limit)
+ {
+ 63a:	e8 2f       	mov	r30, r24
+ 63c:	84 e0       	ldi	r24, 0x04	; 4
+ 63e:	40 30       	cpi	r20, 0x00	; 0
+ 640:	58 07       	cpc	r21, r24
+ 642:	10 f0       	brcs	.+4      	; 0x648 <SetServoLimit+0xe>
+ 644:	4f ef       	ldi	r20, 0xFF	; 255
+ 646:	53 e0       	ldi	r21, 0x03	; 3
+ 648:	9b 01       	movw	r18, r22
+ 64a:	84 e0       	ldi	r24, 0x04	; 4
+ 64c:	60 30       	cpi	r22, 0x00	; 0
+ 64e:	78 07       	cpc	r23, r24
+ 650:	10 f0       	brcs	.+4      	; 0x656 <SetServoLimit+0x1c>
+ 652:	2f ef       	ldi	r18, 0xFF	; 255
+ 654:	33 e0       	ldi	r19, 0x03	; 3
+     else
+	    {
+		 temp_cw = cw_limit;
+	    }
+
+     temp_ccw_h = (unsigned char)(temp_ccw >> 8);
+ 656:	65 2f       	mov	r22, r21
+     temp_ccw_l = (unsigned char)temp_ccw; // 将16bit数据拆为2个8bit数据 // (split 16 bits to 2 bytes)
+ 658:	94 2f       	mov	r25, r20
+	 temp_cw_h = (unsigned char)(temp_cw >> 8);
+ 65a:	43 2f       	mov	r20, r19
+	 temp_cw_l = (unsigned char)temp_cw; // 将16bit数据拆为2个8bit数据 // (split 16 bits to 2 bytes)
+	 PORTG &= ~_BV(PG4);
+ 65c:	80 91 65 00 	lds	r24, 0x0065
+ 660:	8f 7e       	andi	r24, 0xEF	; 239
+ 662:	80 93 65 00 	sts	0x0065, r24
+	 PORTG |= _BV(PG3); // 使总线处于主机发送状态 // (Set the bus to host transmit state)
+ 666:	80 91 65 00 	lds	r24, 0x0065
+ 66a:	88 60       	ori	r24, 0x08	; 8
+ 66c:	80 93 65 00 	sts	0x0065, r24
+	 UCSR0A |= (1<<TXC0); // 清除UART0写完成标志 // (Clear written flag of UART0)
+ 670:	5e 9a       	sbi	0x0b, 6	; 11
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 672:	5d 9b       	sbis	0x0b, 5	; 11
+ 674:	fe cf       	rjmp	.-4      	; 0x672 <SetServoLimit+0x38>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 676:	8f ef       	ldi	r24, 0xFF	; 255
+ 678:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 67a:	5d 9b       	sbis	0x0b, 5	; 11
+ 67c:	fe cf       	rjmp	.-4      	; 0x67a <SetServoLimit+0x40>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 67e:	8f ef       	ldi	r24, 0xFF	; 255
+ 680:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 682:	5d 9b       	sbis	0x0b, 5	; 11
+ 684:	fe cf       	rjmp	.-4      	; 0x682 <SetServoLimit+0x48>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 686:	ec b9       	out	0x0c, r30	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 688:	5d 9b       	sbis	0x0b, 5	; 11
+ 68a:	fe cf       	rjmp	.-4      	; 0x688 <SetServoLimit+0x4e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 68c:	87 e0       	ldi	r24, 0x07	; 7
+ 68e:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 690:	5d 9b       	sbis	0x0b, 5	; 11
+ 692:	fe cf       	rjmp	.-4      	; 0x690 <SetServoLimit+0x56>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 694:	83 e0       	ldi	r24, 0x03	; 3
+ 696:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 698:	5d 9b       	sbis	0x0b, 5	; 11
+ 69a:	fe cf       	rjmp	.-4      	; 0x698 <SetServoLimit+0x5e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 69c:	86 e0       	ldi	r24, 0x06	; 6
+ 69e:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 6a0:	5d 9b       	sbis	0x0b, 5	; 11
+ 6a2:	fe cf       	rjmp	.-4      	; 0x6a0 <SetServoLimit+0x66>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 6a4:	2c b9       	out	0x0c, r18	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 6a6:	5d 9b       	sbis	0x0b, 5	; 11
+ 6a8:	fe cf       	rjmp	.-4      	; 0x6a6 <SetServoLimit+0x6c>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 6aa:	4c b9       	out	0x0c, r20	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 6ac:	5d 9b       	sbis	0x0b, 5	; 11
+ 6ae:	fe cf       	rjmp	.-4      	; 0x6ac <SetServoLimit+0x72>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 6b0:	9c b9       	out	0x0c, r25	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 6b2:	5d 9b       	sbis	0x0b, 5	; 11
+ 6b4:	fe cf       	rjmp	.-4      	; 0x6b2 <SetServoLimit+0x78>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 6b6:	6c b9       	out	0x0c, r22	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 6b8:	5d 9b       	sbis	0x0b, 5	; 11
+ 6ba:	fe cf       	rjmp	.-4      	; 0x6b8 <SetServoLimit+0x7e>
+	 SendUart0Byte(0x06); // 舵机控制寄存器首地址 // (Send the start address of control rigister)
+	 SendUart0Byte(temp_cw_l); // 发送顺时针位置限制低位
+	 SendUart0Byte(temp_cw_h); // 发送顺时针位置限制高位 //(Send the high byte of clockwise position limit)
+	 SendUart0Byte(temp_ccw_l); // 发送逆时针位置限制低位 // (Send the low byte of counterclockwise position limit)
+	 SendUart0Byte(temp_ccw_h); // 发送逆时针位置限制高位 // (Send the low byte of counterclockwise position limit)
+	 temp_sum = id + 7 + 0x03 + 0x06 + temp_cw_l + temp_cw_h + temp_ccw_l + temp_ccw_h;
+ 6bc:	e0 5f       	subi	r30, 0xF0	; 240
+ 6be:	e2 0f       	add	r30, r18
+ 6c0:	e9 0f       	add	r30, r25
+ 6c2:	e4 0f       	add	r30, r20
+ 6c4:	e6 0f       	add	r30, r22
+	 temp_sum = ~temp_sum; // 计算校验和 // (Calculate the checksum)
+ 6c6:	e0 95       	com	r30
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 6c8:	ec b9       	out	0x0c, r30	; 12
+	 SendUart0Byte(temp_ccw_l); // 发送逆时针位置限制低位 // (Send the low byte of counterclockwise position limit)
+	 SendUart0Byte(temp_ccw_h); // 发送逆时针位置限制高位 // (Send the low byte of counterclockwise position limit)
+	 temp_sum = id + 7 + 0x03 + 0x06 + temp_cw_l + temp_cw_h + temp_ccw_l + temp_ccw_h;
+	 temp_sum = ~temp_sum; // 计算校验和 // (Calculate the checksum)
+	 SendUart0Byte(temp_sum); // 发送校验和 // (Send checksum)
+	 while ( !( UCSR0A & (1<<TXC0)) ); // 等待发送完成
+ 6ca:	5e 9b       	sbis	0x0b, 6	; 11
+ 6cc:	fe cf       	rjmp	.-4      	; 0x6ca <SetServoLimit+0x90>
+
+	 PORTG |= _BV(PG4);
+ 6ce:	80 91 65 00 	lds	r24, 0x0065
+ 6d2:	80 61       	ori	r24, 0x10	; 16
+ 6d4:	80 93 65 00 	sts	0x0065, r24
+
+	 PORTG &= ~_BV(PG3);  // 使总线处于主机接收状态 // (Set the UART bus to host receiving state)
+ 6d8:	80 91 65 00 	lds	r24, 0x0065
+ 6dc:	87 7f       	andi	r24, 0xF7	; 247
+ 6de:	80 93 65 00 	sts	0x0065, r24
+ 6e2:	80 e4       	ldi	r24, 0x40	; 64
+ 6e4:	9f e1       	ldi	r25, 0x1F	; 31
+ 6e6:	01 97       	sbiw	r24, 0x01	; 1
+ 6e8:	f1 f7       	brne	.-4      	; 0x6e6 <SetServoLimit+0xac>
+	 _delay_ms(2);        //送完成后，总线会被从机占用，反馈应答数据，所以进行延时
+					               // (The bus will be overrode by slave after finishing sending
+								   // to receive the answer, so here delays 2 ms.)
+
+}
+ 6ea:	08 95       	ret
+
+000006ec <SetServoPosition>:
+
+
+
+
+void SetServoPosition(unsigned char id, unsigned short int position, unsigned short int velocity)
+{
+ 6ec:	e8 2f       	mov	r30, r24
+ 6ee:	84 e0       	ldi	r24, 0x04	; 4
+ 6f0:	40 30       	cpi	r20, 0x00	; 0
+ 6f2:	58 07       	cpc	r21, r24
+ 6f4:	10 f0       	brcs	.+4      	; 0x6fa <SetServoPosition+0xe>
+ 6f6:	4f ef       	ldi	r20, 0xFF	; 255
+ 6f8:	53 e0       	ldi	r21, 0x03	; 3
+ 6fa:	9b 01       	movw	r18, r22
+ 6fc:	84 e0       	ldi	r24, 0x04	; 4
+ 6fe:	60 30       	cpi	r22, 0x00	; 0
+ 700:	78 07       	cpc	r23, r24
+ 702:	10 f0       	brcs	.+4      	; 0x708 <SetServoPosition+0x1c>
+ 704:	2f ef       	ldi	r18, 0xFF	; 255
+ 706:	33 e0       	ldi	r19, 0x03	; 3
+   else
+   {
+   temp_position = position;
+   }
+
+   temp_velocity_h = (unsigned char)(temp_velocity >> 8); // 将16bit数据拆为2个8bit数据 // (split 16 bits to 2 bytes)
+ 708:	65 2f       	mov	r22, r21
+   temp_velocity_l = (unsigned char)temp_velocity;
+ 70a:	94 2f       	mov	r25, r20
+   temp_position_h = (unsigned char)(temp_position >> 8); // 将16bit数据拆为2个8bit数据 // (split 16 bits to 2 bytes)
+ 70c:	43 2f       	mov	r20, r19
+   temp_position_l = (unsigned char)temp_position;
+   PORTG &= ~_BV(PG4);
+ 70e:	80 91 65 00 	lds	r24, 0x0065
+ 712:	8f 7e       	andi	r24, 0xEF	; 239
+ 714:	80 93 65 00 	sts	0x0065, r24
+   	 PORTG |= _BV(PG3); // 使总线处于主机发送状态 // (Set the bus to host transmit state)
+ 718:	80 91 65 00 	lds	r24, 0x0065
+ 71c:	88 60       	ori	r24, 0x08	; 8
+ 71e:	80 93 65 00 	sts	0x0065, r24
+   UCSR0A |= (1<<TXC0); // 清除UART0写完成标志 // (Clear written flag of UART0)
+ 722:	5e 9a       	sbi	0x0b, 6	; 11
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 724:	5d 9b       	sbis	0x0b, 5	; 11
+ 726:	fe cf       	rjmp	.-4      	; 0x724 <SetServoPosition+0x38>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 728:	8f ef       	ldi	r24, 0xFF	; 255
+ 72a:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 72c:	5d 9b       	sbis	0x0b, 5	; 11
+ 72e:	fe cf       	rjmp	.-4      	; 0x72c <SetServoPosition+0x40>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 730:	8f ef       	ldi	r24, 0xFF	; 255
+ 732:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 734:	5d 9b       	sbis	0x0b, 5	; 11
+ 736:	fe cf       	rjmp	.-4      	; 0x734 <SetServoPosition+0x48>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 738:	ec b9       	out	0x0c, r30	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 73a:	5d 9b       	sbis	0x0b, 5	; 11
+ 73c:	fe cf       	rjmp	.-4      	; 0x73a <SetServoPosition+0x4e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 73e:	87 e0       	ldi	r24, 0x07	; 7
+ 740:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 742:	5d 9b       	sbis	0x0b, 5	; 11
+ 744:	fe cf       	rjmp	.-4      	; 0x742 <SetServoPosition+0x56>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 746:	83 e0       	ldi	r24, 0x03	; 3
+ 748:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 74a:	5d 9b       	sbis	0x0b, 5	; 11
+ 74c:	fe cf       	rjmp	.-4      	; 0x74a <SetServoPosition+0x5e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 74e:	8e e1       	ldi	r24, 0x1E	; 30
+ 750:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 752:	5d 9b       	sbis	0x0b, 5	; 11
+ 754:	fe cf       	rjmp	.-4      	; 0x752 <SetServoPosition+0x66>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 756:	2c b9       	out	0x0c, r18	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 758:	5d 9b       	sbis	0x0b, 5	; 11
+ 75a:	fe cf       	rjmp	.-4      	; 0x758 <SetServoPosition+0x6c>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 75c:	4c b9       	out	0x0c, r20	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 75e:	5d 9b       	sbis	0x0b, 5	; 11
+ 760:	fe cf       	rjmp	.-4      	; 0x75e <SetServoPosition+0x72>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 762:	9c b9       	out	0x0c, r25	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 764:	5d 9b       	sbis	0x0b, 5	; 11
+ 766:	fe cf       	rjmp	.-4      	; 0x764 <SetServoPosition+0x78>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 768:	6c b9       	out	0x0c, r22	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 76a:	5d 9b       	sbis	0x0b, 5	; 11
+ 76c:	fe cf       	rjmp	.-4      	; 0x76a <SetServoPosition+0x7e>
+   SendUart0Byte(0x1E); // 舵机控制寄存器首地址 // (Send the start address of control register)
+   SendUart0Byte(temp_position_l); // 发送速度数据低位 // (Send the low byte of velocity)
+   SendUart0Byte(temp_position_h); // 发送速度数据高位 // (Send the high byte of velocity)
+   SendUart0Byte(temp_velocity_l); //发送位置低字节 // (Send the low byte of position)
+   SendUart0Byte(temp_velocity_h); // 发送位置高字节 // (Send the high byte of position)
+   temp_sum = id + 7 + 0x03 + 0x1E + temp_position_l + temp_position_h + temp_velocity_l + temp_velocity_h;
+ 76e:	e8 5d       	subi	r30, 0xD8	; 216
+ 770:	e2 0f       	add	r30, r18
+ 772:	e9 0f       	add	r30, r25
+ 774:	e4 0f       	add	r30, r20
+ 776:	e6 0f       	add	r30, r22
+   temp_sum = ~temp_sum; // 计算校验和
+ 778:	e0 95       	com	r30
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 77a:	ec b9       	out	0x0c, r30	; 12
+   SendUart0Byte(temp_velocity_l); //发送位置低字节 // (Send the low byte of position)
+   SendUart0Byte(temp_velocity_h); // 发送位置高字节 // (Send the high byte of position)
+   temp_sum = id + 7 + 0x03 + 0x1E + temp_position_l + temp_position_h + temp_velocity_l + temp_velocity_h;
+   temp_sum = ~temp_sum; // 计算校验和
+   SendUart0Byte(temp_sum); // 发送校验和 (Send the checksum)
+   while ( !( UCSR0A & (1<<TXC0)) ) // 等待发送完成
+ 77c:	5e 9b       	sbis	0x0b, 6	; 11
+ 77e:	fe cf       	rjmp	.-4      	; 0x77c <SetServoPosition+0x90>
+   {
+                 // (Waiting for finishing sending)
+   ;
+   }
+   PORTG |= _BV(PG4);
+ 780:	80 91 65 00 	lds	r24, 0x0065
+ 784:	80 61       	ori	r24, 0x10	; 16
+ 786:	80 93 65 00 	sts	0x0065, r24
+
+  	 PORTG &= ~_BV(PG3);  // 使总线处于主机接收状态 // (Set the UART bus to host receiving state)
+ 78a:	80 91 65 00 	lds	r24, 0x0065
+ 78e:	87 7f       	andi	r24, 0xF7	; 247
+ 790:	80 93 65 00 	sts	0x0065, r24
+ 794:	80 e4       	ldi	r24, 0x40	; 64
+ 796:	9f e1       	ldi	r25, 0x1F	; 31
+ 798:	01 97       	sbiw	r24, 0x01	; 1
+ 79a:	f1 f7       	brne	.-4      	; 0x798 <SetServoPosition+0xac>
+   _delay_ms(2); // 发送完成后，总线会被从机占用，反馈应答数据，所以进行延时
+                 // (The bus will be overrode by slave after finishing sending
+				 // to receive the answer, so here delays 2 ms.)
+
+}
+ 79c:	08 95       	ret
+
+0000079e <Action_write>:
+
+void Action_write(unsigned char id,unsigned short int position,unsigned short int velocity)
+{
+ 79e:	98 2f       	mov	r25, r24
+	temp_position=position;
+	temp_velocity_h=(unsigned char)(temp_velocity>>8);
+	temp_velocity_l=(unsigned char)temp_velocity;
+	temp_position_h=(unsigned char)(temp_position>>8);
+	temp_position_l=(unsigned char)temp_position;
+	 PORTG &= ~_BV(PG4); 
+ 7a0:	80 91 65 00 	lds	r24, 0x0065
+ 7a4:	8f 7e       	andi	r24, 0xEF	; 239
+ 7a6:	80 93 65 00 	sts	0x0065, r24
+    PORTG |= _BV(PG3); // 使总线处于主机发送状态 
+ 7aa:	80 91 65 00 	lds	r24, 0x0065
+ 7ae:	88 60       	ori	r24, 0x08	; 8
+ 7b0:	80 93 65 00 	sts	0x0065, r24
+
+    UCSR0A |= (1<<TXC0); // 清除UART0写完成标志 
+ 7b4:	5e 9a       	sbi	0x0b, 6	; 11
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 7b6:	5d 9b       	sbis	0x0b, 5	; 11
+ 7b8:	fe cf       	rjmp	.-4      	; 0x7b6 <Action_write+0x18>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 7ba:	8f ef       	ldi	r24, 0xFF	; 255
+ 7bc:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 7be:	5d 9b       	sbis	0x0b, 5	; 11
+ 7c0:	fe cf       	rjmp	.-4      	; 0x7be <Action_write+0x20>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 7c2:	8f ef       	ldi	r24, 0xFF	; 255
+ 7c4:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 7c6:	5d 9b       	sbis	0x0b, 5	; 11
+ 7c8:	fe cf       	rjmp	.-4      	; 0x7c6 <Action_write+0x28>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 7ca:	9c b9       	out	0x0c, r25	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 7cc:	5d 9b       	sbis	0x0b, 5	; 11
+ 7ce:	fe cf       	rjmp	.-4      	; 0x7cc <Action_write+0x2e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 7d0:	87 e0       	ldi	r24, 0x07	; 7
+ 7d2:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 7d4:	5d 9b       	sbis	0x0b, 5	; 11
+ 7d6:	fe cf       	rjmp	.-4      	; 0x7d4 <Action_write+0x36>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 7d8:	84 e0       	ldi	r24, 0x04	; 4
+ 7da:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 7dc:	5d 9b       	sbis	0x0b, 5	; 11
+ 7de:	fe cf       	rjmp	.-4      	; 0x7dc <Action_write+0x3e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 7e0:	8e e1       	ldi	r24, 0x1E	; 30
+ 7e2:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 7e4:	5d 9b       	sbis	0x0b, 5	; 11
+ 7e6:	fe cf       	rjmp	.-4      	; 0x7e4 <Action_write+0x46>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 7e8:	6c b9       	out	0x0c, r22	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 7ea:	5d 9b       	sbis	0x0b, 5	; 11
+ 7ec:	fe cf       	rjmp	.-4      	; 0x7ea <Action_write+0x4c>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 7ee:	7c b9       	out	0x0c, r23	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 7f0:	5d 9b       	sbis	0x0b, 5	; 11
+ 7f2:	fe cf       	rjmp	.-4      	; 0x7f0 <Action_write+0x52>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 7f4:	4c b9       	out	0x0c, r20	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 7f6:	5d 9b       	sbis	0x0b, 5	; 11
+ 7f8:	fe cf       	rjmp	.-4      	; 0x7f6 <Action_write+0x58>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 7fa:	5c b9       	out	0x0c, r21	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 7fc:	5d 9b       	sbis	0x0b, 5	; 11
+ 7fe:	fe cf       	rjmp	.-4      	; 0x7fc <Action_write+0x5e>
+	SendUart0Byte(0x1E);
+	SendUart0Byte(temp_position_l);
+	SendUart0Byte(temp_position_h);
+	SendUart0Byte(temp_velocity_l);
+	SendUart0Byte(temp_velocity_h);
+	temp_sum=id+ 7 + 0x04 + 0x1e + temp_position_l + temp_position_h + temp_velocity_l + temp_velocity_h;
+ 800:	97 5d       	subi	r25, 0xD7	; 215
+ 802:	96 0f       	add	r25, r22
+ 804:	94 0f       	add	r25, r20
+ 806:	97 0f       	add	r25, r23
+ 808:	95 0f       	add	r25, r21
+	temp_sum=~temp_sum;
+ 80a:	90 95       	com	r25
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 80c:	9c b9       	out	0x0c, r25	; 12
+	SendUart0Byte(temp_velocity_h);
+	temp_sum=id+ 7 + 0x04 + 0x1e + temp_position_l + temp_position_h + temp_velocity_l + temp_velocity_h;
+	temp_sum=~temp_sum;
+	SendUart0Byte(temp_sum);
+	
+	 while ( !( UCSR0A & (1<<TXC0)) ) // 等待发送完成 
+ 80e:	5e 9b       	sbis	0x0b, 6	; 11
+ 810:	fe cf       	rjmp	.-4      	; 0x80e <Action_write+0x70>
+{ 
+; 
+} 
+PORTG &=~_BV(PG3);
+ 812:	80 91 65 00 	lds	r24, 0x0065
+ 816:	87 7f       	andi	r24, 0xF7	; 247
+ 818:	80 93 65 00 	sts	0x0065, r24
+PORTG |=_BV(PG4); // 使总线处于主机接收状态 
+ 81c:	80 91 65 00 	lds	r24, 0x0065
+ 820:	80 61       	ori	r24, 0x10	; 16
+ 822:	80 93 65 00 	sts	0x0065, r24
+ 826:	80 e4       	ldi	r24, 0x40	; 64
+ 828:	9f e1       	ldi	r25, 0x1F	; 31
+ 82a:	01 97       	sbiw	r24, 0x01	; 1
+ 82c:	f1 f7       	brne	.-4      	; 0x82a <Action_write+0x8c>
+_delay_ms(2);
+}
+ 82e:	08 95       	ret
+
+00000830 <Action>:
+void Action()
+{
+	unsigned char temp_sum=0;
+    PORTG &= ~_BV(PG4); 
+ 830:	80 91 65 00 	lds	r24, 0x0065
+ 834:	8f 7e       	andi	r24, 0xEF	; 239
+ 836:	80 93 65 00 	sts	0x0065, r24
+    PORTG |= _BV(PG3); // 使总线处于主机发送状态 
+ 83a:	80 91 65 00 	lds	r24, 0x0065
+ 83e:	88 60       	ori	r24, 0x08	; 8
+ 840:	80 93 65 00 	sts	0x0065, r24
+
+    UCSR0A |= (1<<TXC0); // 清除UART0写完成标志 	
+ 844:	5e 9a       	sbi	0x0b, 6	; 11
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 846:	5d 9b       	sbis	0x0b, 5	; 11
+ 848:	fe cf       	rjmp	.-4      	; 0x846 <Action+0x16>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 84a:	8f ef       	ldi	r24, 0xFF	; 255
+ 84c:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 84e:	5d 9b       	sbis	0x0b, 5	; 11
+ 850:	fe cf       	rjmp	.-4      	; 0x84e <Action+0x1e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 852:	8f ef       	ldi	r24, 0xFF	; 255
+ 854:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 856:	5d 9b       	sbis	0x0b, 5	; 11
+ 858:	fe cf       	rjmp	.-4      	; 0x856 <Action+0x26>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 85a:	8e ef       	ldi	r24, 0xFE	; 254
+ 85c:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 85e:	5d 9b       	sbis	0x0b, 5	; 11
+ 860:	fe cf       	rjmp	.-4      	; 0x85e <Action+0x2e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 862:	82 e0       	ldi	r24, 0x02	; 2
+ 864:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 866:	5d 9b       	sbis	0x0b, 5	; 11
+ 868:	fe cf       	rjmp	.-4      	; 0x866 <Action+0x36>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 86a:	85 e0       	ldi	r24, 0x05	; 5
+ 86c:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 86e:	5d 9b       	sbis	0x0b, 5	; 11
+ 870:	fe cf       	rjmp	.-4      	; 0x86e <Action+0x3e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 872:	8a ef       	ldi	r24, 0xFA	; 250
+ 874:	8c b9       	out	0x0c, r24	; 12
+	SendUart0Byte(0x05);
+	temp_sum=0xFE + 0x02 + 0x05;
+	temp_sum=~temp_sum;
+	SendUart0Byte(temp_sum);
+	
+	 while ( !( UCSR0A & (1<<TXC0)) ) // 等待发送完成 
+ 876:	5e 9b       	sbis	0x0b, 6	; 11
+ 878:	fe cf       	rjmp	.-4      	; 0x876 <Action+0x46>
+{ 
+; 
+} 
+PORTG &=~_BV(PG3);
+ 87a:	80 91 65 00 	lds	r24, 0x0065
+ 87e:	87 7f       	andi	r24, 0xF7	; 247
+ 880:	80 93 65 00 	sts	0x0065, r24
+PORTG |=_BV(PG4); // 使总线处于主机接收状态 
+ 884:	80 91 65 00 	lds	r24, 0x0065
+ 888:	80 61       	ori	r24, 0x10	; 16
+ 88a:	80 93 65 00 	sts	0x0065, r24
+ 88e:	80 e4       	ldi	r24, 0x40	; 64
+ 890:	9f e1       	ldi	r25, 0x1F	; 31
+ 892:	01 97       	sbiw	r24, 0x01	; 1
+ 894:	f1 f7       	brne	.-4      	; 0x892 <Action+0x62>
+_delay_ms(2);
+}
+ 896:	08 95       	ret
+
+00000898 <SetServoVelocity>:
+
+
+void SetServoVelocity(unsigned char id, signed short int velocity)
+{
+ 898:	48 2f       	mov	r20, r24
+     unsigned char temp_sign = 0; // 临时符号，用于进行方向判别 // (temp variable to judge the direction)
+	 unsigned short int temp_velocity = 0; // 临时速度，用于进行方向判别 // (temp velocity to judge the direction)
+	 unsigned char temp_value_h = 0; // 待发送数据h位 // (h bits to send)
+	 unsigned char temp_value_l = 0; // 待发送数据l位 // (l bits to send)
+	 unsigned char temp_sum = 0; // 校验和寄存变量 // (temp variable to save checksum)
+	 if (velocity < 0)
+ 89a:	77 ff       	sbrs	r23, 7
+ 89c:	06 c0       	rjmp	.+12     	; 0x8aa <SetServoVelocity+0x12>
+	 { temp_velocity = -velocity; // 如果为负数，则取绝对值 // (if negative, get the absolute value)
+ 89e:	88 27       	eor	r24, r24
+ 8a0:	99 27       	eor	r25, r25
+ 8a2:	86 1b       	sub	r24, r22
+ 8a4:	97 0b       	sbc	r25, r23
+ 8a6:	51 e0       	ldi	r21, 0x01	; 1
+ 8a8:	02 c0       	rjmp	.+4      	; 0x8ae <SetServoVelocity+0x16>
+	 temp_sign = 1; // 设置负数符号标志 // (Set negative flag)
+	 }
+	 else
+	 {
+	 temp_velocity = velocity;
+ 8aa:	cb 01       	movw	r24, r22
+ 8ac:	50 e0       	ldi	r21, 0x00	; 0
+ 8ae:	9c 01       	movw	r18, r24
+ 8b0:	84 e0       	ldi	r24, 0x04	; 4
+ 8b2:	20 30       	cpi	r18, 0x00	; 0
+ 8b4:	38 07       	cpc	r19, r24
+ 8b6:	10 f0       	brcs	.+4      	; 0x8bc <SetServoVelocity+0x24>
+ 8b8:	2f ef       	ldi	r18, 0xFF	; 255
+ 8ba:	33 e0       	ldi	r19, 0x03	; 3
+	 if (temp_velocity > 1023)
+	 {
+	 temp_velocity = 1023; // 限制速度值在可用范围内 // (Limit the velocity to 0-1023)
+	 } // 设置bit10为方向位，这时temp_velocity就是待发送的速度数据了
+	 // (Set bit0 as direction bit, then temp_velocity is the data to be sended)
+	 temp_velocity |= (temp_sign << 10); temp_value_h = (unsigned char)(temp_velocity >> 8); // 将16bit数据拆为2个8bit数据
+ 8bc:	95 2f       	mov	r25, r21
+ 8be:	99 0f       	add	r25, r25
+ 8c0:	99 0f       	add	r25, r25
+ 8c2:	80 e0       	ldi	r24, 0x00	; 0
+ 8c4:	82 2b       	or	r24, r18
+ 8c6:	93 2b       	or	r25, r19
+ 8c8:	29 2f       	mov	r18, r25
+	 // (Split the 16 bits to 2 bytes)
+	 temp_value_l = (unsigned char)temp_velocity;
+ 8ca:	98 2f       	mov	r25, r24
+	 PORTG &= ~_BV(PG4);
+ 8cc:	80 91 65 00 	lds	r24, 0x0065
+ 8d0:	8f 7e       	andi	r24, 0xEF	; 239
+ 8d2:	80 93 65 00 	sts	0x0065, r24
+	 	 PORTG |= _BV(PG3); // 使总线处于主机发送状态 // (Set the bus to host transmit state)
+ 8d6:	80 91 65 00 	lds	r24, 0x0065
+ 8da:	88 60       	ori	r24, 0x08	; 8
+ 8dc:	80 93 65 00 	sts	0x0065, r24
+	 UCSR0A |= (1<<TXC0); // 清除UART0写完成标志 // (Clear written flag of UART0)
+ 8e0:	5e 9a       	sbi	0x0b, 6	; 11
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 8e2:	5d 9b       	sbis	0x0b, 5	; 11
+ 8e4:	fe cf       	rjmp	.-4      	; 0x8e2 <SetServoVelocity+0x4a>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 8e6:	8f ef       	ldi	r24, 0xFF	; 255
+ 8e8:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 8ea:	5d 9b       	sbis	0x0b, 5	; 11
+ 8ec:	fe cf       	rjmp	.-4      	; 0x8ea <SetServoVelocity+0x52>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 8ee:	8f ef       	ldi	r24, 0xFF	; 255
+ 8f0:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 8f2:	5d 9b       	sbis	0x0b, 5	; 11
+ 8f4:	fe cf       	rjmp	.-4      	; 0x8f2 <SetServoVelocity+0x5a>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 8f6:	4c b9       	out	0x0c, r20	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 8f8:	5d 9b       	sbis	0x0b, 5	; 11
+ 8fa:	fe cf       	rjmp	.-4      	; 0x8f8 <SetServoVelocity+0x60>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 8fc:	85 e0       	ldi	r24, 0x05	; 5
+ 8fe:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 900:	5d 9b       	sbis	0x0b, 5	; 11
+ 902:	fe cf       	rjmp	.-4      	; 0x900 <SetServoVelocity+0x68>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 904:	83 e0       	ldi	r24, 0x03	; 3
+ 906:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 908:	5d 9b       	sbis	0x0b, 5	; 11
+ 90a:	fe cf       	rjmp	.-4      	; 0x908 <SetServoVelocity+0x70>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 90c:	80 e2       	ldi	r24, 0x20	; 32
+ 90e:	8c b9       	out	0x0c, r24	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 910:	5d 9b       	sbis	0x0b, 5	; 11
+ 912:	fe cf       	rjmp	.-4      	; 0x910 <SetServoVelocity+0x78>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 914:	9c b9       	out	0x0c, r25	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 916:	5d 9b       	sbis	0x0b, 5	; 11
+ 918:	fe cf       	rjmp	.-4      	; 0x916 <SetServoVelocity+0x7e>
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 91a:	2c b9       	out	0x0c, r18	; 12
+#include "servo.h"
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+ 91c:	5d 9b       	sbis	0x0b, 5	; 11
+ 91e:	fe cf       	rjmp	.-4      	; 0x91c <SetServoVelocity+0x84>
+	 SendUart0Byte(5); // 发送数据长度为参数长度+2，参数长度为3 // (Send the length of frame)
+	 SendUart0Byte(0x03); // 命令数据为“WRITE DATA” // (Send command “WRITE DATA”)
+	 SendUart0Byte(0x20); // 舵机控制寄存器首地址 // (Send the start address of control register)
+	 SendUart0Byte(temp_value_l); // 发送速度数据低位 // (Send the low byte of velocity)
+	 SendUart0Byte(temp_value_h); // 发送速度数据高位 // (Send the high byte of velocity)
+	 temp_sum = id + 5 + 0x03 + 0x20 + temp_value_l + temp_value_h; temp_sum = ~temp_sum; // 计算校验和 // (Calculate the checksum)
+ 920:	48 5d       	subi	r20, 0xD8	; 216
+ 922:	49 0f       	add	r20, r25
+ 924:	42 0f       	add	r20, r18
+ 926:	40 95       	com	r20
+#include "system_init.h"              //定义与系统初始化有关函数
+
+void SendUart0Byte(unsigned char data)
+ {
+       while ( !( UCSR0A & (1<<UDRE)) );   // 等待发送缓冲器为空 // waiting for finishing sending all datas in the Transmit Buffer
+	   UDR0 = data;                       /* 将数据放入缓冲器，发送数据*/
+ 928:	4c b9       	out	0x0c, r20	; 12
+	 SendUart0Byte(0x20); // 舵机控制寄存器首地址 // (Send the start address of control register)
+	 SendUart0Byte(temp_value_l); // 发送速度数据低位 // (Send the low byte of velocity)
+	 SendUart0Byte(temp_value_h); // 发送速度数据高位 // (Send the high byte of velocity)
+	 temp_sum = id + 5 + 0x03 + 0x20 + temp_value_l + temp_value_h; temp_sum = ~temp_sum; // 计算校验和 // (Calculate the checksum)
+	 SendUart0Byte(temp_sum); // 发送校验和 // (Send the checksum)
+	 while ( !( UCSR0A & (1<<TXC0)) ) // 等待发送完成
+ 92a:	5e 9b       	sbis	0x0b, 6	; 11
+ 92c:	fe cf       	rjmp	.-4      	; 0x92a <SetServoVelocity+0x92>
+	        {   ;}           // (Waiting for finishing sending)
+
+	 PORTG |= _BV(PG4);
+ 92e:	80 91 65 00 	lds	r24, 0x0065
+ 932:	80 61       	ori	r24, 0x10	; 16
+ 934:	80 93 65 00 	sts	0x0065, r24
+
+		 PORTG &= ~_BV(PG3);  // 使总线处于主机接收状态 // (Set the UART bus to host receiving state)
+ 938:	80 91 65 00 	lds	r24, 0x0065
+ 93c:	87 7f       	andi	r24, 0xF7	; 247
+ 93e:	80 93 65 00 	sts	0x0065, r24
+ 942:	80 e4       	ldi	r24, 0x40	; 64
+ 944:	9f e1       	ldi	r25, 0x1F	; 31
+ 946:	01 97       	sbiw	r24, 0x01	; 1
+ 948:	f1 f7       	brne	.-4      	; 0x946 <SetServoVelocity+0xae>
+	 _delay_ms(2);      // 发送完成后，总线会被从机占用，反馈应答数据，所以进行延时
+	 }
+ 94a:	08 95       	ret
+
+0000094c <Init_Gpio>:
+#include<util/delay.h>
+#include<avr/interrupt.h>
+#include"system_init.h"
+void Init_Gpio(void)
+ {
+     DDRE &= ~(_BV(PE5) | _BV(PE4));
+ 94c:	82 b1       	in	r24, 0x02	; 2
+ 94e:	8f 7c       	andi	r24, 0xCF	; 207
+ 950:	82 b9       	out	0x02, r24	; 2
+	 PORTE |= (_BV(PE5) | _BV(PE4));
+ 952:	83 b1       	in	r24, 0x03	; 3
+ 954:	80 63       	ori	r24, 0x30	; 48
+ 956:	83 b9       	out	0x03, r24	; 3
+ }
+ 958:	08 95       	ret
+
+0000095a <ADC_Init>:
+
+void ADC_Init(void)
+{
+
+	DDRF  = 0X00;		//PF用于ADC0~ADC7
+ 95a:	10 92 61 00 	sts	0x0061, r1
+	PORTF = 0X00;		//禁止内部上拉
+ 95e:	10 92 62 00 	sts	0x0062, r1
+	ADMUX   = 0B01000000;  //REFS1:REFS0=01 AVCC为基准电压;ADLAR=1 右对齐
+ 962:	80 e4       	ldi	r24, 0x40	; 64
+ 964:	87 b9       	out	0x07, r24	; 7
+	ADCSRA  = 0B10000110;  //ADEN=1 ADC使能；ADPS2:0=110 64分频
+ 966:	86 e8       	ldi	r24, 0x86	; 134
+ 968:	86 b9       	out	0x06, r24	; 6
+}
+ 96a:	08 95       	ret
+
+0000096c <Get_ADC>:
+
+
+unsigned int Get_ADC(unsigned char ID)      //参数为为AD通道ID号
+{
+	unsigned int temp = 0;
+	ADMUX  =  0x40|ID;     //端口选择需要先清除
+ 96c:	80 64       	ori	r24, 0x40	; 64
+ 96e:	87 b9       	out	0x07, r24	; 7
+		ADCSRA |= (1<<ADSC);       //开始转换
+ 970:	36 9a       	sbi	0x06, 6	; 6
+		while(!( ADCSRA  &  (1<<ADIF) ) ); //等待转换完成
+ 972:	34 9b       	sbis	0x06, 4	; 6
+ 974:	fe cf       	rjmp	.-4      	; 0x972 <Get_ADC+0x6>
+		temp = ADCL+ADCH*256;
+ 976:	94 b1       	in	r25, 0x04	; 4
+ 978:	85 b1       	in	r24, 0x05	; 5
+		ADCSRA |= (1<<ADIF);	   //标志位清除
+ 97a:	34 9a       	sbi	0x06, 4	; 6
+ 97c:	38 2f       	mov	r19, r24
+ 97e:	20 e0       	ldi	r18, 0x00	; 0
+ 980:	29 0f       	add	r18, r25
+ 982:	31 1d       	adc	r19, r1
+
+
+	return temp;
+}
+ 984:	c9 01       	movw	r24, r18
+ 986:	08 95       	ret
+
+00000988 <PWM_init>:
+
+/***************PWM初始化**********************/
+void PWM_init()
+{	
+	DDRC=0XF0;             //PB5,PB6  输出 对应于OC1A,OC1B
+ 988:	80 ef       	ldi	r24, 0xF0	; 240
+ 98a:	84 bb       	out	0x14, r24	; 20
+	DDRB|=0X60;  
+ 98c:	87 b3       	in	r24, 0x17	; 23
+ 98e:	80 66       	ori	r24, 0x60	; 96
+ 990:	87 bb       	out	0x17, r24	; 23
+	TCCR1A = 0b10100010;
+ 992:	82 ea       	ldi	r24, 0xA2	; 162
+ 994:	8f bd       	out	0x2f, r24	; 47
+	TCCR1B = 0b00011010;
+ 996:	8a e1       	ldi	r24, 0x1A	; 26
+ 998:	8e bd       	out	0x2e, r24	; 46
+	TCCR1C=0X00;
+ 99a:	10 92 7a 00 	sts	0x007A, r1
+	ICR1=300;             //最大的比对值
+ 99e:	8c e2       	ldi	r24, 0x2C	; 44
+ 9a0:	91 e0       	ldi	r25, 0x01	; 1
+ 9a2:	97 bd       	out	0x27, r25	; 39
+ 9a4:	86 bd       	out	0x26, r24	; 38
+}
+ 9a6:	08 95       	ret
+
+000009a8 <move>:
+void move(int l_speed,int r_speed)     //l_speed,r_speed的范围为-300 ~ +300
+
+{                                        //当速度达到200~300时基本没有太大的变化
+ 9a8:	9c 01       	movw	r18, r24
+    if(l_speed>=0&&r_speed>=0)
+ 9aa:	97 fd       	sbrc	r25, 7
+ 9ac:	0d c0       	rjmp	.+26     	; 0x9c8 <move+0x20>
+ 9ae:	77 fd       	sbrc	r23, 7
+ 9b0:	03 c0       	rjmp	.+6      	; 0x9b8 <move+0x10>
+	{     
+		PORTC=0xA0; 
+ 9b2:	80 ea       	ldi	r24, 0xA0	; 160
+ 9b4:	85 bb       	out	0x15, r24	; 21
+ 9b6:	16 c0       	rjmp	.+44     	; 0x9e4 <move+0x3c>
+	}
+    else if(l_speed>0&&r_speed<0)
+ 9b8:	00 97       	sbiw	r24, 0x00	; 0
+ 9ba:	61 f0       	breq	.+24     	; 0x9d4 <move+0x2c>
+	{     
+		PORTC=0x60; 
+ 9bc:	80 e6       	ldi	r24, 0x60	; 96
+ 9be:	85 bb       	out	0x15, r24	; 21
+		r_speed=0-r_speed;
+ 9c0:	70 95       	com	r23
+ 9c2:	61 95       	neg	r22
+ 9c4:	7f 4f       	sbci	r23, 0xFF	; 255
+ 9c6:	0e c0       	rjmp	.+28     	; 0x9e4 <move+0x3c>
+	}
+	else if(l_speed<0&&r_speed>0)   
+ 9c8:	16 16       	cp	r1, r22
+ 9ca:	17 06       	cpc	r1, r23
+ 9cc:	1c f4       	brge	.+6      	; 0x9d4 <move+0x2c>
+	{     
+		PORTC=0x90;
+ 9ce:	80 e9       	ldi	r24, 0x90	; 144
+ 9d0:	85 bb       	out	0x15, r24	; 21
+ 9d2:	05 c0       	rjmp	.+10     	; 0x9de <move+0x36>
+		l_speed=0-l_speed;
+	}
+	else
+	{
+		PORTC = 0X50;
+ 9d4:	80 e5       	ldi	r24, 0x50	; 80
+ 9d6:	85 bb       	out	0x15, r24	; 21
+		r_speed=0-r_speed;l_speed=0-l_speed;
+ 9d8:	70 95       	com	r23
+ 9da:	61 95       	neg	r22
+ 9dc:	7f 4f       	sbci	r23, 0xFF	; 255
+ 9de:	30 95       	com	r19
+ 9e0:	21 95       	neg	r18
+ 9e2:	3f 4f       	sbci	r19, 0xFF	; 255
+	}
+	OCR1A = l_speed;
+ 9e4:	3b bd       	out	0x2b, r19	; 43
+ 9e6:	2a bd       	out	0x2a, r18	; 42
+	OCR1B = r_speed;
+ 9e8:	79 bd       	out	0x29, r23	; 41
+ 9ea:	68 bd       	out	0x28, r22	; 40
+
+	
+}
+ 9ec:	08 95       	ret
+
+000009ee <USART1_init>:
+
+void USART1_init()
+{
+	UCSR1A = 0X00;
+ 9ee:	10 92 9b 00 	sts	0x009B, r1
+	/*接收结束中断使能， 接收器与发送器使能(1<<RXCIE0)|*/
+	UCSR1B = 0B00011000;
+ 9f2:	88 e1       	ldi	r24, 0x18	; 24
+ 9f4:	80 93 9a 00 	sts	0x009A, r24
+	/* 设置帧格式: 异步，禁止奇偶校验，1个停止位，8个数据位*/
+	UCSR1C = 0B00000110;
+ 9f8:	86 e0       	ldi	r24, 0x06	; 6
+ 9fa:	80 93 9d 00 	sts	0x009D, r24
+	/* 设置波特率为9600*/
+	UBRR1L = 103;
+ 9fe:	87 e6       	ldi	r24, 0x67	; 103
+ a00:	80 93 99 00 	sts	0x0099, r24
+}
+ a04:	08 95       	ret
+
+00000a06 <USART1_send>:
+
+
+void USART1_send(unsigned char data)
+{
+ a06:	98 2f       	mov	r25, r24
+	/* 等待发送缓冲器为空 */
+	while ( !( UCSR1A & (1<<UDRE)) ) ;
+ a08:	80 91 9b 00 	lds	r24, 0x009B
+ a0c:	85 ff       	sbrs	r24, 5
+ a0e:	fc cf       	rjmp	.-8      	; 0xa08 <USART1_send+0x2>
+	/* 将数据放入缓冲器，发送数据*/
+	UDR1 = data;
+ a10:	90 93 9c 00 	sts	0x009C, r25
+}
+ a14:	08 95       	ret
+
+00000a16 <USART1_recieve>:
+
+unsigned char USART1_recieve()
+{
+	/* 等待接收数据*/
+	while ( !(UCSR1A & (1<<RXC)) ) ;
+ a16:	80 91 9b 00 	lds	r24, 0x009B
+ a1a:	87 ff       	sbrs	r24, 7
+ a1c:	fc cf       	rjmp	.-8      	; 0xa16 <USART1_recieve>
+	/* 从缓冲器中获取并返回数据*/
+	return UDR1;
+ a1e:	80 91 9c 00 	lds	r24, 0x009C
+}
+ a22:	08 95       	ret
+
+00000a24 <Init_Uart0>:
+#include<util/delay.h>
+#include<avr/interrupt.h>
+#include"system_init.h"
+void Init_Gpio(void)
+ {
+     DDRE &= ~(_BV(PE5) | _BV(PE4));
+ a24:	82 b1       	in	r24, 0x02	; 2
+ a26:	8f 7c       	andi	r24, 0xCF	; 207
+ a28:	82 b9       	out	0x02, r24	; 2
+	 PORTE |= (_BV(PE5) | _BV(PE4));
+ a2a:	83 b1       	in	r24, 0x03	; 3
+ a2c:	80 63       	ori	r24, 0x30	; 48
+ a2e:	83 b9       	out	0x03, r24	; 3
+	return UDR1;
+}
+void Init_Uart0(void)
+{
+	Init_Gpio();
+    UCSR0A = 0x02;                  // 设置为倍速模式（Set to double velocity mode）                    // 主时钟频率为16M时，波特率为1M // (Set main clock to 16M, baud rate to 1M)
+ a30:	82 e0       	ldi	r24, 0x02	; 2
+ a32:	8b b9       	out	0x0b, r24	; 11
+	UBRR0H=0X00;
+ a34:	10 92 90 00 	sts	0x0090, r1
+	UBRR0L=0X01;                    // 接收器与发送器使能 // (Enable UART0’s receiver and transmitter)
+ a38:	81 e0       	ldi	r24, 0x01	; 1
+ a3a:	89 b9       	out	0x09, r24	; 9
+    UCSR0B = (1<<RXEN)|(1<<TXEN);   // 设置帧格式: 8 个数据位, 1 个停止位 // (Set data frame:8 data bits,1 stop bit)接收中断使能
+ a3c:	88 e1       	ldi	r24, 0x18	; 24
+ a3e:	8a b9       	out	0x0a, r24	; 10
+    UCSR0C = (3<<UCSZ0);            /* 设置端口状态(Set port state) */
+ a40:	86 e0       	ldi	r24, 0x06	; 6
+ a42:	80 93 95 00 	sts	0x0095, r24
+    DDRE &= ~_BV(PE0);              // 初始化RX端口默认方向为输入 // (Set default direction of RX to input mode)
+ a46:	10 98       	cbi	0x02, 0	; 2
+	PORTE &= ~_BV(PE0);             // 初始化RX端口默认状态为高阻 // (Set default state of RX to tri-state)
+ a48:	18 98       	cbi	0x03, 0	; 3
+	DDRE |= _BV(PE1);               // 初始化TX端口默认方向为输出 // (Set default direction of TX to output mode)
+ a4a:	11 9a       	sbi	0x02, 1	; 2
+	PORTE |= _BV(PE1);              // 初始化TX端口默认状态为高电平 // (Set default state of RX to high state)
+ a4c:	19 9a       	sbi	0x03, 1	; 3
+	DDRG |= _BV(PG3);               // 初始化使能端口状态方向为输出 // (Enable direction of Port A as output)
+ a4e:	a4 e6       	ldi	r26, 0x64	; 100
+ a50:	b0 e0       	ldi	r27, 0x00	; 0
+ a52:	8c 91       	ld	r24, X
+ a54:	88 60       	ori	r24, 0x08	; 8
+ a56:	8c 93       	st	X, r24
+	PORTG &= ~_BV(PG3);             // 初始化使能端口状态为RX状态 // (Set Port A state as same to RX)
+ a58:	e5 e6       	ldi	r30, 0x65	; 101
+ a5a:	f0 e0       	ldi	r31, 0x00	; 0
+ a5c:	80 81       	ld	r24, Z
+ a5e:	87 7f       	andi	r24, 0xF7	; 247
+ a60:	80 83       	st	Z, r24
+	DDRG |= _BV(PG4);               // 初始化使能端口状态方向为输出 // (Set Port A state as same to RX)
+ a62:	8c 91       	ld	r24, X
+ a64:	80 61       	ori	r24, 0x10	; 16
+ a66:	8c 93       	st	X, r24
+    PORTG |= _BV(PG4);              // 初始化使能端口状态方为RX状态 // (Set Port A state as same to RX)
+ a68:	80 81       	ld	r24, Z
+ a6a:	80 61       	ori	r24, 0x10	; 16
+ a6c:	80 83       	st	Z, r24
+}
+ a6e:	08 95       	ret
+
+00000a70 <System_Init>:
+void System_Init(void)
+{
+
+
+ 
+    Init_Uart0();
+ a70:	0e 94 12 05 	call	0xa24	; 0xa24 <Init_Uart0>
+	
+}
+
+void USART1_init()
+{
+	UCSR1A = 0X00;
+ a74:	10 92 9b 00 	sts	0x009B, r1
+	/*接收结束中断使能， 接收器与发送器使能(1<<RXCIE0)|*/
+	UCSR1B = 0B00011000;
+ a78:	88 e1       	ldi	r24, 0x18	; 24
+ a7a:	80 93 9a 00 	sts	0x009A, r24
+	/* 设置帧格式: 异步，禁止奇偶校验，1个停止位，8个数据位*/
+	UCSR1C = 0B00000110;
+ a7e:	86 e0       	ldi	r24, 0x06	; 6
+ a80:	80 93 9d 00 	sts	0x009D, r24
+	/* 设置波特率为9600*/
+	UBRR1L = 103;
+ a84:	87 e6       	ldi	r24, 0x67	; 103
+ a86:	80 93 99 00 	sts	0x0099, r24
+    USART1_init();
+
+ 
+
+
+ }
+ a8a:	08 95       	ret
+
+00000a8c <_exit>:
+ a8c:	f8 94       	cli
+
+00000a8e <__stop_program>:
+ a8e:	ff cf       	rjmp	.-2      	; 0xa8e <__stop_program>
